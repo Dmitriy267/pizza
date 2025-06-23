@@ -1,0 +1,29 @@
+@media (max-width: 320px) {
+    .mail-accaunt {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        width: 100%;
+        border-radius: 10px;
+        padding: 50px 45px 50px 45px;
+        box-shadow: 0 20px 40px 0 rgba(39, 95, 158, 0.2);
+        background: #fffefe;
+    }
+    .h2__mail-accaunt {
+        font-weight: 700;
+        font-size: 1.25rem;
+        text-align: center;
+    }
+    .mail-accaunt > p {
+        font-weight: 400;
+        font-size: 0.875rem;
+        text-align: center;
+    }
+    .btn__mail-accaunt {
+        border-radius: 33px;
+        width: 117px;
+        height: 48px;
+        background-color: var(--yellow-color);
+    }
+}

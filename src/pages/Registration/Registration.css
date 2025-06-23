@@ -1,0 +1,99 @@
+@media (max-width: 320px) {
+    .registration__section {
+        padding-top: 20px;
+    }
+    .btn__registration {
+        margin-top: 15px;
+        margin-bottom: 30px;
+        border-radius: 8px;
+        width: 56.78%;
+        height: 45px;
+        background-color: var(--yellow-color);
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 0.875rem;
+        line-height: 200%;
+        color: #473e43;
+    }
+    .title__registration {
+        font-weight: 700;
+        font-size: 1.25rem;
+        text-align: center;
+    }
+    .block-form__registration {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    .form__registration {
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+    }
+    .block-valid__form_position {
+        position: relative;
+    }
+    .block-valid__form_position > span,
+    .error-text__registration_checked {
+        font-weight: 500;
+        font-size: 0.8125rem;
+        line-height: 150%;
+        color: red;
+    }
+    .input__registration {
+        border-radius: 30px;
+        padding: 15px 20px 15px 45px;
+        width: 100%;
+        height: 50px;
+        background-color: #f6f6f6;
+    }
+
+    .login__registration,
+    .email__registration,
+    .password__registration,
+    .password__registration_add {
+        width: 20px;
+        height: 20px;
+        fill: #686868;
+        position: absolute;
+        left: 20px;
+        top: 14px;
+    }
+
+    .castom-checkbox__registration {
+        display: flex;
+        align-items: center;
+        background-color: #f6f6f6;
+        height: 45px;
+    }
+    .castom-checkbox__registration > input[type='checkbox'] {
+        margin-left: 20px;
+    }
+    .castom-checkbox__registration span {
+        margin-left: 8px;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 200%;
+        color: #473e43;
+    }
+    .btn__registration-submit {
+        height: 48px;
+        border-radius: 33px;
+        font-family: Montserrat;
+        background-color: var(--yellow-color);
+    }
+    .info__registration {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .info__registration p {
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 150%;
+        color: #473e43;
+    }
+    .link_prev {
+        color: #664ef9;
+    }
+}

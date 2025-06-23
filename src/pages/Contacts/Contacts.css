@@ -1,0 +1,48 @@
+@media (max-width: 320px) {
+    .block__contacts_middle {
+        display: flex;
+        align-items: center;
+    }
+    .tel__contacts {
+        color: var(--yellow-color);
+        font-weight: 700;
+        font-size: 1.875rem;
+        text-transform: uppercase;
+    }
+    .image_position {
+        position: absolute;
+        top: 5px;
+        right: -8px;
+        width: 60.11px;
+        height: 76.09px;
+        transform: rotate(-45deg);
+        z-index: -1;
+    }
+    .img__contacts {
+        width: 100%;
+        height: 100%;
+    }
+
+    .adress__contacts {
+        margin-top: 17px;
+        margin-bottom: 14px;
+    }
+    .adress__container {
+        margin-top: 6px;
+        position: relative;
+        overflow: hidden;
+    }
+    .adress__contacts p:first-of-type {
+        font-weight: 700;
+        font-variant: small-caps;
+        margin-top: 23px;
+        color: var(--black-color);
+    }
+    .adress__contacts p:last-of-type {
+        font-weight: 600;
+        font-size: 0.75rem;
+        margin-top: 12px;
+        font-variant: small-caps;
+        color: var(--black-color);
+    }
+}

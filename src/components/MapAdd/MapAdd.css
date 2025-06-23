@@ -1,0 +1,16 @@
+@media (max-width: 320px) {
+    .map__section {
+        background-color: var(--blue-light-color);
+        padding-bottom: 26px;
+    }
+    .map__local {
+        border-radius: 14px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    .map__local > iframe {
+        width: 100%;
+        height: 100%;
+        border: 1px;
+    }
+}

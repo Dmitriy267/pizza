@@ -1,0 +1,8 @@
+.btn_common {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--yellow-color);
+    border-radius: 8px;
+    font-family: Montserrat, sans-serif;
+}

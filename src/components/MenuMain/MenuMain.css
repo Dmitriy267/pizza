@@ -1,0 +1,37 @@
+@media (max-width: 320px) {
+    .section__menu_main {
+        padding-top: 21px;
+        width: 100%;
+    }
+    .h1,
+    .title__h2 {
+        color: var(--yellow-color);
+        font-weight: 800;
+        font-size: 1.3125rem;
+        margin-bottom: 18px;
+    }
+    .title__h2 {
+        margin-top: 21px;
+    }
+    .menu_table {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(10, 1fr);
+        row-gap: 10px;
+    }
+    .btn__shop_fixed {
+        border-radius: 8px;
+        width: 107px;
+        height: 42px;
+        background-color: var(--yellow-color);
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 233%;
+        color: #231f20;
+        font-family: Montserrat;
+        position: fixed;
+        z-index: 99;
+        top: 446px;
+        left: 192px;
+    }
+}
