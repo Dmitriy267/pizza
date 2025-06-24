@@ -5,7 +5,7 @@ interface Sauces {
     id: number;
     name: string;
     price: number;
-    image: string;
+    image?: string;
     count: number;
 }
 interface SaucesState {
@@ -16,15 +16,7 @@ const initialState: SaucesState = {
     sauces: [],
     totalPrice: 0,
 };
-// function calcPrice(items: Sauces[]) {
-//     const summ: number = 0;
-//     //  items.reduce((total, val) => total.price * total.count + val, 0);
-//     const total = items.map((item) => item.count * item.price);
-//     console.log(`total`, total);
-//     return total.forEach(function (t) {
-//         summ + t;
-//     });
-// }
+
 export const saucesSlice = createSlice({
     name: 'sauces',
     initialState,
@@ -37,17 +29,9 @@ export const saucesSlice = createSlice({
                 price: action.payload.price,
                 count: action.payload.count,
             });
-            // state.totalPrice = calcPrice(state.sauces);
-        },
-        getSumms: (state, action: PayloadAction<number>) => {
-            const findItem = state.sauces.find(
-                (item) => item.id === action.payload
-            );
-            console.log(findItem);
-            // state.totalPrice = calcPrice(state.sauces);
         },
     },
 });
 
-export const { getProductSauces, getSumms } = saucesSlice.actions;
+export const { getProductSauces } = saucesSlice.actions;
 export default saucesSlice.reducer;

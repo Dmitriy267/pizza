@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
-
+//import { getTotalPrice } from '../getTotalPrice';
 interface Product {
     id: number;
     name: string;
@@ -9,15 +9,17 @@ interface Product {
     image: string;
     count: number;
 }
+export type ProdTotalPrice = {
+    product: Product;
+    quentity: number;
+};
 interface ProductState {
     product: Product[];
-    totalPrice: number;
     maxLimit: number;
     minLimit: number;
 }
 const initialState: ProductState = {
     product: [],
-    totalPrice: 0,
     maxLimit: 10,
     minLimit: 0,
 };
@@ -35,6 +37,7 @@ export const productSelectSlice = createSlice({
                 price: action.payload.price,
             });
         },
+
         deleteProduct: (state, action: PayloadAction<number>) => {
             const findItem = state.product.findIndex(
                 (item) => item.id === action.payload

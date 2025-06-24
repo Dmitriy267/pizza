@@ -6,18 +6,45 @@ import { useGetProductQuery } from '../../redux/services/product';
 import { SauceItem } from '../../components/SauceItem/SauceItem';
 import './ShopPage.css';
 import { useState, type FormEvent } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export const ShopPage = () => {
     const productSelect = useAppSelector(
         (state) => state.productSelect.product
     );
-    const totalPrice = useAppSelector((state) => state.sauces.totalPrice);
+    const priceSouce = useAppSelector((state) => state.sauces);
+    console.log(`priceSouce`, priceSouce);
+    const filterIdSauce = priceSouce.sauces.filter(
+        (obj, index, prod) =>
+            index === prod.findIndex((item) => item.id === obj.id)
+    );
+    const filterId = productSelect.filter(
+        (obj, index, prod) =>
+            index === prod.findIndex((item) => item.id === obj.id)
+    );
+
+    const totalPrice = filterId.reduce(
+        (total, val) => total + val.price * val.count,
+        0
+    );
+    const totalPriceSauce = filterIdSauce.reduce(
+        (total, val) => total + val.price * val.count,
+        0
+    );
+    console.log(`totalPrice`, totalPrice);
+    console.log(`totalPriceSauce`, totalPriceSauce);
+    const navigate = useNavigate();
+
     const { data: sauces, isLoading, error } = useGetProductQuery('sauces');
     const [promoText, setPromoText] = useState<string>('');
+
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log(`promoText`, promoText);
     };
+    const handeClickNavOrder = () => {
+        navigate('/Оформление заказа');
+    };
+
     return (
         <>
             <Header />
@@ -45,9 +72,8 @@ export const ShopPage = () => {
                     <h2 className="shop__h2">Корзина</h2>
 
                     {productSelect &&
-                        productSelect.map((p) => (
-                            <ProductItem key={p.id} {...p} />
-                        ))}
+                        filterId.map((p) => <ProductItem key={p.id} {...p} />)}
+
                     <h2 className="h2__shop_add">Добавить к заказу?</h2>
                     <h3 className="h3__shop">Соусы</h3>
                     {error ? (
@@ -76,10 +102,11 @@ export const ShopPage = () => {
                     </form>
 
                     <p className="summa__shop">
-                        Сумма заказа: <span>{totalPrice}₽</span>
+                        Сумма заказа:{' '}
+                        <span>{totalPrice + totalPriceSauce}₽</span>
                     </p>
                     <div className="block-btn__shop">
-                        <button onClick={() => console.log('click')}>
+                        <button onClick={handeClickNavOrder}>
                             Оформить заказ <span>&gt;</span>
                         </button>
 

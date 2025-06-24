@@ -36,6 +36,7 @@ export const ProductItem: FC<ProductItemProps> = ({
     };
     return (
         <>
+            {console.log(typeof count)}
             <div className="block__shop-prod" key={id}>
                 <div className="block__shop_common">
                     <div className="shop-prod_top">
@@ -47,6 +48,7 @@ export const ProductItem: FC<ProductItemProps> = ({
                         <div className="buttons__shop">
                             <button onClick={handeClickMinus}>-</button>
                             <p>{count}</p>
+
                             <button onClick={handeClickPlus}>+</button>
                         </div>
                         <span className="price__span_yellow">{`${

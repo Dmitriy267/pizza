@@ -45,4 +45,7 @@
         text-align: center;
         color: #ff2e65;
     }
+    .span_hidden {
+        display: none;
+    }
 }
