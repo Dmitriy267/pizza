@@ -12,6 +12,7 @@ import { DrinksPage } from './pages/DrinksPage/DrinksPage.tsx';
 import { ShopPage } from './pages/ShopPage/ShopPage.tsx';
 import { Avtorization } from './pages/Avtorization/Avtorization.tsx';
 import { Registration } from './pages/Registration/Registration.tsx';
+import { OrderPage } from './pages/OrderPage/OrderPage.tsx';
 const router = createBrowserRouter([
     {
         path: '/',
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
     {
         path: 'Регистрация',
         element: <Registration />,
+    },
+    {
+        path: '/Корзина/Оформление заказа',
+        element: <OrderPage />,
     },
 ]);
 createRoot(document.getElementById('root')!).render(

@@ -4,6 +4,7 @@ import { useAppSelector } from '../../redux/hooks/hooks';
 import { ProductItem } from '../../components/ProductItem/ProductItem';
 import { useGetProductQuery } from '../../redux/services/product';
 import { SauceItem } from '../../components/SauceItem/SauceItem';
+import { ShopSteps } from '../../components/ShopSteps/ShopSteps';
 import './ShopPage.css';
 import { useState, type FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -41,8 +42,11 @@ export const ShopPage = () => {
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
     };
+    const summ = totalPrice + totalPriceSauce;
     const handeClickNavOrder = () => {
-        navigate('/Оформление заказа');
+        if (summ !== 0) {
+            navigate('/Корзина/Оформление заказа');
+        }
     };
 
     return (
@@ -50,24 +54,7 @@ export const ShopPage = () => {
             <Header />
             <section className="shop__wrapper">
                 <div className="shop__container">
-                    <div className="shop__steps">
-                        <div className="shop__step">
-                            <span className="step_active">1</span>
-                            <p>Корзина</p>
-                        </div>
-                        <hr className="hr_dashed" />
-                        <div className="shop__step ">
-                            <span className="step_default">2</span>
-                            <p className="text__step_second">
-                                Оформление заказа
-                            </p>
-                        </div>
-                        <hr className="hr_dashed" />
-                        <div className="shop__step">
-                            <span className="step_default">3</span>
-                            <p className="text__step_threed">Заказ принят</p>
-                        </div>
-                    </div>
+                    <ShopSteps step1={true} step2={false} step3={false} />
 
                     <h2 className="shop__h2">Корзина</h2>
 

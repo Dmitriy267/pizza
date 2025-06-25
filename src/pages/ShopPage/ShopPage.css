@@ -2,80 +2,7 @@
     .shop__wrapper {
         padding-top: 12px;
     }
-    .shop__steps {
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        border-bottom-width: 2px;
-        border-bottom-color: #ececf1;
-        border-bottom-style: solid;
-        padding-bottom: 11px;
-    }
-    .shop__step {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .step_active,
-    .step_default {
-        font-weight: 700;
-        font-size: 0.9375rem;
-        line-height: 187%;
-        display: flex;
-        width: 36px;
-        height: 36px;
-        border-radius: 100%;
-        justify-content: center;
-        align-items: center;
-    }
-    .step_active {
-        color: #231f20;
-    }
-    .step_default {
-        color: var(--yellow-color);
-    }
-    .step_default {
-        border-color: var(--yellow-color);
-        border-width: 2px;
-        border-style: solid;
-        opacity: 0.6;
-    }
-    .step_active {
-        background-color: var(--yellow-color);
-    }
-    .step_active + p,
-    .step_default + p {
-        font-weight: 600;
-        font-size: 0.6875rem;
-        line-height: 255%;
-        text-align: center;
-    }
-
-    .hr_dashed {
-        border: 2px dashed #b8c5d0;
-        width: 40px;
-        height: 0px;
-        position: absolute;
-    }
-    .hr_dashed:first-of-type {
-        top: 17px;
-        left: 53px;
-    }
-    .hr_dashed:last-of-type {
-        top: 17px;
-        left: 163px;
-    }
-    .step_default + p {
-        color: rgba(105, 111, 122, 0.95);
-        opacity: 0.8;
-    }
-    .text__step_second {
-        width: 120px;
-    }
-    .text__step_threed {
-        width: 79px;
-    }
     .shop__h2 {
         font-weight: 800;
         font-size: 1.625rem;
@@ -171,6 +98,7 @@
         justify-content: center;
         width: 74.66%;
         height: 55px;
+        font-family: Montserrat;
         font-size: 0.9375rem;
         line-height: 187%;
     }
