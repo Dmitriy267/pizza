@@ -5,9 +5,9 @@ import { ProductItem } from '../../components/ProductItem/ProductItem';
 import { useGetProductQuery } from '../../redux/services/product';
 import { SauceItem } from '../../components/SauceItem/SauceItem';
 import { ShopSteps } from '../../components/ShopSteps/ShopSteps';
+import { FormPromo } from '../../common/FormPromo/FormPromo';
+import { BlockBtnShop } from '../../components/BlockBtnShop/BlockBtnShop';
 import './ShopPage.css';
-import { useState, type FormEvent } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 export const ShopPage = () => {
     const productSelect = useAppSelector(
@@ -34,20 +34,8 @@ export const ShopPage = () => {
     );
     console.log(`totalPrice`, totalPrice);
     console.log(`totalPriceSauce`, totalPriceSauce);
-    const navigate = useNavigate();
 
     const { data: sauces, isLoading, error } = useGetProductQuery('sauces');
-    const [promoText, setPromoText] = useState<string>('');
-
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-    };
-    const summ = totalPrice + totalPriceSauce;
-    const handeClickNavOrder = () => {
-        if (summ !== 0) {
-            navigate('/Корзина/Оформление заказа');
-        }
-    };
 
     return (
         <>
@@ -75,35 +63,13 @@ export const ShopPage = () => {
                         </div>
                     ) : null}
                     <h3 className="h3__promo">Промокод</h3>
-                    <form className="form__promo" onSubmit={handleSubmit}>
-                        <input
-                            type="text"
-                            className="input__promo"
-                            placeholder="Введите промокод"
-                            value={promoText}
-                            onChange={(e) => setPromoText(e.target.value)}
-                        />
-                        <button className="button__promo" type="submit">
-                            Применить
-                        </button>
-                    </form>
+                    <FormPromo />
 
                     <p className="summa__shop">
                         Сумма заказа:{' '}
                         <span>{totalPrice + totalPriceSauce}₽</span>
                     </p>
-                    <div className="block-btn__shop">
-                        <button onClick={handeClickNavOrder}>
-                            Оформить заказ <span>&gt;</span>
-                        </button>
-
-                        <button
-                            onClick={() => console.log('click')}
-                            className="btn__left"
-                        >
-                            <span>&lt;</span> Вернуться в магазин
-                        </button>
-                    </div>
+                    <BlockBtnShop />
                 </div>
             </section>
             <Footer />

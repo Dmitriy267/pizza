@@ -1,5 +1,6 @@
 import { useState, type ChangeEvent, type FC, type FormEvent } from 'react';
 import './FormOrder.css';
+import { useNavigate } from 'react-router-dom';
 
 export interface FormOrderObj {
     lastName: string;
@@ -107,6 +108,7 @@ export const FormOrder: FC = () => {
         console.log(`flag`, flag);
         return flag;
     };
+    const navigate = useNavigate();
     const handleSubmitOrder = (e: FormEvent) => {
         e.preventDefault();
 
@@ -114,6 +116,7 @@ export const FormOrder: FC = () => {
 
         if (flag) {
             console.log(`formOrder`, formOrder);
+            navigate('/оплата');
         }
     };
 

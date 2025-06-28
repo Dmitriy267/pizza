@@ -13,6 +13,7 @@ import { ShopPage } from './pages/ShopPage/ShopPage.tsx';
 import { Avtorization } from './pages/Avtorization/Avtorization.tsx';
 import { Registration } from './pages/Registration/Registration.tsx';
 import { OrderPage } from './pages/OrderPage/OrderPage.tsx';
+import { PayPage } from './pages/PayPage/PayPage.tsx';
 const router = createBrowserRouter([
     {
         path: '/',
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
     {
         path: '/Корзина/Оформление заказа',
         element: <OrderPage />,
+    },
+    {
+        path: '/оплата',
+        element: <PayPage />,
     },
 ]);
 createRoot(document.getElementById('root')!).render(

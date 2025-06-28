@@ -1,0 +1,30 @@
+@media (max-width: 320px) {
+    .form__promo {
+        margin-top: 24px;
+        height: 43px;
+    }
+    .input__promo {
+        width: 63%;
+        border: 1.5px solid #e2e2e9;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        font-weight: 600;
+        font-size: 0.8125rem;
+        line-height: 215%;
+        color: #686466;
+        opacity: 0.82;
+        padding: 14px 22px 15px 22px;
+        height: 100%;
+    }
+    .button__promo {
+        border-radius: 0 8px 8px 0;
+        width: 37%;
+        height: 100%;
+        font-weight: 700;
+        font-size: 0.8125rem;
+        line-height: 215%;
+        color: #231f20;
+        background-color: var(--yellow-color);
+        font-family: Montserrat, sans-serif;
+    }
+}
