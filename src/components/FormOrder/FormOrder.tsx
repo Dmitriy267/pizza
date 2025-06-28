@@ -1,12 +1,6 @@
-import {
-    useState,
-    type ChangeEvent,
-    type FC,
-    type FormEvent,
-    useEffect,
-} from 'react';
+import { useState, type ChangeEvent, type FC, type FormEvent } from 'react';
 import './FormOrder.css';
-import { validateFormOrder } from './validateFormOrder';
+//import { validateFormOrder } from './validateFormOrder';
 export interface FormOrderObj {
     lastName: string;
     firstName: string;
@@ -28,8 +22,16 @@ export const FormOrder: FC = () => {
         comment: '',
         adress: '',
     });
-    const [errors, setErrors] = useState({});
-    const [sub, setSub] = useState<boolean>(false);
+
+    const [errorsLastName, setErrorsLastName] = useState<string>('');
+    const [errorsFirstName, setErrorsFirstName] = useState<string>('');
+    const [errorsPatronName, setErrorsPatronName] = useState<string>('');
+    const [errorsTel, setErrorsTel] = useState<string>('');
+    const [errorsEmail, setErrorsEmail] = useState<string>('');
+    const [errorsDeliver, setErrorsDeliver] = useState<boolean>(false);
+    const [errorsAdress, setErrorsAdress] = useState<string>('');
+
+    //const [sub, setSub] = useState<boolean>(false);
     const handleChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         setFormOrder({ ...formOrder, [name]: value });
@@ -40,21 +42,77 @@ export const FormOrder: FC = () => {
     const handleChangeTextArea = (e: ChangeEvent<HTMLTextAreaElement>) => {
         setFormOrder({ ...formOrder, comment: e.target.value });
     };
-
+    const reTel = /^\+7|8\d{10}$/i;
+    const emailRe = /^\S+@\S+\.\S+$/;
+    let flag = false;
+    const validate = () => {
+        //let flag=false;
+        if (
+            formOrder.lastName.length === 0 ||
+            formOrder.firstName.length === 0 ||
+            formOrder.patron.length === 0 ||
+            formOrder.adress.length === 0 ||
+            formOrder.tel.length === 0 ||
+            formOrder.email.length === 0 ||
+            formOrder.deliver.length === 0
+        ) {
+            setErrorsLastName('Не заполнено поле!');
+            setErrorsFirstName('Не заполнено поле!');
+            setErrorsPatronName('Не заполнено поле!');
+            setErrorsAdress('Не заполнено поле!');
+            setErrorsTel('Не заполнено поле');
+            setErrorsEmail('Не заполнено поле');
+            setErrorsDeliver((prev) => !prev);
+            return (flag = false);
+        } else if (
+            !reTel.test(formOrder.tel) ||
+            !emailRe.test(formOrder.email)
+        ) {
+            setErrorsTel('Неправильно введен номер');
+            setErrorsEmail('Неправильно введена электронная почта');
+            return (flag = false);
+        } else {
+            setErrorsLastName('');
+            setErrorsFirstName('');
+            setErrorsPatronName('');
+            setErrorsAdress('');
+            setErrorsTel('');
+            setErrorsEmail('');
+            setErrorsDeliver((prev) => prev);
+            return (flag = !flag);
+        }
+        // if (formOrder.tel.length === 0) {
+        //     setErrorsTel('Не заполнено поле');
+        //     return
+        // } else if (!reTel.test(formOrder.tel)) {
+        //     setErrorsTel('Неправильно введен номер');
+        // } else {
+        //     setErrorsTel('');
+        // }
+        // if (formOrder.email.length === 0) {
+        //     setErrorsEmail('Не заполнено поле');
+        //     setSub(false);
+        //     console.log(`sub`, sub);
+        // } else if (!emailRe.test(formOrder.email)) {
+        //     setErrorsEmail('Неправильно введена электронная почта');
+        // } else {
+        //     setErrorsEmail('');
+        // }
+        // if (formOrder.deliver.length === 0) {
+        //     setErrorsDeliver('Не заполнено поле');
+        // } else {
+        //     setErrorsDeliver('');
+        // }
+    };
     const handleSubmitOrder = (e: FormEvent) => {
         e.preventDefault();
-        setErrors(validateFormOrder(formOrder));
-        setSub(true);
-        console.log(`formOrder`, formOrder);
-    };
-    const finishSubmit = () => {
-        console.log(formOrder);
-    };
-    useEffect(() => {
-        if (Object.keys(errors).length === 0 && sub) {
-            finishSubmit();
+
+        validate();
+        if (flag) {
+            console.log(`formOrder`, formOrder);
         }
-    }, [errors]);
+    };
+
     return (
         <>
             <form
@@ -73,6 +131,9 @@ export const FormOrder: FC = () => {
                         required
                     />
                 </label>
+                {errorsLastName ? (
+                    <span className="error">{errorsLastName}</span>
+                ) : null}
 
                 <label>
                     Имя{' '}
@@ -85,6 +146,9 @@ export const FormOrder: FC = () => {
                         required
                     />
                 </label>
+                {errorsFirstName ? (
+                    <span className="error">{errorsFirstName}</span>
+                ) : null}
 
                 <label>
                     Отчество{' '}
@@ -97,6 +161,9 @@ export const FormOrder: FC = () => {
                         required
                     />
                 </label>
+                {errorsPatronName ? (
+                    <span className="error">{errorsPatronName}</span>
+                ) : null}
 
                 <label>
                     Телефон{' '}
@@ -109,6 +176,7 @@ export const FormOrder: FC = () => {
                         required
                     />{' '}
                 </label>
+                {errorsTel ? <span className="error">{errorsTel}</span> : null}
 
                 <label>
                     Email{' '}
@@ -121,6 +189,9 @@ export const FormOrder: FC = () => {
                         required
                     />
                 </label>
+                {errorsEmail ? (
+                    <span className="error">{errorsEmail}</span>
+                ) : null}
 
                 <p>Доставка</p>
                 <div className="block-deliver__order">
@@ -160,6 +231,12 @@ export const FormOrder: FC = () => {
                             />
                             Самовывоз
                         </label>
+                        {errorsDeliver ? (
+                            <span className="error">
+                                Выберите один из вариантов. Если вариант уже
+                                выбран, продолжите заполнение формы доставки
+                            </span>
+                        ) : null}
                     </div>
                 </div>
 
@@ -173,14 +250,17 @@ export const FormOrder: FC = () => {
                     onChange={handleChangeInput}
                     required
                 />
+                {errorsAdress ? (
+                    <span className="error">{errorsAdress}</span>
+                ) : null}
                 <label>
                     Коментарий к заказу
                     <textarea
                         name="comment"
                         placeholder="Ваш комментарий"
                         className="textarea_resize"
-                        rows={5}
-                        cols={26}
+                        rows={4}
+                        cols={20}
                         value={formOrder.comment}
                         onChange={handleChangeTextArea}
                     />
@@ -189,9 +269,6 @@ export const FormOrder: FC = () => {
                     Подтвердить
                 </button>
             </form>
-            {Object.keys(errors).length === 0 && sub ? (
-                <span className="success">Successfully submitted ✓</span>
-            ) : null}
         </>
     );
 };
