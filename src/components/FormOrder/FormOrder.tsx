@@ -1,6 +1,6 @@
 import { useState, type ChangeEvent, type FC, type FormEvent } from 'react';
 import './FormOrder.css';
-//import { validateFormOrder } from './validateFormOrder';
+
 export interface FormOrderObj {
     lastName: string;
     firstName: string;
@@ -11,6 +11,9 @@ export interface FormOrderObj {
     comment: string;
     adress: string;
 }
+const reTel = /^\+7|8\d{10}$/i;
+const emailRe = /^\S+@\S+\.\S+$/;
+
 export const FormOrder: FC = () => {
     const [formOrder, setFormOrder] = useState<FormOrderObj>({
         lastName: '',
@@ -28,10 +31,9 @@ export const FormOrder: FC = () => {
     const [errorsPatronName, setErrorsPatronName] = useState<string>('');
     const [errorsTel, setErrorsTel] = useState<string>('');
     const [errorsEmail, setErrorsEmail] = useState<string>('');
-    const [errorsDeliver, setErrorsDeliver] = useState<boolean>(false);
+    const [errorsDeliver, setErrorsDeliver] = useState<string>('');
     const [errorsAdress, setErrorsAdress] = useState<string>('');
 
-    //const [sub, setSub] = useState<boolean>(false);
     const handleChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         setFormOrder({ ...formOrder, [name]: value });
@@ -42,72 +44,74 @@ export const FormOrder: FC = () => {
     const handleChangeTextArea = (e: ChangeEvent<HTMLTextAreaElement>) => {
         setFormOrder({ ...formOrder, comment: e.target.value });
     };
-    const reTel = /^\+7|8\d{10}$/i;
-    const emailRe = /^\S+@\S+\.\S+$/;
     let flag = false;
     const validate = () => {
-        //let flag=false;
-        if (
-            formOrder.lastName.length === 0 ||
-            formOrder.firstName.length === 0 ||
-            formOrder.patron.length === 0 ||
-            formOrder.adress.length === 0 ||
-            formOrder.tel.length === 0 ||
-            formOrder.email.length === 0 ||
-            formOrder.deliver.length === 0
-        ) {
-            setErrorsLastName('Не заполнено поле!');
-            setErrorsFirstName('Не заполнено поле!');
-            setErrorsPatronName('Не заполнено поле!');
-            setErrorsAdress('Не заполнено поле!');
-            setErrorsTel('Не заполнено поле');
-            setErrorsEmail('Не заполнено поле');
-            setErrorsDeliver((prev) => !prev);
-            return (flag = false);
-        } else if (
-            !reTel.test(formOrder.tel) ||
-            !emailRe.test(formOrder.email)
-        ) {
-            setErrorsTel('Неправильно введен номер');
-            setErrorsEmail('Неправильно введена электронная почта');
-            return (flag = false);
-        } else {
-            setErrorsLastName('');
-            setErrorsFirstName('');
-            setErrorsPatronName('');
-            setErrorsAdress('');
-            setErrorsTel('');
-            setErrorsEmail('');
-            setErrorsDeliver((prev) => prev);
-            return (flag = !flag);
+        if (formOrder) {
+            if (formOrder.lastName.length === 0) {
+                setErrorsLastName('Не заполнено поле!');
+                flag = false;
+            } else {
+                setErrorsLastName('');
+                flag = true;
+            }
+            if (formOrder.firstName.length === 0) {
+                setErrorsFirstName('Не заполнено поле!');
+                flag = false;
+            } else {
+                setErrorsFirstName('');
+                flag = true;
+            }
+            if (formOrder.patron.length === 0) {
+                setErrorsPatronName('Не заполнено поле!');
+                flag = false;
+            } else {
+                setErrorsPatronName('');
+                flag = true;
+            }
+            if (formOrder.tel.length === 0) {
+                setErrorsTel('Не заполнено поле!');
+                flag = false;
+            } else if (!reTel.test(formOrder.tel)) {
+                setErrorsTel('Неправильно введен номер!');
+                flag = false;
+            } else {
+                setErrorsTel('');
+                flag = true;
+            }
+            if (formOrder.email.length === 0) {
+                setErrorsEmail('Не заполнено поле!');
+                flag = false;
+            } else if (!emailRe.test(formOrder.email)) {
+                setErrorsEmail('Неправильно введена электронная почта!');
+                flag = false;
+            } else {
+                setErrorsEmail(' ');
+                flag = true;
+            }
+            if (formOrder.deliver.length === 0) {
+                setErrorsDeliver('Выберите доставку');
+                flag = false;
+            } else {
+                setErrorsDeliver('');
+                flag = true;
+            }
+
+            if (formOrder.adress.length === 0) {
+                setErrorsAdress('Не заполнено поле!');
+                flag = false;
+            } else {
+                setErrorsAdress('');
+                flag = true;
+            }
         }
-        // if (formOrder.tel.length === 0) {
-        //     setErrorsTel('Не заполнено поле');
-        //     return
-        // } else if (!reTel.test(formOrder.tel)) {
-        //     setErrorsTel('Неправильно введен номер');
-        // } else {
-        //     setErrorsTel('');
-        // }
-        // if (formOrder.email.length === 0) {
-        //     setErrorsEmail('Не заполнено поле');
-        //     setSub(false);
-        //     console.log(`sub`, sub);
-        // } else if (!emailRe.test(formOrder.email)) {
-        //     setErrorsEmail('Неправильно введена электронная почта');
-        // } else {
-        //     setErrorsEmail('');
-        // }
-        // if (formOrder.deliver.length === 0) {
-        //     setErrorsDeliver('Не заполнено поле');
-        // } else {
-        //     setErrorsDeliver('');
-        // }
+        console.log(`flag`, flag);
+        return flag;
     };
     const handleSubmitOrder = (e: FormEvent) => {
         e.preventDefault();
 
         validate();
+
         if (flag) {
             console.log(`formOrder`, formOrder);
         }
@@ -232,10 +236,7 @@ export const FormOrder: FC = () => {
                             Самовывоз
                         </label>
                         {errorsDeliver ? (
-                            <span className="error">
-                                Выберите один из вариантов. Если вариант уже
-                                выбран, продолжите заполнение формы доставки
-                            </span>
+                            <span className="error">{errorsDeliver}</span>
                         ) : null}
                     </div>
                 </div>
