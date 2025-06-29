@@ -35,6 +35,7 @@
     }
     .h3__promo {
         margin-top: 33px;
+        margin-bottom: 24px;
         font-weight: 600;
         font-size: 20px;
         line-height: 85%;
@@ -56,5 +57,50 @@
         font-size: 1.625rem;
         text-align: right;
         color: var(--yellow-color);
+    }
+    .block-btn__shop {
+        margin-top: 34px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+    }
+    .block-btn__shop button:first-of-type,
+    .block-btn__shop button:last-of-type {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 74.66%;
+        height: 55px;
+        font-family: Montserrat;
+        font-size: 0.9375rem;
+        line-height: 187%;
+    }
+    .block-btn__shop button:first-of-type {
+        border-radius: 8px;
+        font-weight: 800;
+        color: #231f20;
+        background-color: var(--yellow-color);
+    }
+
+    .block-btn__shop button:first-of-type span,
+    .btn__left span {
+        font-family: Awesome;
+        font-weight: 900;
+        font-size: 15px;
+        line-height: 187%;
+    }
+    .block-btn__shop button:first-of-type span {
+        color: #231f20;
+        margin-left: 15px;
+        padding-top: 4px;
+    }
+    .btn__left span {
+        color: #696f7a;
+        margin-right: 15px;
+    }
+    .block-btn__shop button:last-of-type {
+        font-weight: 700;
+        color: #696f7a;
     }
 }

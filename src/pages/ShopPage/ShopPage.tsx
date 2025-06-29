@@ -6,10 +6,11 @@ import { useGetProductQuery } from '../../redux/services/product';
 import { SauceItem } from '../../components/SauceItem/SauceItem';
 import { ShopSteps } from '../../components/ShopSteps/ShopSteps';
 import { FormPromo } from '../../common/FormPromo/FormPromo';
-import { BlockBtnShop } from '../../components/BlockBtnShop/BlockBtnShop';
+import { useNavigate } from 'react-router-dom';
 import './ShopPage.css';
+import type { FC } from 'react';
 
-export const ShopPage = () => {
+export const ShopPage: FC = () => {
     const productSelect = useAppSelector(
         (state) => state.productSelect.product
     );
@@ -36,7 +37,14 @@ export const ShopPage = () => {
     console.log(`totalPriceSauce`, totalPriceSauce);
 
     const { data: sauces, isLoading, error } = useGetProductQuery('sauces');
+    const navigate = useNavigate();
 
+    const summ = totalPrice + totalPriceSauce;
+    const handeClickNavOrder = () => {
+        if (summ !== 0) {
+            navigate('/Корзина/Оформление заказа');
+        }
+    };
     return (
         <>
             <Header />
@@ -69,7 +77,18 @@ export const ShopPage = () => {
                         Сумма заказа:{' '}
                         <span>{totalPrice + totalPriceSauce}₽</span>
                     </p>
-                    <BlockBtnShop />
+                    <div className="block-btn__shop">
+                        <button onClick={handeClickNavOrder}>
+                            Оформить заказ <span>&gt;</span>
+                        </button>
+
+                        <button
+                            onClick={() => console.log('click')}
+                            className="btn__left"
+                        >
+                            <span>&lt;</span> Вернуться в магазин
+                        </button>
+                    </div>
                 </div>
             </section>
             <Footer />

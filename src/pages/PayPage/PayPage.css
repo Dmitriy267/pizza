@@ -1,0 +1,80 @@
+@media (max-width: 320px) {
+    .section__pay {
+        padding-top: 11px;
+    }
+    .data-user__pay {
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+    }
+    .title__pay {
+        font-weight: 800;
+        font-size: 1.625rem;
+        color: var(--yellow-color);
+    }
+    .text-user__pay_first {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 187%;
+        color: #231f20;
+        opacity: 0.7;
+    }
+    .div__pay {
+        display: flex;
+        align-items: center;
+        border: 1.5px solid #e2e2e9;
+        border-radius: 7px;
+        width: 100%;
+        padding-left: 20px;
+        font-weight: 700;
+        color: #231f20;
+        opacity: 0.82;
+    }
+    .div_first {
+        height: 48px;
+        font-size: 1.0625rem;
+        line-height: 165%;
+    }
+    .div_second {
+        height: 48px;
+        background-color: var(--bg-color-grey);
+        font-size: 0.9375rem;
+        line-height: 187%;
+    }
+    .div_three {
+        height: 129px;
+        background-color: var(--bg-color-grey);
+        font-size: 0.875rem;
+        line-height: 171%;
+    }
+    .div_fourth {
+        height: 48px;
+        background-color: var(--bg-color-grey);
+        font-size: 0.875rem;
+        line-height: 200%;
+    }
+    .text__pay_gap-first {
+        margin-top: 28px;
+        margin-bottom: 16px;
+    }
+    .text__pay_gap-second {
+        margin-top: 27px;
+        margin-bottom: 13px;
+    }
+    .text__pay_gap-three {
+        margin-top: 16px;
+        margin-bottom: 13px;
+    }
+    .text__pay_gap-fourth {
+        margin-top: 20px;
+        margin-bottom: 13px;
+    }
+    .h3__pay {
+        margin-top: 23px;
+        margin-bottom: 14px;
+        font-weight: 600;
+        font-size: 1.125rem;
+        line-height: 94%;
+        color: var(--yellow-color);
+    }
+}

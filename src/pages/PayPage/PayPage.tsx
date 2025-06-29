@@ -1,42 +1,73 @@
+import type { FC } from 'react';
 import { FormPromo } from '../../common/FormPromo/FormPromo';
 import { Footer } from '../../components/Footer/Footer';
 import { Header } from '../../components/Header/Header';
 import { ShopSteps } from '../../components/ShopSteps/ShopSteps';
+import { ViewPay } from '../../components/ViewPay/ViewPay';
+import './PayPage.css';
+import { useAppSelector } from '../../redux/hooks/hooks';
 
-export const PayPage = () => {
+export const PayPage: FC = () => {
+    const userOrder = useAppSelector((state) => state.userOrderProduct);
     return (
         <>
             <Header />
             <section className="section__pay">
                 <div className="block-payPage__container">
                     <ShopSteps step1={true} step2={true} step3={false} />
-                </div>
-                <div className="data-user__pay">
-                    <h1>Заказ на доставку</h1>
-                    <p>Имя </p>
-                    <p>Номер телефона</p>
-                    <p>Aдрес доставки</p>
-                    <h3>Промокод</h3>
-                    <FormPromo />
-                </div>
-                <div className="viev__pay">
-                    <h2>Способы оплаты</h2>
-                    <label>
-                        <input type="radio" name="cartMoney" /> Картой на сайте
-                    </label>
-                    <label>
-                        <input type="radio" name="handMoney" /> Наличными
-                    </label>
-                </div>
-                <div className="sms__actions">
-                    <label>
-                        <input type="checkbox" name="smsActions" />
-                        Сообщать о бонусах, акциях и новых продуктах
-                    </label>
-                </div>
-                <div className="menu-page__pay">
-                    <h4>Состов заказа</h4>
-                    <p>Сумма заказа </p>
+                    <div className="data-user__pay">
+                        <h1 className="title__pay">Заказ на доставку</h1>
+                        <p className="text-user__pay_first text__pay_gap-first">
+                            Имя{' '}
+                        </p>
+                        <div className="div__pay div_first">
+                            {userOrder.userOrderProduct.firstName}
+                        </div>
+                        <p className="text-user__pay_first text__pay_gap-second">
+                            Номер телефона
+                        </p>
+                        <div className="div__pay div_second">
+                            {userOrder.userOrderProduct.tel}
+                        </div>
+                        <p className="text-user__pay_first text__pay_gap-three">
+                            Aдрес доставки
+                        </p>
+                        <div className="div__pay div_three">
+                            {userOrder.userOrderProduct.adress}
+                        </div>
+                        <p className="text-user__pay_first text__pay_gap-fourth">
+                            Вид доставки
+                        </p>
+                        <div className="div__pay div_fourth">
+                            {userOrder.userOrderProduct.deliver}
+                        </div>
+                        <h3 className="h3__pay">Промокод</h3>
+                        <FormPromo />
+                    </div>
+                    <ViewPay />
+
+                    <div className="sms__actions">
+                        <label>
+                            <input type="checkbox" name="smsActions" />
+                            Сообщать о бонусах, акциях и новых продуктах
+                        </label>
+                    </div>
+                    <div className="menu-page__pay">
+                        <h4>Состов заказа</h4>
+                        <p>Сумма заказа </p>
+                    </div>
+                    <div className="block-btn__shop">
+                        <button onClick={() => {}}>
+                            Оформить заказ <span>&gt;</span>
+                        </button>
+
+                        <button
+                            onClick={() => console.log('click')}
+                            className="btn__left"
+                        >
+                            <span>&lt;</span> Вернуться в магазин
+                        </button>
+                    </div>
                 </div>
             </section>
 

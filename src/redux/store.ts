@@ -4,12 +4,14 @@ import { productApi } from './services/product';
 import productSelectReducer from './features/productSelect/productSelectSlice';
 import saucesReducer from './features/sauces/saucesSlice';
 import userReducer from './features/User/userSlice';
+import userOrderProducReducer from './features/userOrderProduct/userOrderProductSlice';
 export const store = configureStore({
     reducer: {
         [productApi.reducerPath]: productApi.reducer,
         productSelect: productSelectReducer,
         sauces: saucesReducer,
         user: userReducer,
+        userOrderProduct: userOrderProducReducer,
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware().concat(productApi.middleware),

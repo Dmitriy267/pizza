@@ -1,7 +1,8 @@
 import { useState, type ChangeEvent, type FC, type FormEvent } from 'react';
 import './FormOrder.css';
 import { useNavigate } from 'react-router-dom';
-
+import { useAppDispatch } from '../../redux/hooks/hooks';
+import { getUserOrder } from '../../redux/features/userOrderProduct/userOrderProductSlice';
 export interface FormOrderObj {
     lastName: string;
     firstName: string;
@@ -9,7 +10,7 @@ export interface FormOrderObj {
     tel: string;
     email: string;
     deliver: string;
-    comment: string;
+    comment?: string;
     adress: string;
 }
 const reTel = /^\+7|8\d{10}$/i;
@@ -109,6 +110,7 @@ export const FormOrder: FC = () => {
         return flag;
     };
     const navigate = useNavigate();
+    const dispatch = useAppDispatch();
     const handleSubmitOrder = (e: FormEvent) => {
         e.preventDefault();
 
@@ -116,6 +118,7 @@ export const FormOrder: FC = () => {
 
         if (flag) {
             console.log(`formOrder`, formOrder);
+            dispatch(getUserOrder(formOrder));
             navigate('/оплата');
         }
     };
@@ -123,6 +126,7 @@ export const FormOrder: FC = () => {
     return (
         <>
             <form
+                method="post"
                 className="form__order"
                 onSubmit={handleSubmitOrder}
                 noValidate
