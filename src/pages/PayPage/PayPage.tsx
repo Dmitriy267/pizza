@@ -4,6 +4,8 @@ import { Footer } from '../../components/Footer/Footer';
 import { Header } from '../../components/Header/Header';
 import { ShopSteps } from '../../components/ShopSteps/ShopSteps';
 import { ViewPay } from '../../components/ViewPay/ViewPay';
+import Group425 from '../../../public/images/decors/Group425.jpg';
+import { MenuPagePay } from '../../components/MenuPagePay/MenuPagePay';
 import './PayPage.css';
 import { useAppSelector } from '../../redux/hooks/hooks';
 
@@ -46,16 +48,25 @@ export const PayPage: FC = () => {
                     </div>
                     <ViewPay />
 
-                    <div className="sms__actions">
+                    <div className="div-sms__actions">
                         <label>
-                            <input type="checkbox" name="smsActions" />
-                            Сообщать о бонусах, акциях и новых продуктах
+                            <input
+                                type="checkbox"
+                                name="smsActions"
+                                className="input-decor__actions"
+                            />
+                            Сообщать о бонусах, акциях и{' '}
+                            <span>новых продуктах</span>
+                            <span>
+                                <img
+                                    src={Group425}
+                                    alt="Знак подписки на акции"
+                                />
+                            </span>
                         </label>
                     </div>
-                    <div className="menu-page__pay">
-                        <h4>Состов заказа</h4>
-                        <p>Сумма заказа </p>
-                    </div>
+                    <MenuPagePay />
+
                     <div className="block-btn__shop">
                         <button onClick={() => {}}>
                             Оформить заказ <span>&gt;</span>

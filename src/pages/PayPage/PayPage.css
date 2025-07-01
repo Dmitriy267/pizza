@@ -77,4 +77,49 @@
         line-height: 94%;
         color: var(--yellow-color);
     }
+    .div-sms__actions {
+        width: 100%;
+        display: flex;
+        margin-top: 14px;
+    }
+    .div-sms__actions label {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 164%;
+        color: #231f20;
+        opacity: 0.7;
+    }
+    .div-sms__actions span:first-of-type {
+        margin-left: 36px;
+    }
+    .div-sms__actions span:last-of-type {
+        margin-left: 9px;
+    }
+    .input-decor__actions {
+        appearance: none;
+        position: relative;
+        border: 2px solid var(--yellow-color);
+        border-radius: 3px;
+        width: 19px;
+        height: 19px;
+        transition: 100ms;
+        margin-right: 16px;
+    }
+    .input-decor__actions::after {
+        content: '';
+        position: absolute;
+        top: 4.75px;
+        left: 4.75px;
+        width: 0;
+        height: 0;
+        border-radius: 100%;
+        background-color: var(--yellow-color);
+        transition: 100ms;
+        overflow: hidden;
+    }
+    .input-decor__actions:checked::after {
+        width: 7px;
+        height: 7px;
+        transition: 100ms;
+    }
 }
