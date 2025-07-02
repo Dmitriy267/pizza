@@ -9,6 +9,7 @@ interface SauceItemProps {
     price: number;
     image: string;
     count: number;
+    description: string;
 }
 export const SauceItem: FunctionComponent<SauceItemProps> = ({
     id,
@@ -16,6 +17,7 @@ export const SauceItem: FunctionComponent<SauceItemProps> = ({
     price,
     image,
     count,
+    description,
 }) => {
     const dispatch = useAppDispatch();
 
@@ -32,6 +34,7 @@ export const SauceItem: FunctionComponent<SauceItemProps> = ({
                             price: price,
                             image: image,
                             count: count,
+                            description: description,
                         })
                     )
                 }
@@ -42,6 +45,7 @@ export const SauceItem: FunctionComponent<SauceItemProps> = ({
                         alt="Фото соуса"
                     />
                     <p>{name}</p>
+                    <p>{description}</p>
                     <span>{price} ₽</span>
                     <span className="span_hidden">{count} </span>
                 </div>

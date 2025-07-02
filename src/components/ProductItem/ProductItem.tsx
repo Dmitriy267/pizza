@@ -5,7 +5,7 @@ import {
     decrementPrice,
     deleteProduct,
     incrementPrice,
-} from '../../redux/features/productSelect/productSelectSlice';
+} from '../../redux/features/drinkSelect/drinkSelectSlice';
 
 import './ProductItem.css';
 interface ProductItemProps {

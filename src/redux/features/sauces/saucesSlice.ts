@@ -7,6 +7,7 @@ interface Sauces {
     price: number;
     image?: string;
     count: number;
+    description: string;
 }
 interface SaucesState {
     sauces: Sauces[];
@@ -28,6 +29,7 @@ export const saucesSlice = createSlice({
                 name: action.payload.name,
                 price: action.payload.price,
                 count: action.payload.count,
+                description: action.payload.description,
             });
         },
     },

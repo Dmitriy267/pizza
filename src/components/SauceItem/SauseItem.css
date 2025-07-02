@@ -32,12 +32,15 @@
     .sauce_flex > img {
         width: 56.56%;
     }
-    .sauce_flex > p {
+    .sauce_flex > p:first-of-type {
         font-weight: 600;
         font-size: 0.8125rem;
         line-height: 108%;
         text-align: center;
         color: #000;
+    }
+    .sauce_flex > p:last-of-type {
+        display: none;
     }
     .sauce_flex > span {
         font-weight: 700;

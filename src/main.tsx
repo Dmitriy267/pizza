@@ -14,6 +14,7 @@ import { Avtorization } from './pages/Avtorization/Avtorization.tsx';
 import { Registration } from './pages/Registration/Registration.tsx';
 import { OrderPage } from './pages/OrderPage/OrderPage.tsx';
 import { PayPage } from './pages/PayPage/PayPage.tsx';
+import { PayFinishPage } from './pages/PayFinishPage/PayFinishPage.tsx';
 const router = createBrowserRouter([
     {
         path: '/',
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
     {
         path: '/оплата',
         element: <PayPage />,
+    },
+    {
+        path: '/Завершение заказа',
+        element: <PayFinishPage />,
     },
 ]);
 createRoot(document.getElementById('root')!).render(

@@ -1,0 +1,19 @@
+@media (max-width: 320px) {
+    .section__pay-finish {
+        padding-top: 11px;
+    }
+    .block-info__pay-finish {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 10vh;
+    }
+    .h1__pay-finish {
+        font-weight: 600;
+        font-size: 1.625rem;
+        line-height: 65%;
+        color: var(--yellow-color);
+    }
+}

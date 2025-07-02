@@ -8,9 +8,20 @@ import Group425 from '../../../public/images/decors/Group425.jpg';
 import { MenuPagePay } from '../../components/MenuPagePay/MenuPagePay';
 import './PayPage.css';
 import { useAppSelector } from '../../redux/hooks/hooks';
+import { useNavigate } from 'react-router-dom';
 
 export const PayPage: FC = () => {
     const userOrder = useAppSelector((state) => state.userOrderProduct);
+    const navigate = useNavigate();
+    const PrevMainClick = () => {
+        navigate('/');
+    };
+    const summa = useAppSelector((state) => state.summaProducts.summa);
+    const NextOrderClick = () => {
+        if (summa !== 0) {
+            navigate('/Завершение заказа');
+        }
+    };
     return (
         <>
             <Header />
@@ -68,14 +79,11 @@ export const PayPage: FC = () => {
                     <MenuPagePay />
 
                     <div className="block-btn__shop">
-                        <button onClick={() => {}}>
+                        <button onClick={NextOrderClick}>
                             Оформить заказ <span>&gt;</span>
                         </button>
 
-                        <button
-                            onClick={() => console.log('click')}
-                            className="btn__left"
-                        >
+                        <button onClick={PrevMainClick} className="btn__left">
                             <span>&lt;</span> Вернуться в магазин
                         </button>
                     </div>

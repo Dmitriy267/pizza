@@ -3,7 +3,7 @@ import { useGetProductQuery } from '../../redux/services/product';
 import { Button } from '../../common/Button/Button';
 import './ProductDiscript.css';
 import { useAppDispatch } from '../../redux/hooks/hooks';
-import { getProduct } from '../../redux/features/productSelect/productSelectSlice';
+import { getProduct } from '../../redux/features/drinkSelect/drinkSelectSlice';
 
 export const ProductDiscript: FunctionComponent = () => {
     const { data, isLoading, error } = useGetProductQuery('drinks');

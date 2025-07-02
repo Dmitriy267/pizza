@@ -3,16 +3,20 @@ import cartMoney from '../../../public/images/decors/image36.png';
 import { BlockCartPay } from '../BlockCartPay/BlockCartPay';
 import './ViewPay.css';
 export const ViewPay: FC = () => {
-    const [hand, setHand] = useState<boolean>(false);
-    const [cart, setCart] = useState<boolean>(true);
+    const [hand, setHand] = useState<boolean>(true);
+    const [cart, setCart] = useState<boolean>(false);
     const [selectHand, setSelectHand] = useState<string>(' ');
     // const [selectCart, setSelectCart] = useState<string>(' ');
+    const handleChangeViewCart = (e: ChangeEvent<HTMLInputElement>) => {
+        setSelectHand(e.target.value);
+        setHand(false);
+        setCart(true);
+    };
     const handleChangeView = (e: ChangeEvent<HTMLInputElement>) => {
         setSelectHand(e.target.value);
-        setHand((prev) => !prev);
-        setCart((prev) => !prev);
+        setHand(true);
+        setCart(false);
     };
-
     return (
         <>
             <div className="view__pay">
@@ -24,7 +28,7 @@ export const ViewPay: FC = () => {
                         className="input__view_yellow-first "
                         value="Картой"
                         checked={selectHand === 'Картой'}
-                        onChange={handleChangeView}
+                        onChange={handleChangeViewCart}
                     />
                     <img src={cartMoney} alt="Карта оплаты" />
                     Картой на сайте
@@ -41,6 +45,7 @@ export const ViewPay: FC = () => {
                     />{' '}
                     Наличными
                 </label>
+
                 {hand ? (
                     <div className="block__nal">
                         <p>С какой суммы подготовить сдачу?</p>

@@ -1,6 +1,6 @@
 import { Footer } from '../../components/Footer/Footer';
 import { Header } from '../../components/Header/Header';
-import { useAppSelector } from '../../redux/hooks/hooks';
+import { useAppDispatch, useAppSelector } from '../../redux/hooks/hooks';
 import { ProductItem } from '../../components/ProductItem/ProductItem';
 import { useGetProductQuery } from '../../redux/services/product';
 import { SauceItem } from '../../components/SauceItem/SauceItem';
@@ -9,18 +9,18 @@ import { FormPromo } from '../../common/FormPromo/FormPromo';
 import { useNavigate } from 'react-router-dom';
 import './ShopPage.css';
 import type { FC } from 'react';
+import { getSummaProducts } from '../../redux/features/summaProducts/summaProductsSlice';
 
 export const ShopPage: FC = () => {
-    const productSelect = useAppSelector(
-        (state) => state.productSelect.product
-    );
+    const dispatch = useAppDispatch();
+    const drink = useAppSelector((state) => state.drinkSelect.product);
     const priceSouce = useAppSelector((state) => state.sauces);
-    console.log(`priceSouce`, priceSouce);
+
     const filterIdSauce = priceSouce.sauces.filter(
         (obj, index, prod) =>
             index === prod.findIndex((item) => item.id === obj.id)
     );
-    const filterId = productSelect.filter(
+    const filterId = drink.filter(
         (obj, index, prod) =>
             index === prod.findIndex((item) => item.id === obj.id)
     );
@@ -33,8 +33,6 @@ export const ShopPage: FC = () => {
         (total, val) => total + val.price * val.count,
         0
     );
-    console.log(`totalPrice`, totalPrice);
-    console.log(`totalPriceSauce`, totalPriceSauce);
 
     const { data: sauces, isLoading, error } = useGetProductQuery('sauces');
     const navigate = useNavigate();
@@ -43,6 +41,7 @@ export const ShopPage: FC = () => {
     const handeClickNavOrder = () => {
         if (summ !== 0) {
             navigate('/Корзина/Оформление заказа');
+            dispatch(getSummaProducts(summ));
         }
     };
     return (
@@ -54,7 +53,7 @@ export const ShopPage: FC = () => {
 
                     <h2 className="shop__h2">Корзина</h2>
 
-                    {productSelect &&
+                    {drink &&
                         filterId.map((p) => <ProductItem key={p.id} {...p} />)}
 
                     <h2 className="h2__shop_add">Добавить к заказу?</h2>
