@@ -3,8 +3,11 @@ import Arrow from '../../../public/images/slider/.svg';
 import './Slider.css';
 import { SliderData } from './sliderData';
 
+interface Slide {
+    image: string;
+}
 interface SliderProps {
-    slides: [];
+    slides: Slide[];
 }
 export const Slider: FunctionComponent<SliderProps> = ({ slides }) => {
     const [current, setCurrent] = useState<number>(0);
