@@ -3,13 +3,18 @@ import { Product } from '../Product/Product';
 import './MenuMain.css';
 import { useGetProductQuery } from '../../redux/services/product';
 import { useNavigate } from 'react-router-dom';
+import { useAppDispatch } from '../../redux/hooks/hooks';
+import { getPizza } from '../../redux/features/Pizza/pizzaSlice';
+import { getProduct } from '../../redux/features/drinkSelect/drinkSelectSlice';
 
 export function MenuMain() {
     const [shop, setShop] = useState<number>(0);
+    const dispatch = useAppDispatch();
+    const { data: pizza, error, isLoading } = useGetProductQuery('pizza');
     const handeClick = () => {
         setShop((prev) => prev + 1);
     };
-    const { data: pizza, error, isLoading } = useGetProductQuery('pizza');
+
     const { data: drinks } = useGetProductQuery('drinks');
     const navigate = useNavigate();
     const handeClickNavigate = () => {
@@ -33,7 +38,19 @@ export function MenuMain() {
                                 name={p.name}
                                 description={p.description}
                                 price={p.price}
-                                onClick={handeClick}
+                                onClick={() => {
+                                    dispatch(
+                                        getPizza({
+                                            id: p.id,
+                                            name: p.name,
+                                            image: p.image,
+                                            count: p.count,
+                                            description: p.description,
+                                            price: p.price,
+                                        })
+                                    );
+                                    handeClick();
+                                }}
                             />
                         ))
                     ) : null}
@@ -56,7 +73,10 @@ export function MenuMain() {
                                   name={p.name}
                                   price={p.price}
                                   key={p.id}
-                                  onClick={handeClick}
+                                  onClick={() => {
+                                      dispatch(getProduct({ ...p }));
+                                      handeClick();
+                                  }}
                                   description={p.description}
                               />
                           ))

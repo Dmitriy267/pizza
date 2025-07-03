@@ -1,4 +1,7 @@
 @media (max-width: 320px) {
+    .section__productDesc {
+        padding-top: 12px;
+    }
     .block-wrapper__productDesc {
         display: flex;
         flex-direction: column;

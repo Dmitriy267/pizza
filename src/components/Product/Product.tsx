@@ -19,7 +19,7 @@ export const Product: FunctionComponent<ProductProps> = ({
         <>
             <div className="block__descriptionProduct">
                 <div className="block__description_top">
-                    <img src={srcImage} alt="Фото пиццы" />
+                    <img src={srcImage} alt="Фото продукта" />
                     <div className="descript">
                         <p>{name}</p>
                         <p>{description}</p>

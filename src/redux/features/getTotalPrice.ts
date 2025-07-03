@@ -1,4 +1,4 @@
-import { type ProdTotalPrice } from '../features/productSelect/productSelectSlice';
+import { type ProdTotalPrice } from './drinkSelect/drinkSelectSlice';
 
 export const getTotalPrice = (items: ProdTotalPrice[]) =>
     items.reduce(

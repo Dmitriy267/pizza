@@ -1,12 +1,12 @@
 import type { FunctionComponent } from 'react';
 import { useGetProductQuery } from '../../redux/services/product';
 import { Button } from '../../common/Button/Button';
-import './ProductDiscript.css';
+import '../ProductDiscript/ProductDiscript.css';
 import { useAppDispatch } from '../../redux/hooks/hooks';
-import { getProduct } from '../../redux/features/drinkSelect/drinkSelectSlice';
+import { getPizza } from '../../redux/features/Pizza/pizzaSlice';
 
-export const ProductDiscript: FunctionComponent = () => {
-    const { data, isLoading, error } = useGetProductQuery('drinks');
+export const PizzaDiscript: FunctionComponent = () => {
+    const { data, isLoading, error } = useGetProductQuery('pizza');
 
     const dispatch = useAppDispatch();
 
@@ -22,7 +22,7 @@ export const ProductDiscript: FunctionComponent = () => {
                         <div key={p.id} className="block-wrapper__productDesc">
                             <div className="productDesc_top">
                                 <img
-                                    src={`../../public/images/drink/${p.image}`}
+                                    src={`../../public/images/paste/${p.image}`}
                                     alt="Фото продукта"
                                 />
                             </div>
@@ -36,7 +36,7 @@ export const ProductDiscript: FunctionComponent = () => {
                                     unicClass="btn__productDesc"
                                     onClick={() => {
                                         dispatch(
-                                            getProduct({
+                                            getPizza({
                                                 id: p.id,
                                                 name: p.name,
                                                 description: p.description,

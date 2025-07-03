@@ -5,9 +5,9 @@ import {
     decrementPrice,
     deleteProduct,
     incrementPrice,
-} from '../../redux/features/drinkSelect/drinkSelectSlice';
+} from '../../redux/features/Pizza/pizzaSlice';
 
-import './ProductItem.css';
+import '../ProductItem/ProductItem.css';
 interface ProductItemProps {
     id: number;
     name: string;
@@ -16,7 +16,7 @@ interface ProductItemProps {
     image: string;
     count: number;
 }
-export const ProductItem: FC<ProductItemProps> = ({
+export const PizzaItem: FC<ProductItemProps> = ({
     id,
     name,
     price,
@@ -40,7 +40,7 @@ export const ProductItem: FC<ProductItemProps> = ({
                 <div className="block__shop_common">
                     <div className="shop-prod_top">
                         <img
-                            src={`../../public/images/drink/${image}`}
+                            src={`../../public/images/paste/${image}`}
                             alt="Фото товара"
                             className="img__shop-prod_first"
                         />

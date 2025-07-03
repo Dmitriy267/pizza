@@ -22,7 +22,7 @@ export const DescriptMemuOrder: FC<DescriptMemuOrderProps> = ({
                 </div>
 
                 <p>{count} шт</p>
-                <span>{price} ₽</span>
+                <span>{price * count} ₽</span>
             </div>
         </>
     );

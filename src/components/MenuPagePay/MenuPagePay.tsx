@@ -5,6 +5,7 @@ import type { FC } from 'react';
 export const MenuPagePay: FC = () => {
     const drink = useAppSelector((state) => state.drinkSelect.product);
     const sauces = useAppSelector((state) => state.sauces.sauces);
+    const pizza = useAppSelector((state) => state.pizza.pizza);
     console.log(`drink в меню`, drink);
     console.log(`sauces в меню`, sauces);
     const summa = useAppSelector((state) => state.summaProducts);
@@ -25,6 +26,17 @@ export const MenuPagePay: FC = () => {
                     : null}
                 {sauces
                     ? sauces.map((s) => (
+                          <DescriptMemuOrder
+                              key={s.id}
+                              title={s.name}
+                              descript={s.description}
+                              price={s.price}
+                              count={s.count}
+                          />
+                      ))
+                    : null}
+                {pizza
+                    ? pizza.map((s) => (
                           <DescriptMemuOrder
                               key={s.id}
                               title={s.name}

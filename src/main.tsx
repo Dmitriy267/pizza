@@ -15,6 +15,7 @@ import { Registration } from './pages/Registration/Registration.tsx';
 import { OrderPage } from './pages/OrderPage/OrderPage.tsx';
 import { PayPage } from './pages/PayPage/PayPage.tsx';
 import { PayFinishPage } from './pages/PayFinishPage/PayFinishPage.tsx';
+import { PizzaPage } from './pages/PizzaPage/PizzaPage.tsx';
 const router = createBrowserRouter([
     {
         path: '/',
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
     {
         path: 'Напитки',
         element: <DrinksPage />,
+    },
+    {
+        path: 'Пицца',
+        element: <PizzaPage />,
     },
     {
         path: 'Корзина',

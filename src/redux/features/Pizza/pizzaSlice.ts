@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
-//import { getTotalPrice } from '../getTotalPrice';
+
 interface Product {
     id: number;
     name: string;
@@ -14,21 +14,21 @@ export type ProdTotalPrice = {
     quentity: number;
 };
 interface ProductState {
-    product: Product[];
+    pizza: Product[];
     maxLimit: number;
     minLimit: number;
 }
 const initialState: ProductState = {
-    product: [],
+    pizza: [],
     maxLimit: 10,
     minLimit: 0,
 };
-export const productSelectSlice = createSlice({
-    name: 'productSelect',
+export const pizzaSlice = createSlice({
+    name: 'pizza',
     initialState,
     reducers: {
-        getProduct: (state, action: PayloadAction<Product>) => {
-            state.product.push({
+        getPizza: (state, action: PayloadAction<Product>) => {
+            state.pizza.push({
                 id: action.payload.id,
                 image: action.payload.image,
                 name: action.payload.name,
@@ -39,13 +39,13 @@ export const productSelectSlice = createSlice({
         },
 
         deleteProduct: (state, action: PayloadAction<number>) => {
-            const findItem = state.product.findIndex(
+            const findItem = state.pizza.findIndex(
                 (item) => item.id === action.payload
             );
-            state.product.splice(findItem, 1);
+            state.pizza.splice(findItem, 1);
         },
         decrementPrice: (state, action: PayloadAction<number>) => {
-            const finndItemDecrement = state.product.find(
+            const finndItemDecrement = state.pizza.find(
                 (item) => item.id === action.payload
             );
 
@@ -57,7 +57,7 @@ export const productSelectSlice = createSlice({
             }
         },
         incrementPrice: (state, action: PayloadAction<number>) => {
-            const finndItemDecrement = state.product.find(
+            const finndItemDecrement = state.pizza.find(
                 (item) => item.id === action.payload
             );
 
@@ -71,6 +71,6 @@ export const productSelectSlice = createSlice({
     },
 });
 
-export const { getProduct, deleteProduct, decrementPrice, incrementPrice } =
-    productSelectSlice.actions;
-export default productSelectSlice.reducer;
+export const { getPizza, deleteProduct, decrementPrice, incrementPrice } =
+    pizzaSlice.actions;
+export default pizzaSlice.reducer;
