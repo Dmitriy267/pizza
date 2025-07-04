@@ -1,6 +1,6 @@
 import type { FC } from 'react';
-import { useState, type FormEvent, type ChangeEvent, useEffect } from 'react';
-import { FormPromo } from '../../common/FormPromo/FormPromo';
+//import { useState, type FormEvent, type ChangeEvent, useEffect } from 'react';
+//import { FormPromo } from '../../common/FormPromo/FormPromo';
 import { Footer } from '../../components/Footer/Footer';
 import { Header } from '../../components/Header/Header';
 import { ShopSteps } from '../../components/ShopSteps/ShopSteps';
@@ -8,16 +8,17 @@ import { ViewPay } from '../../components/ViewPay/ViewPay';
 import Group425 from '../../../public/images/decors/Group425.jpg';
 import { MenuPagePay } from '../../components/MenuPagePay/MenuPagePay';
 import './PayPage.css';
-import { useAppDispatch, useAppSelector } from '../../redux/hooks/hooks';
+import { useAppSelector } from '../../redux/hooks/hooks';
 import { useNavigate } from 'react-router-dom';
-import { getPercent } from '../../redux/features/summaProducts/summaProductsSlice';
+//import { getPercent } from '../../redux/features/summaProducts/summaProductsSlice';
+//import { useAppDispatch } from '../../redux/hooks/hooks';
 
 export const PayPage: FC = () => {
     const userOrder = useAppSelector((state) => state.userOrderProduct);
-    const [text, setText] = useState<string>('');
-    const [promo, setPromo] = useState<boolean>(false);
+    // const [text, setText] = useState<string>('');
+    // const [promo, setPromo] = useState<boolean>(false);
     const navigate = useNavigate();
-    const dispatch = useAppDispatch();
+    //const dispatch = useAppDispatch();
     const PrevMainClick = () => {
         navigate('/');
     };
@@ -27,23 +28,23 @@ export const PayPage: FC = () => {
             navigate('/Завершение заказа');
         }
     };
-    useEffect(() => {
-        if (promo) {
-            dispatch(getPercent(10));
-        }
-    }, [promo, dispatch]);
-    const handleChangePromo = (e: ChangeEvent<HTMLInputElement>) => {
-        setText(e.target.value);
-    };
-    const handleSubmitPromo = (e: FormEvent) => {
-        e.preventDefault();
-        if (text === 'firstShop') {
-            setPromo(true);
-        } else {
-            setPromo(false);
-        }
-        setText('');
-    };
+    // useEffect(() => {
+    //     if (promo) {
+    //         dispatch(getPercent(10));
+    //     }
+    // }, [promo, dispatch]);
+    // const handleChangePromo = (e: ChangeEvent<HTMLInputElement>) => {
+    //     setText(e.target.value);
+    // };
+    // const handleSubmitPromo = (e: FormEvent) => {
+    //     e.preventDefault();
+    //     if (text === 'firstShop') {
+    //         setPromo(true);
+    //     } else {
+    //         setPromo(false);
+    //     }
+    //     setText('');
+    // };
     return (
         <>
             <Header />
@@ -76,8 +77,8 @@ export const PayPage: FC = () => {
                         <div className="div__pay div_fourth">
                             {userOrder.userOrderProduct.deliver}
                         </div>
-                        <h3 className="h3__pay">Промокод</h3>
-                        {promo ? (
+                        {/* <h3 className="h3__pay">Промокод</h3> */}
+                        {/* {promo ? (
                             <p className="text__promo_active">
                                 Промокод активирован, скидка 10%
                             </p>
@@ -86,7 +87,7 @@ export const PayPage: FC = () => {
                             value={text}
                             onSubmit={handleSubmitPromo}
                             onChange={handleChangePromo}
-                        />
+                        /> */}
                     </div>
                     <ViewPay />
 
