@@ -41,7 +41,10 @@
         line-height: 85%;
         color: #ff2e65;
     }
-
+    .text__promo_active {
+        margin-bottom: 8px;
+        font-size: 0.875rem;
+    }
     .summa__shop {
         margin-top: 30px;
         font-weight: 600;
@@ -102,5 +105,8 @@
     .block-btn__shop button:last-of-type {
         font-weight: 700;
         color: #696f7a;
+    }
+    .text-percent {
+        margin-top: 8px;
     }
 }

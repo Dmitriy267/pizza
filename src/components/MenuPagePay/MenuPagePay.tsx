@@ -9,6 +9,8 @@ export const MenuPagePay: FC = () => {
     console.log(`drink в меню`, drink);
     console.log(`sauces в меню`, sauces);
     const summa = useAppSelector((state) => state.summaProducts);
+    const percent = useAppSelector((state) => state.summaProducts.percent);
+    console.log(`percent`, percent);
     return (
         <>
             <div className="menu-page__pay">
@@ -46,13 +48,21 @@ export const MenuPagePay: FC = () => {
                           />
                       ))
                     : null}
-
-                <p className="text-summa__pay">
-                    Сумма заказа{' '}
-                    <span className="span-summa__pay_black">
-                        {summa.summa} ₽
-                    </span>
-                </p>
+                {percent === 0 ? (
+                    <p className="text-summa__pay">
+                        Сумма заказа{' '}
+                        <span className="span-summa__pay_black">
+                            {summa.summa} ₽
+                        </span>
+                    </p>
+                ) : (
+                    <p className="text-summa__pay">
+                        Сумма заказа co скидкой {percent}%{' '}
+                        <span className="span-summa__pay_black">
+                            {summa.summa} ₽
+                        </span>
+                    </p>
+                )}
             </div>
         </>
     );

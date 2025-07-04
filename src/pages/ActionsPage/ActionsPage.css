@@ -7,12 +7,4 @@
         font-size: 1.625rem;
         color: var(--yellow-color);
     }
-    .block__actions {
-        margin-top: 22px;
-        position: relative;
-    }
-    .block-info__actions_position {
-        position: absolute;
-        top: 101px;
-    }
 }
