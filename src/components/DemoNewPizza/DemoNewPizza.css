@@ -1,19 +1,19 @@
-@media (max-width: 320px) {
+@media screen and (max-width: 768px) {
     .block__demoPizza {
         background-color: var(--white-color);
         border-radius: 12px;
         box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.06);
         display: flex;
         align-items: center;
-        margin-right: 12px;
-        padding-top: 12px;
-        padding-bottom: 16px;
+        margin-right: 29px;
+        padding-top: 11px;
+        padding-bottom: 14px;
     }
     .block-info__newPizza {
         display: flex;
         flex-direction: column;
-        margin-left: 16px;
-        margin-right: 35px;
+        margin-left: 14px;
+        margin-right: 32px;
     }
     .img__pizzaDemo {
         width: 56px;
@@ -27,6 +27,21 @@
         font-weight: 800;
         font-size: 0.8125rem;
         color: var(--yellow-color);
+        margin-top: 9px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .block__demoPizza {
+        margin-right: 12px;
+        padding-top: 12px;
+        padding-bottom: 16px;
+    }
+    .block-info__newPizza {
+        margin-left: 16px;
+        margin-right: 35px;
+    }
+
+    .block-info__newPizza p:last-child {
         margin-top: 6px;
     }
 }

@@ -1,4 +1,9 @@
-@media (max-width: 320px) {
+@media screen and (max-width: 768px) {
+    .actions__section {
+        padding-top: 41px;
+    }
+}
+@media screen and (max-width: 320px) {
     .actions__section {
         padding-top: 41px;
     }

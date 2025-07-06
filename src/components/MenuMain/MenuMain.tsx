@@ -25,39 +25,38 @@ export function MenuMain() {
         <menu className="section__menu_main">
             <div className="menu__container">
                 <h1 className="h1">Пицца</h1>
+                {error && <h2>Ошибка в получении данных</h2>}
+                {isLoading && <p>Loading...</p>}
+
                 <div className="menu_table">
-                    {error ? (
-                        <h2>Ошибка в получении данных</h2>
-                    ) : isLoading ? (
-                        <p>Loading...</p>
-                    ) : pizza ? (
-                        pizza.map((p) => (
-                            <Product
-                                key={p.id}
-                                srcImage={`/public/images/paste/${p.image}`}
-                                name={p.name}
-                                description={p.description}
-                                price={p.price}
-                                onClick={() => {
-                                    dispatch(
-                                        getPizza({
-                                            id: p.id,
-                                            name: p.name,
-                                            image: p.image,
-                                            count: p.count,
-                                            description: p.description,
-                                            price: p.price,
-                                        })
-                                    );
-                                    handeClick();
-                                }}
-                            />
-                        ))
-                    ) : null}
+                    {pizza
+                        ? pizza.map((p) => (
+                              <Product
+                                  key={p.id}
+                                  srcImage={`/public/images/paste/${p.image}`}
+                                  name={p.name}
+                                  description={p.description}
+                                  price={p.price}
+                                  onClick={() => {
+                                      dispatch(
+                                          getPizza({
+                                              id: p.id,
+                                              name: p.name,
+                                              image: p.image,
+                                              count: p.count,
+                                              description: p.description,
+                                              price: p.price,
+                                          })
+                                      );
+                                      handeClick();
+                                  }}
+                              />
+                          ))
+                        : null}
 
                     {shop === 0 ? null : (
                         <button
-                            className="btn__shop_fixed"
+                            className="btn__shop btn_fixed"
                             onClick={handeClickNavigate}
                         >
                             Корзина | {shop}
@@ -65,23 +64,26 @@ export function MenuMain() {
                     )}
                 </div>
                 <h2 className="title__h2">Напитки</h2>
-                {drinks
-                    ? drinks
-                          .map((p) => (
-                              <Product
-                                  srcImage={`/public/images/drink/${p.image}`}
-                                  name={p.name}
-                                  price={p.price}
-                                  key={p.id}
-                                  onClick={() => {
-                                      dispatch(getProduct({ ...p }));
-                                      handeClick();
-                                  }}
-                                  description={p.description}
-                              />
-                          ))
-                          .slice(0, 2)
-                    : null}
+
+                <div className="menu_table_drinks">
+                    {drinks
+                        ? drinks
+                              .map((p) => (
+                                  <Product
+                                      srcImage={`/public/images/drink/${p.image}`}
+                                      name={p.name}
+                                      price={p.price}
+                                      key={p.id}
+                                      onClick={() => {
+                                          dispatch(getProduct({ ...p }));
+                                          handeClick();
+                                      }}
+                                      description={p.description}
+                                  />
+                              ))
+                              .slice(0, 2)
+                        : null}
+                </div>
             </div>
         </menu>
     );

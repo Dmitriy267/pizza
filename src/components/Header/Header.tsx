@@ -29,32 +29,17 @@ export function Header() {
             <header className="header">
                 <div className="header__container">
                     <a href="#">
-                        <img src={logo} alt="Логотип сайта" />
+                        <img
+                            src={logo}
+                            alt="Логотип сайта"
+                            className="img-logo"
+                        />
                     </a>
-                    <HamburgerMenu
-                        isActive={isActive}
-                        onClick={handeClickToggle}
-                    />
-                    {isActive ? (
-                        <div className="header__menu">
-                            <nav className="menu__body">
-                                <ul className="menu__list">{menuList}</ul>
-                                <a
-                                    href="tel:+74993918449"
-                                    className="menu__tel"
-                                >
-                                    8 499 391-84-49
-                                </a>
-                                <button
-                                    className="btn__menu"
-                                    onClick={() => navigate('Корзина')}
-                                >
-                                    Корзина
-                                </button>
-                            </nav>
-                        </div>
-                    ) : null}
-                    <div className="header_top">
+                    <a href="tel:84993918449" className="link-tel_yellow">
+                        8 499 391-84-49
+                    </a>
+                    <button className="btn-shop__header">Корзина|1</button>
+                    {/* <div className="header_top">
                         <div className="adress__paste">
                             <p>
                                 Доставка еды <span>Москва</span>
@@ -66,8 +51,32 @@ export function Header() {
                                 <p>от 31 мин</p>
                             </div>
                         </div>
-                    </div>
-                    <div className="header_bottom">
+                    </div> */}
+                    <HamburgerMenu
+                        isActive={isActive}
+                        onClick={handeClickToggle}
+                    />
+                    {isActive ? (
+                        <div className="header__menu header_border">
+                            <nav className="menu__body">
+                                <ul className="menu__list">{menuList}</ul>
+                                <a
+                                    href="tel:84993918449"
+                                    className="menu__tel link-menu__tel_display"
+                                >
+                                    8 499 391-84-49
+                                </a>
+                                <button
+                                    className="btn__menu btn__menu_display"
+                                    onClick={() => navigate('Корзина')}
+                                >
+                                    Корзина
+                                </button>
+                            </nav>
+                        </div>
+                    ) : null}
+
+                    {/* <div className="header_bottom">
                         <div className="header__menu">
                             <nav className="menu__body">
                                 <ul className="menu__list">{menuList}</ul>
@@ -80,7 +89,7 @@ export function Header() {
                                 </button>
                             </nav>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </header>
         </>

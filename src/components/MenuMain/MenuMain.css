@@ -1,12 +1,57 @@
-@media (max-width: 320px) {
+@media screen and (max-width: 768px) {
+    .section__menu_main {
+        padding-top: 44px;
+        width: 100%;
+    }
+
+    .h1,
+    .title__h2 {
+        font-weight: 800;
+        font-size: 1.5rem;
+        margin-bottom: 26px;
+        color: var(--yellow-color);
+    }
+    .title__h2 {
+        margin-top: 31px;
+    }
+    .menu_table {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        row-gap: 30px;
+        column-gap: 32px;
+        width: 729px;
+    }
+    .btn__shop {
+        border-radius: 8px;
+        width: 126px;
+        height: 36px;
+        background-color: var(--yellow-color);
+        font-family: Montserrat, sans-serif;
+        font-weight: 700;
+        font-size: 0.875rem;
+        line-height: 200%;
+        color: #473e43;
+    }
+    .btn_fixed {
+        position: fixed;
+        z-index: 99;
+        top: 446px;
+        right: 10px;
+    }
+    .menu_table_drinks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 30px;
+        width: 729px;
+    }
+}
+@media screen and (max-width: 320px) {
     .section__menu_main {
         padding-top: 21px;
-        width: 100%;
     }
     .h1,
     .title__h2 {
-        color: var(--yellow-color);
-        font-weight: 800;
         font-size: 1.3125rem;
         margin-bottom: 18px;
     }
@@ -14,24 +59,26 @@
         margin-top: 21px;
     }
     .menu_table {
-        display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(10, 1fr);
         row-gap: 10px;
+        column-gap: 0px;
+        width: 300px;
     }
-    .btn__shop_fixed {
-        border-radius: 8px;
+    .btn__shop {
         width: 107px;
         height: 42px;
-        background-color: var(--yellow-color);
-        font-weight: 700;
-        font-size: 12px;
+        font-size: 0.75rem;
         line-height: 233%;
-        color: #231f20;
-        font-family: Montserrat;
-        position: fixed;
-        z-index: 99;
+    }
+    .btn_fixed {
         top: 446px;
-        left: 192px;
+        left: 165px;
+    }
+    .menu_table_drinks {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 10px;
+        width: 300px;
     }
 }
