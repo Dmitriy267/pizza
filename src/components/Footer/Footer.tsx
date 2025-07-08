@@ -13,12 +13,16 @@ import './Footer.css';
 export const Footer: FunctionComponent = () => {
     return (
         <>
-            <footer className="footer ">
+            {/* <footer className="footer ">
                 <div className="footer__container">
                     <div className="block__footer_flex">
                         <div className="footer_up">
                             <a href="#">
-                                <img src={logo} alt="Логотип сайта" />
+                                <img
+                                    src={logo}
+                                    alt="Логотип сайта"
+                                    className="logo__footer"
+                                />
                             </a>
                             <div className="call">
                                 <a href="tel:+74993918449">8 499 391-84-49</a>
@@ -105,6 +109,125 @@ export const Footer: FunctionComponent = () => {
                                 {' '}
                                 Написать нам
                             </button>
+                        </div>
+                    </div>
+                    <div className="block__footer_bottom">
+                        <p className="last__text">
+                            {' '}
+                            YaBao Все права защищены © 2021
+                        </p>
+                        <div className="block__footer_bottom-right">
+                            <img src={cardIcon1} alt="Иконка карты" />
+                            <img src={cardIcon2} alt="Иконка карты" />
+                            <img src={cardIcon3} alt="Иконка карты" />
+                        </div>
+                    </div>
+                </div>
+            </footer> */}
+
+            <footer className="footer ">
+                <div className="footer__container">
+                    <div className="block__footer_flex">
+                        <div className="block-logo__footer">
+                            <a href="#" className="link-logo__footer">
+                                <img
+                                    src={logo}
+                                    alt="Логотип сайта"
+                                    className="logo-img__footer"
+                                />
+                            </a>
+                            <div className="call">
+                                <a href="tel:+74993918449">8 499 391-84-49</a>
+                                <button className="btn__call">
+                                    Заказать звонок
+                                </button>
+                            </div>
+                        </div>
+
+                        <div className="footer__info">
+                            <p>Калорийность и состав</p>
+                            <p>Правовая информация</p>
+                        </div>
+                        <div className="social">
+                            <p className="title__social">Мы в соцсетях</p>
+                            <div className="block__list">
+                                <ul className="list__social_left">
+                                    <li>
+                                        <a href="#">YouTube</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Instagram</a>
+                                    </li>
+                                </ul>
+                                <ul className="list__social_middle">
+                                    <li>
+                                        <a href="#">Facebook</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">ВКонтакте</a>
+                                    </li>
+                                </ul>
+                                <p>Москва ул. Проспект Вернадского 86В</p>
+                            </div>
+                        </div>
+                        <div className="message">
+                            <p>Остались вопросы? А мы всегда на связи:</p>
+
+                            <ul className="icons">
+                                <li>
+                                    <div className="decor__border">
+                                        <a href="#">
+                                            <img src={icon1} alt="Соц.иконка" />
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="decor__border">
+                                        <a href="#">
+                                            <img src={icon2} alt="Соц.иконка" />
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="decor__border">
+                                        <a href="#">
+                                            <img src={icon3} alt="Соц.иконка" />
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="decor__border">
+                                        <a href="#">
+                                            <img src={icon4} alt="Соц.иконка" />
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="decor__border">
+                                        <a href="#">
+                                            <img src={icon5} alt="Соц.иконка" />
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="decor__border">
+                                        <a href="#">
+                                            <img src={icon6} alt="Соц.иконка" />
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <button className="btn__email">
+                                        {' '}
+                                        Написать нам
+                                    </button>
+                                </li>
+                            </ul>
+
+                            {/* <button className="btn__email">
+                                {' '}
+                                Написать нам
+                            </button> */}
                         </div>
                     </div>
                     <div className="block__footer_bottom">
