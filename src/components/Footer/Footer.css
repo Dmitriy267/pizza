@@ -184,8 +184,9 @@
     }
 
     .block-logo__footer {
-        height: 50px;
-        width: 72px;
+        height: 57px;
+        width: 100%;
+        justify-content: space-between;
     }
     .link-logo__footer {
         width: 72px;
@@ -208,14 +209,12 @@
     .call a {
         font-size: 1.3125rem;
         margin-bottom: 10px;
-        margin-left: 38px;
         width: 174px;
     }
 
     .btn__call {
         width: 75.72%;
         height: 64%;
-        margin-left: 40px;
         font-size: 0.625rem;
         line-height: 280%;
     }
