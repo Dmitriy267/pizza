@@ -16,6 +16,10 @@ export function Header() {
         setIsActive((prev) => !prev);
     };
     const navigate = useNavigate();
+
+    const handeClickNavigate = () => {
+        navigate('/Корзина');
+    };
     const menuList = menu.map((m) => (
         <li key={m.id} className="menu__item">
             {' '}
@@ -38,7 +42,12 @@ export function Header() {
                     <a href="tel:84993918449" className="link-tel_yellow">
                         8 499 391-84-49
                     </a>
-                    <button className="btn-shop__header">Корзина|1</button>
+                    <button
+                        className="btn-shop__header"
+                        onClick={handeClickNavigate}
+                    >
+                        Корзина
+                    </button>
                     {/* <div className="header_top">
                         <div className="adress__paste">
                             <p>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type FC } from 'react';
 import { Product } from '../Product/Product';
 import './MenuMain.css';
 import { useGetProductQuery } from '../../redux/services/product';
@@ -7,7 +7,7 @@ import { useAppDispatch } from '../../redux/hooks/hooks';
 import { getPizza } from '../../redux/features/Pizza/pizzaSlice';
 import { getProduct } from '../../redux/features/drinkSelect/drinkSelectSlice';
 
-export function MenuMain() {
+export const MenuMain: FC = () => {
     const [shop, setShop] = useState<number>(0);
     const dispatch = useAppDispatch();
     const { data: pizza, error, isLoading } = useGetProductQuery('pizza');
@@ -87,4 +87,4 @@ export function MenuMain() {
             </div>
         </menu>
     );
-}
+};

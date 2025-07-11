@@ -3,7 +3,8 @@ import { Header } from '../../components/Header/Header';
 import { MapAdd } from '../../components/MapAdd/MapAdd';
 import './Contacts.css';
 import Icons34 from '../../../public/images/cake/image 34.svg';
-export function Contacts() {
+import type { FC } from 'react';
+export const Contacts: FC = () => {
     return (
         <>
             <Header />
@@ -27,4 +28,4 @@ export function Contacts() {
             <Footer />
         </>
     );
-}
+};

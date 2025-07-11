@@ -22,6 +22,7 @@
         column-gap: 32px;
         width: 729px;
     }
+
     .btn__shop {
         border-radius: 8px;
         width: 126px;
@@ -35,10 +36,11 @@
     }
     .btn_fixed {
         position: fixed;
-        z-index: 99;
-        top: 446px;
-        right: 10px;
+        top: 50%;
+        right: 5%;
+        z-index: 4;
     }
+
     .menu_table_drinks {
         display: grid;
         grid-template-columns: 1fr 1fr;

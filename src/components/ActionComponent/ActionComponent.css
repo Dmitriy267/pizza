@@ -1,28 +1,29 @@
-@media (max-width: 320px) {
+@media screen and (max-width: 768px) {
     .block__actions-component {
-        margin-top: 22px;
+        margin-top: 30px;
         width: 100%;
-        height: 407px;
         border-radius: 14px;
         box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.06);
         background: #fff;
+        padding-bottom: 20px;
     }
     .block__actions-component img {
-        width: 100%;
-        height: 33.9%;
+        width: 50%;
+        height: 46.9%;
         object-fit: contain;
+        margin-left: 25%;
     }
     .h3__actions-component {
         font-weight: 700;
-        font-size: 1rem;
+        font-size: 1.625rem;
         line-height: 175%;
         color: #0e0c0d;
         margin-top: 16px;
         margin-left: 19px;
     }
     .text-description__actions-component {
-        font-weight: 500;
-        font-size: 0.75rem;
+        font-weight: 600;
+        font-size: 0.825rem;
         line-height: 167%;
         color: #797979;
         margin-top: 18px;
@@ -31,7 +32,7 @@
     }
     .text-info__actions-component {
         font-weight: 500;
-        font-size: 0.75rem;
+        font-size: 0.825rem;
         line-height: 167%;
         color: #797979;
         margin-bottom: 8px;
@@ -44,15 +45,44 @@
     }
     .btn__actions-component {
         border-radius: 8px;
-        width: 53%;
+        width: 50%;
         height: 45px;
         background-color: var(--yellow-color);
-        margin-left: 19px;
+        margin-left: 25%;
         font-family: Montserrat, sans-serif;
         font-weight: 700;
         font-size: 0.875rem;
         line-height: 200%;
         color: #473e43;
         margin-top: 8px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .block__actions-component {
+        margin-top: 22px;
+        height: 407px;
+        padding-bottom: 0px;
+    }
+    .block__actions-component img {
+        width: 100%;
+        height: 33.9%;
+        margin-left: 0;
+    }
+    .h3__actions-component {
+        font-size: 1rem;
+    }
+    .text-description__actions-component {
+        font-size: 0.75rem;
+        margin-top: 18px;
+        margin-bottom: 8px;
+        margin-left: 19px;
+    }
+    .text-info__actions-component {
+        font-size: 0.75rem;
+    }
+
+    .btn__actions-component {
+        width: 53%;
+        margin-left: 19px;
     }
 }

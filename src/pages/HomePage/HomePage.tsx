@@ -7,6 +7,7 @@ import { Actions } from '../../components/Actions/Actions';
 import { PayAdd } from '../../components/PayAdd/PayAdd';
 import { MapAdd } from '../../components/MapAdd/MapAdd';
 import { Footer } from '../../components/Footer/Footer';
+
 export function HomePage() {
     return (
         <>
