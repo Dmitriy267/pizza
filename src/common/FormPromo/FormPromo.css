@@ -1,9 +1,9 @@
-@media (max-width: 320px) {
+@media screen and (max-width: 768px) {
     .form__promo {
         height: 43px;
     }
     .input__promo {
-        width: 63%;
+        width: 32.5%; /**/
         border: 1.5px solid #e2e2e9;
         border-top-left-radius: 8px;
         border-bottom-left-radius: 8px;
@@ -12,18 +12,27 @@
         line-height: 215%;
         color: #686466;
         opacity: 0.82;
-        padding: 14px 22px 15px 22px;
+        padding: 14px 22px 15px 25px; /**/
         height: 100%;
     }
     .button__promo {
         border-radius: 0 8px 8px 0;
-        width: 37%;
+        width: 19.7%; /**/
         height: 100%;
         font-weight: 700;
         font-size: 0.8125rem;
         line-height: 215%;
         color: #231f20;
         background-color: var(--yellow-color);
-        font-family: Montserrat, sans-serif;
+        font-family: var(--font-family);
+    }
+}
+@media screen and (max-width: 320px) {
+    .input__promo {
+        width: 63%;
+        padding: 14px 22px 15px 22px;
+    }
+    .button__promo {
+        width: 37%;
     }
 }

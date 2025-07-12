@@ -1,4 +1,4 @@
-@media (max-width: 320px) {
+@media screen and (max-width: 768px) {
     .shop__steps {
         display: flex;
         justify-content: space-between;
@@ -6,7 +6,7 @@
         border-bottom-width: 2px;
         border-bottom-color: #ececf1;
         border-bottom-style: solid;
-        padding-bottom: 11px;
+        padding-bottom: 19px;
     }
     .shop__step {
         display: flex;
@@ -16,7 +16,7 @@
 
     .step_active,
     .step_default {
-        font-weight: 700;
+        font-weight: 800;
         font-size: 0.9375rem;
         line-height: 187%;
         display: flex;
@@ -44,15 +44,66 @@
     .step_active + p,
     .step_default + p {
         font-weight: 600;
-        font-size: 0.6875rem;
-        line-height: 255%;
+        font-size: 0.875rem;
+        line-height: 200%;
         text-align: center;
     }
     .hr_dashed {
         border: 2px dashed #b8c5d0;
-        width: 40px;
+        width: 14.82%;
         height: 0px;
         position: absolute;
+    }
+    .hr_dashed:first-of-type {
+        top: 17px;
+        left: 101px;
+    }
+    .hr_dashed:last-of-type {
+        top: 17px;
+        left: 433px;
+    }
+    .step_default + p {
+        color: rgba(105, 111, 122, 0.95);
+        opacity: 0.8;
+    }
+    .text__step_second {
+        width: 141px;
+    }
+    .text__step_threed {
+        width: 95px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .shop__steps {
+        padding-bottom: 11px;
+    }
+
+    .step_active,
+    .step_default {
+        font-weight: 700;
+    }
+    .step_active {
+        color: #231f20;
+    }
+    .step_default {
+        color: var(--yellow-color);
+    }
+    .step_default {
+        border-color: var(--yellow-color);
+        border-width: 2px;
+        border-style: solid;
+        opacity: 0.6;
+    }
+    .step_active {
+        background-color: var(--yellow-color);
+    }
+    .step_active + p,
+    .step_default + p {
+        font-size: 0.6875rem;
+        line-height: 255%;
+    }
+    .hr_dashed {
+        width: 40px;
     }
     .hr_dashed:first-of-type {
         top: 17px;

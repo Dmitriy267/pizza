@@ -1,11 +1,11 @@
-@media (max-width: 320px) {
+@media screen and (max-width: 768px) {
     .shop__wrapper {
-        padding-top: 12px;
+        padding-top: 45px; /**/
     }
 
     .shop__h2 {
         font-weight: 800;
-        font-size: 1.625rem;
+        font-size: 1.9375rem;
         color: var(--yellow-color);
         margin-top: 30px;
         margin-bottom: 20px;
@@ -15,15 +15,15 @@
         display: flex;
         width: 100%;
         flex-wrap: wrap;
-        gap: 6px;
+        gap: 20px; /**/
     }
     .h2__shop_add {
-        margin-top: 22px;
+        margin-top: 25px;
     }
     .h2__shop_add,
     .h3__shop {
         font-weight: 700;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         line-height: 85%;
         color: var(--yellow-color);
     }
@@ -37,7 +37,7 @@
         margin-top: 33px;
         margin-bottom: 24px;
         font-weight: 600;
-        font-size: 20px;
+        font-size: 1.375rem;
         line-height: 85%;
         color: #ff2e65;
     }
@@ -48,7 +48,7 @@
     .summa__shop {
         margin-top: 30px;
         font-weight: 600;
-        font-size: 1.3125rem;
+        font-size: 1.5rem;
         line-height: 81%;
         color: var(--black-color);
         width: 100%;
@@ -68,15 +68,16 @@
         align-items: center;
         gap: 14px;
     }
+
     .block-btn__shop button:first-of-type,
     .block-btn__shop button:last-of-type {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 74.66%;
+        width: 32.66%; /**/
         height: 55px;
-        font-family: Montserrat;
-        font-size: 0.9375rem;
+        font-family: var(--font-family);
+        font-size: 0.9375rem; /**/
         line-height: 187%;
     }
     .block-btn__shop button:first-of-type {
@@ -108,5 +109,35 @@
     }
     .text-percent {
         margin-top: 8px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .shop__wrapper {
+        padding-top: 12px;
+    }
+
+    .shop__h2 {
+        font-size: 1.625rem;
+    }
+    .block__sauce_table {
+        gap: 6px;
+    }
+
+    .h2__shop_add {
+        margin-top: 22px;
+    }
+    .h2__shop_add,
+    .h3__shop {
+        font-size: 1.25rem;
+    }
+
+    .summa__shop {
+        font-size: 1.3125rem;
+    }
+
+    .block-btn__shop button:first-of-type,
+    .block-btn__shop button:last-of-type {
+        font-size: 0.9375rem;
+        width: 74.66%;
     }
 }
