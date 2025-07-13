@@ -13,7 +13,9 @@ export const MailAccaunt = () => {
     return (
         <>
             {value ? (
-                <h1>Добро пожаловать, {user.user.login}!</h1>
+                <h1 className="h1__mail-accaunt">
+                    Добро пожаловать, {user.user.login}!
+                </h1>
             ) : (
                 <div className="mail-accaunt">
                     <h2 className="h2__mail-accaunt">

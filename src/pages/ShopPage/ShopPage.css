@@ -1,6 +1,6 @@
 @media screen and (max-width: 768px) {
     .shop__wrapper {
-        padding-top: 45px; /**/
+        padding-top: 45px;
     }
 
     .shop__h2 {
@@ -15,7 +15,7 @@
         display: flex;
         width: 100%;
         flex-wrap: wrap;
-        gap: 20px; /**/
+        gap: 20px;
     }
     .h2__shop_add {
         margin-top: 25px;
@@ -74,10 +74,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 32.66%; /**/
+        width: 32.66%;
         height: 55px;
         font-family: var(--font-family);
-        font-size: 0.9375rem; /**/
+        font-size: 0.9375rem;
         line-height: 187%;
     }
     .block-btn__shop button:first-of-type {

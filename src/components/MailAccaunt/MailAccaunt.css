@@ -1,29 +1,53 @@
-@media (max-width: 320px) {
+@media screen and (max-width: 768px) {
     .mail-accaunt {
         display: flex;
         flex-direction: column;
         gap: 20px;
         align-items: center;
-        width: 100%;
+        width: 70%;
         border-radius: 10px;
         padding: 50px 45px 50px 45px;
         box-shadow: 0 20px 40px 0 rgba(39, 95, 158, 0.2);
         background: #fffefe;
+        margin-left: 15%;
     }
     .h2__mail-accaunt {
         font-weight: 700;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         text-align: center;
     }
     .mail-accaunt > p {
         font-weight: 400;
-        font-size: 0.875rem;
+        font-size: 0.925rem;
         text-align: center;
     }
     .btn__mail-accaunt {
         border-radius: 33px;
-        width: 117px;
+        width: 35.95%;
         height: 48px;
         background-color: var(--yellow-color);
+    }
+    .h1__mail-accaunt {
+        text-align: center;
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 320px) {
+    .mail-accaunt {
+        width: 100%;
+
+        margin-left: 0;
+    }
+    .h2__mail-accaunt {
+        font-size: 1.25rem;
+    }
+    .mail-accaunt > p {
+        font-size: 0.875rem;
+    }
+    .btn__mail-accaunt {
+        width: 117px;
+    }
+    .h1__mail-accaunt {
+        font-size: 1rem;
     }
 }

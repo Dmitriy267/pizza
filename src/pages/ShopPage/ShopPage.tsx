@@ -91,7 +91,9 @@ export const ShopPage: FC = () => {
         }
         setText('');
     };
-
+    const backClickPage = () => {
+        navigate('/');
+    };
     return (
         <>
             <Header />
@@ -161,10 +163,7 @@ export const ShopPage: FC = () => {
                             Оформить заказ <span>&gt;</span>
                         </button>
 
-                        <button
-                            onClick={() => console.log('click')}
-                            className="btn__left"
-                        >
+                        <button onClick={backClickPage} className="btn__left">
                             <span>&lt;</span> Вернуться в магазин
                         </button>
                     </div>

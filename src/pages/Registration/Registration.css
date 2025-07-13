@@ -1,15 +1,15 @@
-@media (max-width: 320px) {
+@media screen and (max-width: 768px) {
     .registration__section {
-        padding-top: 20px;
+        padding-top: 45px;
     }
     .btn__registration {
         margin-top: 15px;
         margin-bottom: 30px;
         border-radius: 8px;
-        width: 56.78%;
+        width: 25.78%;
         height: 45px;
         background-color: var(--yellow-color);
-        font-family: Montserrat;
+        font-family: var(--font-family);
         font-weight: 700;
         font-size: 0.875rem;
         line-height: 200%;
@@ -95,5 +95,13 @@
     }
     .link_prev {
         color: #664ef9;
+    }
+}
+@media screen and (max-width: 320px) {
+    .registration__section {
+        padding-top: 20px;
+    }
+    .btn__registration {
+        width: 56.78%;
     }
 }
