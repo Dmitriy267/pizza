@@ -1,4 +1,4 @@
-@media (max-width: 320px) {
+@media screen and (max-width: 768px) {
     .section__pay-finish {
         padding-top: 11px;
     }
@@ -12,8 +12,13 @@
     }
     .h1__pay-finish {
         font-weight: 600;
-        font-size: 1.625rem;
+        font-size: 1.875rem; /**/
         line-height: 65%;
         color: var(--yellow-color);
+    }
+}
+@media screen and (max-width: 320px) {
+    .h1__pay-finish {
+        font-size: 1.625rem;
     }
 }

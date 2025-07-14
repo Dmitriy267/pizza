@@ -1,10 +1,10 @@
-@media (max-width: 320px) {
+@media screen and (max-width: 768px) {
     .view__pay {
         margin-top: 30px;
         display: flex;
         flex-direction: column;
         border-radius: 6px;
-        width: 100%;
+        width: 80%; /**/
         height: auto;
         background-color: var(--bg-color-grey);
     }
@@ -21,12 +21,13 @@
     .input__view_yellow-second {
         appearance: none;
         position: relative;
-        width: 19px;
-        height: 19px;
+        width: 24px; /**/
+        height: 24px; /**/
         border: 2px solid #f7d22d;
         border-radius: 25px;
         transition: 200ms;
     }
+
     .input__view_yellow-first::after {
         content: '';
         width: 0;
@@ -34,8 +35,8 @@
         border-radius: 50%;
         background-color: var(--yellow-color);
         position: absolute;
-        top: 4px;
-        left: 4px;
+        top: 6px; /**/
+        left: 6px; /**/
         transition: 200ms;
         overflow: hidden;
     }
@@ -46,15 +47,15 @@
         border-radius: 50%;
         background-color: var(--yellow-color);
         position: absolute;
-        top: 5px;
-        left: 5px;
+        top: 6px; /**/
+        left: 6px; /**/
         transition: 200ms;
         overflow: hidden;
     }
     .input__view_yellow-first:checked::after,
     .input__view_yellow-second:checked::after {
-        width: 36.84%;
-        height: 36.84%;
+        width: 40%; /**/
+        height: 40%; /**/
         transition: 200ms;
     }
     .view__pay label {
@@ -76,7 +77,7 @@
     }
     .block__nal > p {
         font-weight: 700;
-        font-size: 0.75rem;
+        font-size: 1rem; /**/
         line-height: 233%;
         color: #231f20;
         opacity: 0.7;
@@ -93,11 +94,12 @@
         margin-left: 24px;
     }
     .input__nal {
-        width: 35.15%;
+        width: 28.15%; /**/
         height: 100%;
         border: 1.5px solid #e2e2e9;
         border-radius: 7px;
         position: relative;
+        padding-left: 8px;
     }
     .input__nal::placeholder {
         font-weight: 600;
@@ -107,15 +109,15 @@
         opacity: 0.82;
         position: absolute;
         top: 10px;
-        left: 58px;
+        left: 108px; /**/
     }
     .input-checkbox__nal {
         appearance: none;
         position: relative;
         border: 2px solid var(--yellow-color);
         border-radius: 3px;
-        width: 19px;
-        height: 19px;
+        width: 24px; /**/
+        height: 24px; /**/
         transition: 100ms;
         margin-right: 8px;
     }
@@ -126,8 +128,8 @@
         border-radius: 100%;
         background-color: var(--yellow-color);
         position: absolute;
-        top: 3.5px;
-        left: 3.5px;
+        top: 6px; /**/
+        left: 6px; /**/
         overflow: hidden;
         transition: 100ms;
     }
@@ -145,11 +147,61 @@
         color: #231f20;
         opacity: 0.7;
     }
-    .block-post__actions {
+    /* .block-post__actions {
         margin-top: 15px;
         width: 100%;
     }
     .label__actions_flex {
         display: flex;
+    } */
+}
+@media screen and (max-width: 320px) {
+    .view__pay {
+        width: 100%;
     }
+
+    .input__view_yellow-first,
+    .input__view_yellow-second {
+        width: 19px;
+        height: 19px;
+    }
+    .input__view_yellow-first::after {
+        top: 4px;
+        left: 4px;
+    }
+    .input__view_yellow-second::after {
+        top: 5px;
+        left: 5px;
+    }
+    .input__view_yellow-first:checked::after,
+    .input__view_yellow-second:checked::after {
+        width: 36.84%;
+        height: 36.84%;
+    }
+
+    .block__nal > p {
+        font-size: 0.75rem;
+    }
+    .input__nal {
+        width: 35.15%;
+    }
+    .input__nal::placeholder {
+        left: 58px;
+    }
+    .input-checkbox__nal {
+        width: 19px;
+        height: 19px;
+    }
+    .input-checkbox__nal::after {
+        top: 3.5px;
+        left: 3.5px;
+    }
+
+    /* .block-post__actions {
+        margin-top: 15px;
+        width: 100%;
+    }
+    .label__actions_flex {
+        display: flex;
+    } */
 }

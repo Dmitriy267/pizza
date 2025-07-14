@@ -1,4 +1,4 @@
-@media (max-width: 320px) {
+@media screen and (max-width: 768px) {
     .section__pay {
         padding-top: 11px;
     }
@@ -14,7 +14,7 @@
     }
     .text-user__pay_first {
         font-weight: 600;
-        font-size: 15px;
+        font-size: 1.25rem; /**/
         line-height: 187%;
         color: #231f20;
         opacity: 0.7;
@@ -24,33 +24,35 @@
         align-items: center;
         border: 1.5px solid #e2e2e9;
         border-radius: 7px;
-        width: 100%;
+        width: 60%; /**/
         padding-left: 20px;
         font-weight: 700;
         color: #231f20;
         opacity: 0.82;
     }
+    .div_first,
+    .div_second,
+    .div_three,
+    .div_fourth {
+        font-size: 1.0625rem;
+    }
     .div_first {
         height: 48px;
-        font-size: 1.0625rem;
         line-height: 165%;
     }
     .div_second {
         height: 48px;
         background-color: var(--bg-color-grey);
-        font-size: 0.9375rem;
         line-height: 187%;
     }
     .div_three {
         height: 129px;
         background-color: var(--bg-color-grey);
-        font-size: 0.875rem;
         line-height: 171%;
     }
     .div_fourth {
         height: 48px;
         background-color: var(--bg-color-grey);
-        font-size: 0.875rem;
         line-height: 200%;
     }
     .text__pay_gap-first {
@@ -84,7 +86,7 @@
     }
     .div-sms__actions label {
         font-weight: 700;
-        font-size: 14px;
+        font-size: 1rem; /**/
         line-height: 164%;
         color: #231f20;
         opacity: 0.7;
@@ -100,16 +102,16 @@
         position: relative;
         border: 2px solid var(--yellow-color);
         border-radius: 3px;
-        width: 19px;
-        height: 19px;
+        width: 24px; /**/
+        height: 24px; /**/
         transition: 100ms;
         margin-right: 16px;
     }
     .input-decor__actions::after {
         content: '';
         position: absolute;
-        top: 4.75px;
-        left: 4.75px;
+        top: 6px; /**/
+        left: 6px; /**/
         width: 0;
         height: 0;
         border-radius: 100%;
@@ -121,5 +123,37 @@
         width: 7px;
         height: 7px;
         transition: 100ms;
+    }
+}
+@media screen and (max-width: 320px) {
+    .text-user__pay_first {
+        font-size: 0.9375rem;
+    }
+    .div__pay {
+        width: 100%;
+    }
+    .div_first {
+        font-size: 1.0625rem;
+    }
+    .div_second {
+        font-size: 0.9375rem;
+    }
+    .div_three {
+        font-size: 0.875rem;
+    }
+    .div_fourth {
+        font-size: 0.875rem;
+    }
+    .div-sms__actions label {
+        font-size: 0.875rem;
+    }
+
+    .input-decor__actions {
+        width: 19px;
+        height: 19px;
+    }
+    .input-decor__actions::after {
+        top: 4.75px;
+        left: 4.75px;
     }
 }

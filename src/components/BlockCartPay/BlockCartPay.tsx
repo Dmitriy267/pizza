@@ -10,21 +10,30 @@ export const BlockCartPay: FC = () => {
                     type="text"
                     placeholder="Номер карты"
                     className="input-decor__cart"
+                    required
                 />
                 <div className="inputs__cart-pay_bottom">
                     <input
                         type="date"
                         placeholder="Срок действия карты"
                         className="input-decor__cart"
+                        required
                     />
                     <input
                         type="number"
                         placeholder="CVC"
                         className="input-decor__cart"
+                        required
+                        min={0}
+                        maxLength={3}
                     />
                 </div>
 
-                <img src={infoCartPay} alt="Рисунок с информацией по карте" />
+                <img
+                    src={infoCartPay}
+                    alt="Рисунок с информацией по карте"
+                    className="img-decor__cart"
+                />
             </div>
         </>
     );
