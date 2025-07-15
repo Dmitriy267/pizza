@@ -1,27 +1,145 @@
-/* @media (max-width: 1549px) {
-    .header {
-        padding-top: 13px;
-    }
-}
-@media (max-width: 768px) {
-    .header {
-        padding-top: 20px;
-        z-index: 1;
-        position: relative;
-    }
-    .header__container {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-    }
-    .header_bottom {
-        display: none;
-    }
-} */
 @media screen and (max-width: 1549px) {
     .header {
         padding-top: 13px;
+        display: flex;
+    }
+    .header__container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        min-height: 108px;
+        width: 1108px;
+    }
+
+    .img-logo {
+        height: 59.13px;
+        width: 80px;
+    }
+    .header_top {
+        display: flex;
+        flex-direction: row;
+    }
+    .adress__paste {
+        display: flex;
+        flex-direction: column;
+        margin-left: 52px;
+    }
+    .adress__paste > p,
+    .adress__paste > p span {
+        font-weight: 600;
+        font-size: 1.0625rem;
+    }
+    .adress__paste > p {
+        color: #231f20;
+    }
+    .adress__paste > p span {
+        color: var(--yellow-color);
+    }
+    .time {
+        display: flex;
+        align-items: center;
+        margin-top: 9px;
+    }
+
+    .name-company__time,
+    .span-reiting__time,
+    .text-delivery__time,
+    .text-minut__time {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        font-size: 0.8125rem;
+        color: #231f20;
+    }
+    .name-company__time::before {
+        content: '';
+        width: 18px;
+        height: 18px;
+        background-image: url('../../../public/images/decors/image\ 31.jpg');
+        margin-right: 7px;
+    }
+    .name-company__time::after,
+    .text-delivery__time::after {
+        content: ' ';
+        width: 4px;
+        height: 4px;
+        border-radius: 100%;
+        background-color: #ff2e65;
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+    .span-reiting__time::after {
+        content: ' ';
+        width: 14px;
+        height: 16px;
+        margin-left: 9px;
+        margin-right: 20px;
+        background-image: url('../../../public/images/decors/reiting.png');
+    }
+    .btn-call__header {
+        display: flex;
+        width: 180px;
+        height: 42px;
+        margin-left: 170px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 28px;
+        background-color: #f3f3f7;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 0.875rem;
+        line-height: 200%;
+        color: #696f7a;
+    }
+    .link-tel__header_top_yellow {
+        font-weight: 700;
+        font-size: 1.625rem;
+        text-transform: uppercase;
+        color: var(--yellow-color);
+        margin-left: 28px;
+    }
+    .btn-shop__header,
+    .link-tel_yellow,
+    .img-logo_display {
+        display: none;
+    }
+    .header_bottom {
+        display: flex;
+        width: 100%;
+        margin-top: 9px;
+    }
+    .menu-nav__header_bottom {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+    .menu-list__header_bottom {
+        display: flex;
+        gap: 21px;
+    }
+    .menu-list__header_bottom li:not(li:last-of-type) {
+        font-weight: 600;
+        font-size: 0.9375rem;
+        color: #0e0c0d;
+    }
+    .menu-list__header_bottom li:last-of-type {
+        font-weight: 700;
+        font-size: 1rem;
+        color: #696f7a;
+    }
+    .btn-menu__header_bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        width: 160px;
+        height: 42px;
+        background-color: var(--yellow-color);
+        font-family: Montserrat, sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 175%;
+        color: #231f20;
     }
 }
 @media screen and (max-width: 768px) {
@@ -39,11 +157,22 @@
         justify-content: space-between;
         width: 100%;
     }
+
     .img-logo {
         height: 59.13px;
         width: 80px;
     }
+    .img-logo_display {
+        display: block;
+    }
+    .header_top,
+    .btn-call__header,
+    .header_bottom {
+        display: none;
+    }
+
     .link-tel_yellow {
+        display: block;
         font-weight: 700;
         font-size: 1.625rem;
         text-transform: uppercase;

@@ -1,3 +1,8 @@
+@media screen and (max-width: 1549px) {
+    .Hamburger {
+        display: none;
+    }
+}
 @media screen and (max-width: 768px) {
     .Hamburger {
         display: flex;

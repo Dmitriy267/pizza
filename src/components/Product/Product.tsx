@@ -27,7 +27,7 @@ export const Product: FunctionComponent<ProductProps> = ({
                 </div>
                 <div className="block__shop">
                     <p>от {price} ₽</p>
-                    <button className="btn__shop " onClick={onClick}>
+                    <button className="btn__shop btn_color" onClick={onClick}>
                         В корзину
                     </button>
                 </div>

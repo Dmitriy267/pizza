@@ -56,7 +56,7 @@ export const MenuMain: FC = () => {
 
                     {shop === 0 ? null : (
                         <button
-                            className="btn__shop btn_fixed"
+                            className="btn__shop btn_fixed btn_grey"
                             onClick={handeClickNavigate}
                         >
                             Корзина | {shop}

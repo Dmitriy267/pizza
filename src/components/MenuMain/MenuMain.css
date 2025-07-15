@@ -1,14 +1,14 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1549px) {
     .section__menu_main {
-        padding-top: 44px;
+        padding-top: 55px; /**/
         width: 93vw;
     }
 
     .h1,
     .title__h2 {
         font-weight: 800;
-        font-size: 1.5rem;
-        margin-bottom: 26px;
+        font-size: 2rem; /**/
+        margin-bottom: 37px; /**/
         color: var(--yellow-color);
     }
     .title__h2 {
@@ -16,11 +16,11 @@
     }
     .menu_table {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4, 1fr);
-        row-gap: 30px;
-        column-gap: 32px;
-        width: 729px;
+        grid-template-columns: 1fr 1fr 1fr 1fr; /**/
+        grid-template-rows: repeat(3, 1fr); /**/
+        row-gap: 49px; /**/
+        column-gap: 30px; /**/
+        width: 1109px; /**/
     }
 
     .btn__shop {
@@ -32,6 +32,8 @@
         font-weight: 700;
         font-size: 0.875rem;
         line-height: 200%;
+    }
+    .btn_grey {
         color: #473e43;
     }
     .btn_fixed {
@@ -44,6 +46,34 @@
     .menu_table_drinks {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 49px; /**/
+        width: 100%; /**/
+    }
+}
+@media screen and (max-width: 768px) {
+    .section__menu_main {
+        padding-top: 44px;
+    }
+
+    .h1,
+    .title__h2 {
+        font-size: 1.5rem;
+        margin-bottom: 26px;
+    }
+
+    .menu_table {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        row-gap: 30px;
+        column-gap: 32px;
+        width: 729px;
+    }
+
+    .btn_color {
+        color: #473e43;
+    }
+
+    .menu_table_drinks {
         row-gap: 30px;
         width: 729px;
     }
