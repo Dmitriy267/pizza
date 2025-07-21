@@ -9,7 +9,7 @@ import icon6 from '../../../public/images/social/image 22.svg';
 import cardIcon1 from '../../../public/images/pay/Group 328.svg';
 import cardIcon2 from '../../../public/images/pay/Group 327.svg';
 import cardIcon3 from '../../../public/images/pay/Group 326.svg';
-import imgGroup from '../../../public/images/decors/Group 329.png';
+import imgGroup from '../../../public/images/decors/Group 330.svg';
 import './Footer.css';
 export const Footer: FunctionComponent = () => {
     return (

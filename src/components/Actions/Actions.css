@@ -1,13 +1,13 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1549px) {
     .actions__section {
-        padding-top: 45px;
+        padding-top: 76px; /**/
     }
 
     .cake__h2,
     .cake__h2 > span {
         font-weight: 800;
-        font-size: 1.5rem;
-        margin-bottom: 36px;
+        font-size: 2.75rem; /**/
+        margin-bottom: 52px; /**/
         text-align: center;
     }
     .cake__h2 {
@@ -20,37 +20,37 @@
         display: flex;
         flex-direction: row;
         margin-bottom: 0px;
+        align-items: center; /**/
         width: 100%;
-        height: 255px;
+        height: 405.5px;
     }
     .block__actions_top {
-        width: 52.03%;
+        width: 48.73%; /**/
     }
     .cake__image_top {
-        border-radius: 10px;
-        max-width: 100%;
-        width: 100%;
-        height: 100%;
+        border-radius: 20px; /**/
+        width: 100%; /**/
+        height: 405.5px; /**/
     }
     .block__actions_bottom {
         display: grid;
         margin-top: 0px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        row-gap: 17px;
-        column-gap: 14px;
-        width: 47.97%;
-        margin-left: 18px;
+        row-gap: 30px; /**/
+        column-gap: 27px; /**/
+        width: 51.27%; /**/
+        margin-left: 29px; /**/
     }
     .block__actions_bottom img {
-        max-width: 100%;
-        max-height: 119px;
-        width: 100%;
+        height: 189px; /**/
+        width: 100%; /**/
     }
+
     .actions_all {
         display: flex;
-        width: 728px;
-        height: 128px;
+        width: 100%;
+        height: 159px; /**/
     }
     .btn__actions_all {
         display: flex;
@@ -60,20 +60,78 @@
         font-weight: 700;
         font-size: 0.875rem;
         line-height: 200%;
-        color: var(--black-color);
-        font-family: Montserrat;
+        color: #fff;
+        font-family: var(--font-family);
         border-radius: 23px;
-        width: 21.97%;
+        width: 14.41%; /**/
         height: 48px;
+        margin-top: 49px; /**/
+        margin-left: 50%; /**/
+    }
+    .wrap__img_position {
+        position: relative;
+        height: 348px; /**/
+        width: 210px; /**/
+        overflow: hidden;
+        left: 400px; /**/
+        top: -190px; /**/
+        z-index: -1; /**/
+    }
+    .actions__image_right {
+        height: 479px; /**/
+        width: 378px; /**/
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .actions__section {
+        padding-top: 45px;
+    }
+
+    .cake__h2,
+    .cake__h2 > span {
+        font-size: 1.5rem;
+        margin-bottom: 36px;
+    }
+
+    .block__actions {
+        width: 100%;
+        height: 255px;
+    }
+    .block__actions_top {
+        width: 52.03%;
+    }
+    .cake__image_top {
+        border-radius: 10px;
+        width: 100%;
+        height: 255px;
+    }
+    .block__actions_bottom {
+        row-gap: 17px;
+        column-gap: 14px;
+        width: 47.97%;
+        margin-left: 18px;
+    }
+    .block__actions_bottom img {
+        height: 119px;
+        width: 100%;
+    }
+    .actions_all {
+        height: 128px;
+    }
+    .btn__actions_all {
+        width: 21.97%;
+        color: var(--black-color);
         margin-top: 30px;
         margin-left: 284px;
     }
     .wrap__img_position {
-        position: relative;
         height: 100%;
         width: 101px;
-        overflow: hidden;
+
         left: 174px;
+        top: 0px;
+        z-index: 1;
     }
     .actions__image_right {
         position: absolute;
@@ -103,7 +161,7 @@
         width: 100%;
     }
     .cake__image_top {
-        max-width: 100%;
+        width: 100%;
         height: 213px;
     }
     .block__actions_bottom {
@@ -114,8 +172,8 @@
         width: 100%;
     }
     .block__actions_bottom img {
-        max-width: 144px;
-        max-height: 101px;
+        width: 144px;
+        height: 101px;
     }
     .actions_all {
         height: 83px;

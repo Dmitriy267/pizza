@@ -45,9 +45,10 @@
 
     .menu_table_drinks {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 49px; /**/
+        grid-template-columns: 1fr 1fr 1fr 1fr; /**/
+        gap: 40px; /**/
         width: 100%; /**/
+        overflow: hidden;
     }
 }
 @media screen and (max-width: 768px) {
@@ -74,6 +75,7 @@
     }
 
     .menu_table_drinks {
+        grid-template-columns: 1fr 1fr;
         row-gap: 30px;
         width: 729px;
     }

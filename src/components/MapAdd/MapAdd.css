@@ -1,8 +1,8 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1549px) {
     .map__section {
         background-color: var(--blue-light-color);
         padding-top: 32px;
-        padding-bottom: 52px;
+        padding-bottom: 74px; /**/
     }
     .map__local {
         border-radius: 14px;
@@ -13,6 +13,11 @@
         width: 100%;
         height: 100%;
         border: 1px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .map__section {
+        padding-bottom: 52px;
     }
 }
 

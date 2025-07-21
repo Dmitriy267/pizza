@@ -1,4 +1,8 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1549px) {
+    .adress__container {
+        position: static; /**/
+        overflow: hidden;
+    }
     .block__contacts_middle {
         display: flex;
         align-items: center;
@@ -6,22 +10,40 @@
     .tel__contacts {
         color: var(--yellow-color);
         font-weight: 700;
-        font-size: 1.875rem;
+        font-size: 2.375rem; /**/
         text-transform: uppercase;
     }
     .image_position {
         position: absolute;
-        top: 5px;
-        right: 0px;
-        width: 76.11px;
-        height: 88.09px;
-        z-index: -1;
+        top: 133px;
+        right: 1px; /**/
+        width: 196px; /**/
+        height: 281px; /**/
+        z-index: 0;
+        overflow: hidden;
     }
     .img__contacts {
         width: 100%;
         height: 100%;
+        object-fit: cover;
     }
 
+    .adress__contacts p:first-of-type {
+        font-weight: 700;
+        font-variant: small-caps;
+        margin-top: 35px; /**/
+        font-size: 1.625rem; /**/
+        color: var(--black-color);
+    }
+    .adress__contacts p:last-of-type {
+        font-weight: 600;
+        font-size: 0.9375rem; /**/
+        margin-top: 12px;
+        font-variant: small-caps;
+        color: var(--black-color);
+    }
+}
+@media screen and (max-width: 768px) {
     .adress__contacts {
         margin-top: 17px;
         margin-bottom: 14px;
@@ -29,21 +51,28 @@
     .adress__container {
         margin-top: 6px;
         position: relative;
-        overflow: hidden;
     }
+    .tel__contacts {
+        font-size: 1.875rem;
+    }
+    .image_position {
+        top: 5px;
+        right: 0px;
+        width: 76.11px;
+        height: 88.09px;
+        z-index: -1;
+        overflow: auto;
+    }
+    .img__contacts {
+        object-fit: contain;
+    }
+
     .adress__contacts p:first-of-type {
-        font-weight: 700;
-        font-variant: small-caps;
         margin-top: 23px;
         font-size: 1.125rem;
-        color: var(--black-color);
     }
     .adress__contacts p:last-of-type {
-        font-weight: 600;
         font-size: 0.825rem;
-        margin-top: 12px;
-        font-variant: small-caps;
-        color: var(--black-color);
     }
 }
 @media screen and (max-width: 320px) {

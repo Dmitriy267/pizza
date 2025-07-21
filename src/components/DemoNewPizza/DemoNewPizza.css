@@ -8,6 +8,7 @@
         margin-right: 29px;
         padding-top: 14px; /**/
         padding-bottom: 14px;
+        border: 1px solid #faebeb;
     }
     .block-info__newPizza {
         display: flex;
