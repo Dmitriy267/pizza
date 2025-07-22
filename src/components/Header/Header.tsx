@@ -36,13 +36,6 @@ export function Header() {
         <>
             <header className="header">
                 <div className="header__container">
-                    {/* <a href="#">
-                        <img
-                            src={logo}
-                            alt="Логотип сайта"
-                            className="img-logo"
-                        />
-                    </a> */}
                     <div className="header_top">
                         <a href="#">
                             <img
@@ -66,18 +59,20 @@ export function Header() {
                                 <p className="text-minut__time">от 31 мин</p>
                             </div>
                         </div>
-                        <button
-                            className="btn-call__header"
-                            onClick={callClick}
-                        >
-                            Заказать звонок
-                        </button>
-                        <a
-                            href="tel:84993918449"
-                            className="link-tel__header_top_yellow "
-                        >
-                            8 499 391-84-49
-                        </a>
+                        <div className="block-call__header">
+                            <button
+                                className="btn-call__header"
+                                onClick={callClick}
+                            >
+                                Заказать звонок
+                            </button>
+                            <a
+                                href="tel:84993918449"
+                                className="link-tel__header_top_yellow "
+                            >
+                                8 499 391-84-49
+                            </a>
+                        </div>
                     </div>
                     <div className="header_bottom">
                         <nav className="menu-nav__header_bottom">
@@ -134,81 +129,6 @@ export function Header() {
                             </nav>
                         </div>
                     ) : null}
-
-                    {/* <a href="#">
-                        <img
-                            src={logo}
-                            alt="Логотип сайта"
-                            className="img-logo"
-                        />
-                    </a> */}
-                    {/* <div className="header_top">
-                        <div className="adress__paste">
-                            <p>
-                                Доставка еды <span>Москва</span>
-                            </p>
-                        </div>
-                        <div className="time">
-                            <p className="name-company__time">Яндекс еда</p>
-                            <span className="span-reiting__time">4.8</span>
-
-                            <p className="text-delivery__time">
-                                Время доставки
-                            </p>
-                            <p>от 31 мин</p>
-                        </div>
-                    </div> */}
-                    {/* <button className="btn-call__header" onClick={callClick}>
-                        Заказать звонок
-                    </button>
-                    <a href="tel:84993918449" className="link-tel_yellow">
-                        8 499 391-84-49
-                    </a>
-                    <button
-                        className="btn-shop__header"
-                        onClick={handeClickNavigate}
-                    >
-                        Корзина
-                    </button>
-
-                    <HamburgerMenu
-                        isActive={isActive}
-                        onClick={handeClickToggle}
-                    />
-                    {isActive ? (
-                        <div className="header__menu header_border">
-                            <nav className="menu__body">
-                                <ul className="menu__list">{menuList}</ul>
-                                <a
-                                    href="tel:84993918449"
-                                    className="menu__tel link-menu__tel_display"
-                                >
-                                    8 499 391-84-49
-                                </a>
-                                <button
-                                    className="btn__menu btn__menu_display"
-                                    onClick={() => navigate('Корзина')}
-                                >
-                                    Корзина
-                                </button>
-                            </nav>
-                        </div>
-                    ) : null} */}
-
-                    {/* <div className="header_bottom">
-                        <div className="header__menu">
-                            <nav className="menu__body">
-                                <ul className="menu__list">{menuList}</ul>
-
-                                <button
-                                    className="btn__menu"
-                                    onClick={() => navigate('Корзина')}
-                                >
-                                    Корзина
-                                </button>
-                            </nav>
-                        </div>
-                    </div> */}
                 </div>
             </header>
         </>

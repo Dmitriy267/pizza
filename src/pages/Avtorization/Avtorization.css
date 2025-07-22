@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1549px) {
     .avtorization {
         padding-top: 45px;
     }
@@ -9,16 +9,16 @@
         justify-content: center;
         background-image: url('../../public/images/enter/1.jpg');
         width: 100%;
-        height: 62vh;
+        height: 86vh; /**/
         background-repeat: no-repeat;
-        background-size: 100% 87%;
+        background-size: 100% 100%; /**/
         background-position: center;
     }
     .model__button {
         margin-top: 15px;
         margin-bottom: 30px;
         border-radius: 8px;
-        width: 56.78%;
+        width: 27.78%; /**/
         height: 54px;
         background-color: var(--yellow-color);
         font-family: var(--font-family);
@@ -29,7 +29,7 @@
     }
     .title-avtorization__h1 {
         font-weight: 800;
-        font-size: 1.875rem;
+        font-size: 2.25rem; /**/
         color: var(--black-color);
         text-align: center;
     }
@@ -55,7 +55,7 @@
         display: flex;
         flex-direction: column;
         position: relative;
-        width: 80%;
+        width: 45%; /**/
     }
     .input__avtorization {
         border-radius: 30px;
@@ -165,6 +165,22 @@
         font-weight: 500;
         line-height: 186%;
         color: #664ef9;
+    }
+}
+@media screen and (max-width: 768px) {
+    .block-avtorization {
+        height: 62vh;
+        background-size: 100% 87%;
+    }
+    .model__button {
+        width: 56.78%;
+    }
+    .title-avtorization__h1 {
+        font-size: 1.875rem;
+    }
+
+    .form-avtorization {
+        width: 80%;
     }
 }
 @media screen and (max-width: 320px) {

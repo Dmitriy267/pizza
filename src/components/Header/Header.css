@@ -76,6 +76,10 @@
         margin-right: 20px;
         background-image: url('../../../public/images/decors/reiting.png');
     }
+    .block-call__header {
+        display: flex;
+        align-items: center;
+    }
     .btn-call__header {
         display: flex;
         width: 180px;
@@ -167,7 +171,8 @@
     }
     .header_top,
     .btn-call__header,
-    .header_bottom {
+    .header_bottom,
+    .block-call__header {
         display: none;
     }
 

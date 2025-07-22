@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1549px) {
     .registration__section {
         padding-top: 45px;
     }
@@ -6,7 +6,7 @@
         margin-top: 15px;
         margin-bottom: 30px;
         border-radius: 8px;
-        width: 25.78%;
+        width: 14.87%; /**/
         height: 45px;
         background-color: var(--yellow-color);
         font-family: var(--font-family);
@@ -24,6 +24,8 @@
         margin-top: 30px;
         display: flex;
         flex-direction: column;
+        width: 60%; /**/
+        margin-left: 20%; /**/
     }
     .form__registration {
         display: flex;
@@ -95,6 +97,16 @@
     }
     .link_prev {
         color: #664ef9;
+    }
+}
+@media screen and (max-width: 768px) {
+    .btn__registration {
+        width: 25.78%;
+    }
+
+    .block-form__registration {
+        width: 100%;
+        margin-left: 0;
     }
 }
 @media screen and (max-width: 320px) {

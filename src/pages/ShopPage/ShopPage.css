@@ -1,44 +1,44 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1549px) {
     .shop__wrapper {
-        padding-top: 45px;
+        padding-top: 59px; /**/
     }
 
     .shop__h2 {
         font-weight: 800;
-        font-size: 1.9375rem;
+        font-size: 2.25rem; /**/
         color: var(--yellow-color);
         margin-top: 30px;
-        margin-bottom: 20px;
+        margin-bottom: 61px; /**/
     }
     .block__sauce_table {
-        margin-top: 30px;
+        margin-top: 40px; /**/
         display: flex;
         width: 100%;
-        flex-wrap: wrap;
-        gap: 20px;
+        flex-wrap: nowrap; /**/
+        gap: 21px; /**/
     }
     .h2__shop_add {
-        margin-top: 25px;
+        margin-top: 40px; /**/
     }
     .h2__shop_add,
     .h3__shop {
         font-weight: 700;
         font-size: 1.5rem;
-        line-height: 85%;
+        line-height: 71%; /**/
         color: var(--yellow-color);
     }
     .h3__shop {
-        margin-top: 30px;
+        margin-top: 40px; /**/
     }
     .btn__left {
         margin-bottom: 18px;
     }
     .h3__promo {
-        margin-top: 33px;
+        margin-top: 43px; /**/
         margin-bottom: 24px;
         font-weight: 600;
         font-size: 1.375rem;
-        line-height: 85%;
+        line-height: 77%; /**/
         color: #ff2e65;
     }
     .text__promo_active {
@@ -49,24 +49,24 @@
         margin-top: 30px;
         font-weight: 600;
         font-size: 1.5rem;
-        line-height: 81%;
+        line-height: 71%; /**/
         color: var(--black-color);
         width: 100%;
         display: flex;
-        gap: 36px;
     }
     .summa__shop span {
         font-weight: 800;
-        font-size: 1.625rem;
+        font-size: 2.25rem; /**/
         text-align: right;
         color: var(--yellow-color);
+        margin-left: 18px;
     }
     .block-btn__shop {
-        margin-top: 34px;
+        margin-top: 42px; /**/
         display: flex;
-        flex-direction: column;
         align-items: center;
-        gap: 14px;
+        flex-direction: row-reverse; /**/
+        justify-content: space-between; /**/
     }
 
     .block-btn__shop button:first-of-type,
@@ -74,7 +74,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 32.66%;
+        width: 224px; /**/
         height: 55px;
         font-family: var(--font-family);
         font-size: 0.9375rem;
@@ -109,6 +109,54 @@
     }
     .text-percent {
         margin-top: 8px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .shop__wrapper {
+        padding-top: 45px;
+    }
+
+    .shop__h2 {
+        font-size: 1.9375rem;
+        margin-bottom: 20px;
+    }
+    .block__sauce_table {
+        margin-top: 30px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .h2__shop_add {
+        margin-top: 25px;
+    }
+    .h2__shop_add,
+    .h3__shop {
+        line-height: 85%;
+    }
+    .h3__shop {
+        margin-top: 30px;
+    }
+
+    .h3__promo {
+        margin-top: 33px;
+        line-height: 85%;
+    }
+
+    .summa__shop {
+        line-height: 81%;
+    }
+    .summa__shop span {
+        font-size: 1.625rem;
+    }
+    .block-btn__shop {
+        margin-top: 34px;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .block-btn__shop button:first-of-type,
+    .block-btn__shop button:last-of-type {
+        width: 32.66%;
     }
 }
 @media screen and (max-width: 320px) {

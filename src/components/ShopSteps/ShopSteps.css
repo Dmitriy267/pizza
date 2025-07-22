@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1549px) {
     .shop__steps {
         display: flex;
         justify-content: space-between;
@@ -56,11 +56,11 @@
     }
     .hr_dashed:first-of-type {
         top: 17px;
-        left: 101px;
+        left: 164px; /**/
     }
     .hr_dashed:last-of-type {
         top: 17px;
-        left: 433px;
+        left: 694px; /**/
     }
     .step_default + p {
         color: rgba(105, 111, 122, 0.95);
@@ -71,6 +71,14 @@
     }
     .text__step_threed {
         width: 95px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .hr_dashed:first-of-type {
+        left: 101px;
+    }
+    .hr_dashed:last-of-type {
+        left: 433px;
     }
 }
 @media screen and (max-width: 320px) {
