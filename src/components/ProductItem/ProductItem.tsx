@@ -46,14 +46,17 @@ export const ProductItem: FC<ProductItemProps> = ({
                         />
                         <div className="buttons__shop">
                             <button onClick={handeClickMinus}>-</button>
-                            <p>{count}</p>
+                            <p>{count} </p>
 
                             <button onClick={handeClickPlus}>+</button>
                         </div>
-                        <span className="price__span_yellow">{`${
-                            price * count
-                        }`}</span>
-                        <button onClick={handeClickRemove}>
+                        <span className="price__span_yellow">
+                            {`${price * count}`} ₽
+                        </span>
+                        <button
+                            onClick={handeClickRemove}
+                            className="btn__shop_order"
+                        >
                             <img
                                 src={decor}
                                 alt="Значок кнопки"

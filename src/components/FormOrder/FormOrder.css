@@ -1,31 +1,36 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1549px) {
     .form__order {
-        margin-top: 15px;
+        margin-top: 10px;
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 13px; /**/
+    }
+    .div-form__order_flex {
+        display: flex;
+        flex-direction: row; /**/
+        align-items: center; /**/
     }
     .form__order label {
-        width: 80%;
+        width: 52%; /**/
     }
     .form__order input[type='text'],
     .form__order input[type='tel'],
-    .form__order input[type='email'],
-    .form__order textarea {
+    .form__order input[type='email'] {
         border: 1.5px solid #e2e2e9;
         border-radius: 8px;
-        width: 100%;
+        width: 85.77%; /**/
         margin-top: 8px;
         padding-left: 15px;
         font-weight: 700;
         font-size: 0.8125rem;
         line-height: 215%;
         color: #231f20;
+        margin-left: 20px; /**/
     }
     .form__order input[type='text'],
     .form__order input[type='tel'],
     .form__order input[type='email'] {
-        height: 35px;
+        height: 48px; /**/
     }
 
     .block-deliver__order {
@@ -41,13 +46,22 @@
     }
 
     .textarea_resize {
+        border: 1.5px solid #e2e2e9;
+        border-radius: 8px;
         margin-top: 10px;
+        padding-left: 15px;
+        font-weight: 700;
+        font-size: 0.8125rem;
+        line-height: 215%;
+        color: #231f20;
         resize: none;
+        width: 573px; /**/
+        margin-left: 20px;
     }
     .btn__order_submit {
         border-radius: 8px;
-        width: 100%;
-        height: 45px;
+        width: 30.2%; /**/
+        height: 55px; /**/
         background-color: var(--yellow-color);
         font-family: Montserrat, sans-serif;
         font-weight: 400;
@@ -60,6 +74,41 @@
         font-size: 0.8125rem;
         line-height: 150%;
         color: red;
+    }
+}
+@media screen and (max-width: 768px) {
+    .form__order {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .div-form__order_flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .form__order label {
+        width: 80%;
+    }
+    .form__order input[type='text'],
+    .form__order input[type='tel'],
+    .form__order input[type='email'],
+    .form__order textarea {
+        margin-left: 0;
+    }
+    .form__order input[type='text'],
+    .form__order input[type='tel'],
+    .form__order input[type='email'] {
+        height: 35px;
+    }
+
+    .textarea_resize {
+        margin-top: 10px;
+        resize: none;
+        width: 100%;
+    }
+    .btn__order_submit {
+        width: 100%;
     }
 }
 @media screen and (max-width: 320px) {

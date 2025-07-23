@@ -106,16 +106,14 @@ export const FormOrder: FC = () => {
                 flag = true;
             }
         }
-        console.log(`flag`, flag);
+
         return flag;
     };
     const navigate = useNavigate();
     const dispatch = useAppDispatch();
     const handleSubmitOrder = (e: FormEvent) => {
         e.preventDefault();
-
         validate();
-
         if (flag) {
             console.log(`formOrder`, formOrder);
             dispatch(getUserOrder(formOrder));
@@ -131,78 +129,90 @@ export const FormOrder: FC = () => {
                 onSubmit={handleSubmitOrder}
                 noValidate
             >
-                <label>
-                    Фамилия{' '}
-                    <input
-                        type="text"
-                        placeholder="Ваша фамилия"
-                        name="lastName"
-                        value={formOrder.lastName}
-                        onChange={handleChangeLastName}
-                        required
-                    />
-                </label>
-                {errorsLastName ? (
-                    <span className="error">{errorsLastName}</span>
-                ) : null}
+                <div className="div-form__order_flex">
+                    <label>
+                        Фамилия{' '}
+                        <input
+                            type="text"
+                            placeholder="Ваша фамилия"
+                            name="lastName"
+                            value={formOrder.lastName}
+                            onChange={handleChangeLastName}
+                            required
+                        />
+                    </label>
+                    {errorsLastName ? (
+                        <span className="error">{errorsLastName}</span>
+                    ) : null}
+                </div>
 
-                <label>
-                    Имя{' '}
-                    <input
-                        type="text"
-                        placeholder="Ваше имя"
-                        name="firstName"
-                        value={formOrder.firstName}
-                        onChange={handleChangeInput}
-                        required
-                    />
-                </label>
-                {errorsFirstName ? (
-                    <span className="error">{errorsFirstName}</span>
-                ) : null}
+                <div className="div-form__order_flex">
+                    <label>
+                        Имя{' '}
+                        <input
+                            type="text"
+                            placeholder="Ваше имя"
+                            name="firstName"
+                            value={formOrder.firstName}
+                            onChange={handleChangeInput}
+                            required
+                        />
+                    </label>
+                    {errorsFirstName ? (
+                        <span className="error">{errorsFirstName}</span>
+                    ) : null}
+                </div>
 
-                <label>
-                    Отчество{' '}
-                    <input
-                        type="text"
-                        placeholder="Ваше отчество"
-                        name="patron"
-                        value={formOrder.patron}
-                        onChange={handleChangeInput}
-                        required
-                    />
-                </label>
-                {errorsPatronName ? (
-                    <span className="error">{errorsPatronName}</span>
-                ) : null}
+                <div className="div-form__order_flex">
+                    <label>
+                        Отчество{' '}
+                        <input
+                            type="text"
+                            placeholder="Ваше отчество"
+                            name="patron"
+                            value={formOrder.patron}
+                            onChange={handleChangeInput}
+                            required
+                        />
+                    </label>
+                    {errorsPatronName ? (
+                        <span className="error">{errorsPatronName}</span>
+                    ) : null}
+                </div>
 
-                <label>
-                    Телефон{' '}
-                    <input
-                        type="tel"
-                        placeholder="Ваш телефон"
-                        name="tel"
-                        value={formOrder.tel}
-                        onChange={handleChangeInput}
-                        required
-                    />{' '}
-                </label>
-                {errorsTel ? <span className="error">{errorsTel}</span> : null}
+                <div className="div-form__order_flex">
+                    <label>
+                        Телефон{' '}
+                        <input
+                            type="tel"
+                            placeholder="Ваш телефон"
+                            name="tel"
+                            value={formOrder.tel}
+                            onChange={handleChangeInput}
+                            required
+                        />{' '}
+                    </label>
+                    {errorsTel ? (
+                        <span className="error">{errorsTel}</span>
+                    ) : null}
+                </div>
 
-                <label>
-                    Email{' '}
-                    <input
-                        type="email"
-                        placeholder="Ваша эл.почта"
-                        name="email"
-                        value={formOrder.email}
-                        onChange={handleChangeInput}
-                        required
-                    />
-                </label>
-                {errorsEmail ? (
-                    <span className="error">{errorsEmail}</span>
-                ) : null}
+                <div className="div-form__order_flex">
+                    <label>
+                        Email{' '}
+                        <input
+                            type="email"
+                            placeholder="Ваша эл.почта"
+                            name="email"
+                            value={formOrder.email}
+                            onChange={handleChangeInput}
+                            required
+                        />
+                    </label>
+                    {errorsEmail ? (
+                        <span className="error">{errorsEmail}</span>
+                    ) : null}
+                </div>
 
                 <p>Доставка</p>
                 <div className="block-deliver__order">

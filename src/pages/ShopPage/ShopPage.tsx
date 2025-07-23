@@ -130,12 +130,12 @@ export const ShopPage: FC = () => {
                             Промокод активирован, скидка 10%
                         </p>
                     ) : null}
+
                     <FormPromo
                         value={text}
                         onChange={handleChangePromo}
                         onSubmit={handleSubmitPromo}
                     />
-
                     <p className="summa__shop">
                         Сумма заказа:{' '}
                         <span>

@@ -50,10 +50,13 @@ export const PizzaItem: FC<ProductItemProps> = ({
 
                             <button onClick={handeClickPlus}>+</button>
                         </div>
-                        <span className="price__span_yellow">{`${
-                            price * count
-                        }`}</span>
-                        <button onClick={handeClickRemove}>
+                        <span className="price__span_yellow">
+                            {`${price * count}`} ₽
+                        </span>
+                        <button
+                            onClick={handeClickRemove}
+                            className="btn__shop_order"
+                        >
                             <img
                                 src={decor}
                                 alt="Значок кнопки"

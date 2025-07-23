@@ -1,6 +1,37 @@
+@media screen and (max-width: 1549px) {
+    .form__promo {
+        height: 43px;
+        width: 355px;
+    }
+    .input__promo {
+        width: 220px; /**/
+        border: 1.5px solid #e2e2e9;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        font-weight: 600;
+        font-size: 0.8125rem;
+        line-height: 215%;
+        color: #686466;
+        opacity: 0.82;
+        padding: 14px 22px 15px 25px; /**/
+        height: 100%;
+    }
+    .button__promo {
+        border-radius: 0 8px 8px 0;
+        width: 133px; /**/
+        height: 100%;
+        font-weight: 700;
+        font-size: 0.8125rem;
+        line-height: 215%;
+        color: #231f20;
+        background-color: var(--yellow-color);
+        font-family: var(--font-family);
+    }
+}
 @media screen and (max-width: 768px) {
     .form__promo {
         height: 43px;
+        width: 100%;
     }
     .input__promo {
         width: 32.5%; /**/

@@ -6,7 +6,6 @@ export const ViewPay: FC = () => {
     const [hand, setHand] = useState<boolean>(true);
     const [cart, setCart] = useState<boolean>(false);
     const [selectHand, setSelectHand] = useState<string>(' ');
-    // const [selectCart, setSelectCart] = useState<string>(' ');
     const handleChangeViewCart = (e: ChangeEvent<HTMLInputElement>) => {
         setSelectHand(e.target.value);
         setHand(false);

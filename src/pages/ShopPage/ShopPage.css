@@ -7,8 +7,8 @@
         font-weight: 800;
         font-size: 2.25rem; /**/
         color: var(--yellow-color);
-        margin-top: 30px;
-        margin-bottom: 61px; /**/
+        margin-top: 39px; /**/
+        margin-bottom: 34px; /**/
     }
     .block__sauce_table {
         margin-top: 40px; /**/
@@ -41,18 +41,19 @@
         line-height: 77%; /**/
         color: #ff2e65;
     }
+
     .text__promo_active {
         margin-bottom: 8px;
         font-size: 0.875rem;
     }
     .summa__shop {
-        margin-top: 30px;
         font-weight: 600;
         font-size: 1.5rem;
         line-height: 71%; /**/
         color: var(--black-color);
-        width: 100%;
         display: flex;
+        margin-top: 30px;
+        margin-bottom: 20px;
     }
     .summa__shop span {
         font-weight: 800;
@@ -117,6 +118,7 @@
     }
 
     .shop__h2 {
+        margin-top: 37px;
         font-size: 1.9375rem;
         margin-bottom: 20px;
     }
@@ -142,7 +144,9 @@
     }
 
     .summa__shop {
+        margin-top: 30px;
         line-height: 81%;
+        width: 100%;
     }
     .summa__shop span {
         font-size: 1.625rem;
