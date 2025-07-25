@@ -30,6 +30,7 @@ export const PayPage: FC = () => {
             <section className="section__pay">
                 <div className="block-payPage__container">
                     <ShopSteps step1={true} step2={true} step3={false} />
+
                     <div className="data-user__pay">
                         <h1 className="title__pay">Заказ на доставку</h1>
                         <p className="text-user__pay_first text__pay_gap-first">
@@ -76,6 +77,7 @@ export const PayPage: FC = () => {
                             </span>
                         </label>
                     </div>
+
                     <MenuPagePay />
 
                     <div className="block-btn__shop">

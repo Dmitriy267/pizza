@@ -6,11 +6,8 @@ export const MenuPagePay: FC = () => {
     const drink = useAppSelector((state) => state.drinkSelect.product);
     const sauces = useAppSelector((state) => state.sauces.sauces);
     const pizza = useAppSelector((state) => state.pizza.pizza);
-    console.log(`drink в меню`, drink);
-    console.log(`sauces в меню`, sauces);
     const summa = useAppSelector((state) => state.summaProducts);
     const percent = useAppSelector((state) => state.summaProducts.percent);
-    console.log(`percent`, percent);
     return (
         <>
             <div className="menu-page__pay">

@@ -1,27 +1,52 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1549px) {
     .menu-page__pay {
         display: flex;
         flex-direction: column;
         margin-top: 37px;
-        width: 80%; /**/
+        width: 68%; /**/
         height: auto;
         box-shadow: 0 4px 28px 0 rgba(0, 0, 0, 0.08);
         background-color: #fff;
     }
     .h4__pay_yellow {
         font-weight: 800;
-        font-size: 1.125rem; /**/
-        line-height: 100%;
+        font-size: 1rem; /**/
+        line-height: 175%; /**/
         color: var(--yellow-color);
-        margin-top: 22px;
-        margin-left: 20px;
-        margin-bottom: 23px;
+        margin-top: 29px; /**/
+        margin-left: 22px; /**/
+        margin-bottom: 38px; /**/
     }
     .text-summa__pay {
         font-weight: 600;
         font-size: 1rem;
         line-height: 175%;
         color: rgba(35, 31, 32, 0.6);
+        margin-left: 22px; /**/
+        margin-top: 14px; /**/
+        margin-bottom: 35px; /**/
+    }
+    .span-summa__pay_black {
+        font-weight: 800; /**/
+        font-size: 1.0625rem;
+        line-height: 165%;
+        color: #231f20;
+        margin-left: 110px; /**/
+    }
+}
+@media screen and (max-width: 768px) {
+    .menu-page__pay {
+        margin-top: 37px;
+        width: 80%; /**/
+    }
+    .h4__pay_yellow {
+        font-size: 1.125rem; /**/
+        line-height: 100%;
+        margin-top: 22px;
+        margin-left: 20px;
+        margin-bottom: 23px;
+    }
+    .text-summa__pay {
         margin-left: 20px;
         margin-top: 13px;
         margin-bottom: 40px;
@@ -29,8 +54,6 @@
     .span-summa__pay_black {
         font-weight: 700;
         font-size: 1.0625rem;
-        line-height: 165%;
-        color: #231f20;
         margin-left: 77px;
     }
 }
@@ -41,20 +64,4 @@
     .h4__pay_yellow {
         font-size: 0.9375rem;
     }
-    /* .text-summa__pay {
-        font-weight: 600;
-        font-size: 1rem;
-        line-height: 175%;
-        color: rgba(35, 31, 32, 0.6);
-        margin-left: 20px;
-        margin-top: 13px;
-        margin-bottom: 40px;
-    }
-    .span-summa__pay_black {
-        font-weight: 700;
-        font-size: 1.0625rem;
-        line-height: 165%;
-        color: #231f20;
-        margin-left: 77px;
-    } */
 }

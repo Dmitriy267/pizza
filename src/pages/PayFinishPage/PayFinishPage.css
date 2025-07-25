@@ -1,6 +1,6 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1549px) {
     .section__pay-finish {
-        padding-top: 11px;
+        padding-top: 59px; /**/
     }
     .block-info__pay-finish {
         margin-top: 20px;
@@ -15,6 +15,11 @@
         font-size: 1.875rem; /**/
         line-height: 65%;
         color: var(--yellow-color);
+    }
+}
+@media screen and (max-width: 768px) {
+    .section__pay-finish {
+        padding-top: 11px;
     }
 }
 @media screen and (max-width: 320px) {
