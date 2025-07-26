@@ -1,7 +1,12 @@
+import { useNavigate } from 'react-router-dom';
 import Cake from '../../../public/images/cake/image 26.jpg';
 import picter from '../../../public/images/cake/image 34.svg';
 import './Actions.css';
 export function Actions() {
+    const navigate = useNavigate();
+    const handeClick = () => {
+        navigate('/Акции');
+    };
     return (
         <>
             <section className="actions__section">
@@ -25,7 +30,12 @@ export function Actions() {
                         </div>
                     </div>
                     <div className="actions_all">
-                        <button className="btn__actions_all">Все акции</button>
+                        <button
+                            className="btn__actions_all"
+                            onClick={handeClick}
+                        >
+                            Все акции
+                        </button>
 
                         <div className="wrap__img_position">
                             <img

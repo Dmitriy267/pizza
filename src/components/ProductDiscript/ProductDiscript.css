@@ -61,6 +61,15 @@
         width: 126px;
         height: 36px;
     }
+    .btn_common {
+        transition: background-color 0.5s;
+    }
+    .btn_common:hover {
+        background-color: var(--hover-button);
+    }
+    .btn_common:active {
+        background-color: var(--active-button);
+    }
 }
 @media screen and (max-width: 768px) {
     .section__productDesc {

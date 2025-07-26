@@ -32,6 +32,13 @@
         font-weight: 700;
         font-size: 0.875rem;
         line-height: 200%;
+        transition: background-color 0.5s;
+    }
+    .btn__shop:hover {
+        background-color: var(--hover-button);
+    }
+    .btn__shop:active {
+        background-color: var(--active-button);
     }
     .btn_grey {
         color: #473e43;

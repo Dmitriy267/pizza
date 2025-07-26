@@ -32,6 +32,7 @@ export function Header() {
     const callClick = () => {
         alert('Вы позвонили!');
     };
+
     return (
         <>
             <header className="header">

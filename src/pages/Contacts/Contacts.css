@@ -12,6 +12,13 @@
         font-weight: 700;
         font-size: 2.375rem; /**/
         text-transform: uppercase;
+        transition: color 0.5s;
+    }
+    .tel__contacts:hover {
+        color: var(--hover-link);
+    }
+    .tel__contacts:active {
+        color: var(--active-link);
     }
     .image_position {
         position: absolute;

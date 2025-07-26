@@ -67,6 +67,13 @@
         height: 48px;
         margin-top: 49px; /**/
         margin-left: 50%; /**/
+        transition: background-color 0.5s;
+    }
+    .btn__actions_all:hover {
+        background-color: var(--hover-button);
+    }
+    .btn__actions_all:active {
+        background-color: var(--active-button);
     }
     .wrap__img_position {
         position: relative;

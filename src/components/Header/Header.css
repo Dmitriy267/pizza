@@ -94,6 +94,14 @@
         font-size: 0.875rem;
         line-height: 200%;
         color: #696f7a;
+        transition: background-color 0.5s color 0.5s;
+    }
+    .btn-call__header:hover {
+        background-color: rgb(155, 155, 160);
+        color: #000;
+    }
+    .btn-call__header:active {
+        background-color: rgb(132, 132, 233);
     }
     .link-tel__header_top_yellow {
         font-weight: 700;
@@ -101,10 +109,21 @@
         text-transform: uppercase;
         color: var(--yellow-color);
         margin-left: 28px;
+        transition: color 0.5s transform 0.5s;
+    }
+    .link-tel__header_top_yellow:hover {
+        color: var(--hover-link);
+        transform: scale(1.2);
+    }
+    .link-tel__header_top_yellow:active {
+        color: var(--active-link);
     }
     .btn-shop__header,
     .link-tel_yellow,
     .img-logo_display {
+        display: none;
+    }
+    .header__menu {
         display: none;
     }
     .header_bottom {
@@ -131,6 +150,12 @@
         font-size: 1rem;
         color: #696f7a;
     }
+    .menu__link {
+        transition: color 0.6s;
+    }
+    .menu__link:hover {
+        color: var(--yellow-color);
+    }
     .btn-menu__header_bottom {
         display: flex;
         align-items: center;
@@ -144,6 +169,13 @@
         font-size: 1rem;
         line-height: 175%;
         color: #231f20;
+        transition: background-color 0.5s;
+    }
+    .btn-menu__header_bottom:hover {
+        background-color: var(--hover-button);
+    }
+    .btn-menu__header_bottom:active {
+        background-color: var(--active-button);
     }
 }
 @media screen and (max-width: 768px) {
@@ -182,6 +214,13 @@
         font-size: 1.625rem;
         text-transform: uppercase;
         color: var(--yellow-color);
+        transition: color 0.5s;
+    }
+    .link-tel_yellow:hover {
+        color: var(--hover-link);
+    }
+    .link-tel_yellow:active {
+        color: var(--active-link);
     }
     .btn-shop__header {
         display: flex;
@@ -196,11 +235,19 @@
         font-size: 1rem;
         line-height: 175%;
         color: #231f20;
+        transition: background-color 0.5s;
+    }
+    .btn-shop__header:hover {
+        background-color: var(--hover-button);
+    }
+    .btn-shop__header:active {
+        background-color: var(--active-button);
     }
     .header_bottom {
         display: none;
     }
     .header__menu {
+        display: block;
         position: fixed;
         left: 80%;
         top: 13%;

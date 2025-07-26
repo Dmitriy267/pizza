@@ -12,6 +12,9 @@ import cardIcon3 from '../../../public/images/pay/Group 326.svg';
 import imgGroup from '../../../public/images/decors/Group 330.svg';
 import './Footer.css';
 export const Footer: FunctionComponent = () => {
+    const callClick = () => {
+        alert('Вы позвонили!');
+    };
     return (
         <>
             <footer className="footer ">
@@ -27,7 +30,10 @@ export const Footer: FunctionComponent = () => {
                             </a>
                             <div className="call">
                                 <a href="tel:+74993918449">8 499 391-84-49</a>
-                                <button className="btn__call">
+                                <button
+                                    className="btn__call"
+                                    onClick={callClick}
+                                >
                                     Заказать звонок
                                 </button>
                             </div>
@@ -42,18 +48,38 @@ export const Footer: FunctionComponent = () => {
                             <div className="block__list">
                                 <ul className="list__social_left">
                                     <li>
-                                        <a href="#">YouTube</a>
+                                        <a
+                                            href="#"
+                                            className="link__sosial_line"
+                                        >
+                                            YouTube
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="#">Instagram</a>
+                                        <a
+                                            href="#"
+                                            className="link__sosial_line"
+                                        >
+                                            Instagram
+                                        </a>
                                     </li>
                                 </ul>
                                 <ul className="list__social_middle">
                                     <li>
-                                        <a href="#">Facebook</a>
+                                        <a
+                                            href="#"
+                                            className="link__sosial_line"
+                                        >
+                                            Facebook
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="#">ВКонтакте</a>
+                                        <a
+                                            href="#"
+                                            className="link__sosial_line"
+                                        >
+                                            ВКонтакте
+                                        </a>
                                     </li>
                                 </ul>
                                 <p>Москва ул. Проспект Вернадского 86В</p>
