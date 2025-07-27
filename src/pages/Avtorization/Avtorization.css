@@ -62,8 +62,15 @@
     .form-avtorization {
         display: flex;
         flex-direction: column;
-        position: relative;
+        /* position: relative; */
         width: 45%; /**/
+    }
+    .div__avtorisation_relative {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        position: relative;
+        margin-bottom: 20px;
     }
     .input__avtorization {
         border-radius: 30px;
@@ -71,11 +78,11 @@
         height: 50px;
     }
     .login {
-        margin-bottom: 20px;
+        /* margin-bottom: 20px; */
         border: 2px solid rgba(78, 100, 249, 0.8);
     }
     .password {
-        margin-bottom: 20px;
+        /* margin-bottom: 20px; */
         background-color: #f6f6f6;
     }
     .svg-user,
@@ -94,7 +101,7 @@
         fill: green;
     }
     .svg-password {
-        top: 81px;
+        top: 12px; /**/ /*81*/
         left: 15px;
         fill: #686868;
     }

@@ -26,6 +26,8 @@ export const userSlice = createSlice({
     reducers: {
         addUser: (state, action: PayloadAction<User>) => {
             state.user = { ...state.user, ...action.payload };
+            document.cookie = `userLogin=${state.user.login}`;
+            document.cookie = `userPassword=${state.user.password}`;
         },
     },
 });
