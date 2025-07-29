@@ -4,6 +4,8 @@ import { HamburgerMenu } from '../../components/HamburgerMenu/Hamburger';
 
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { SelectCity } from '../SelectCity/SelectCity';
+import { Option } from '../../common/Option/Option';
 const menu = [
     { id: 1, name: 'Пицца' },
     { id: 2, name: 'Напитки' },
@@ -47,7 +49,37 @@ export function Header() {
                         </a>
                         <div className="adress__paste">
                             <p>
-                                Доставка еды <span>Москва</span>
+                                Доставка еды{' '}
+                                <SelectCity placeholder="Выберите город ">
+                                    <Option value="Москва">Москва</Option>
+                                    <Option value="Санкт-Петербург">
+                                        Санкт-Петербург
+                                    </Option>
+                                    <Option value="Новосибирск">
+                                        Новосибирск
+                                    </Option>
+                                    <Option value="Екатеринбург">
+                                        Екатеринбург
+                                    </Option>
+                                    <Option value="Казань">Казань</Option>
+                                    <Option value="Красноярск">
+                                        Красноярск
+                                    </Option>
+                                    <Option value="Нижний Новгород">
+                                        Нижний Новгород
+                                    </Option>
+                                    <Option value="Челябинск">Челябинск</Option>
+                                    <Option value="Уфа">Уфа</Option>
+                                    <Option value="Краснодар">Краснодар</Option>
+                                    <Option value="Самара">Самара</Option>
+                                    <Option value="	Ростов-на-Дону">
+                                        Ростов-на-Дону
+                                    </Option>
+                                    <Option value="Омск">Омск</Option>
+                                    <Option value="Воронеж">Воронеж</Option>
+                                    <Option value="Пермь">Пермь</Option>
+                                    <Option value="Волгоград">Волгоград</Option>
+                                </SelectCity>
                             </p>
 
                             <div className="time">
