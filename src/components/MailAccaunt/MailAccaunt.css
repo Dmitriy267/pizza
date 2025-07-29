@@ -27,10 +27,6 @@
         height: 48px;
         background-color: var(--yellow-color);
     }
-    .h1__mail-accaunt {
-        text-align: center;
-        font-size: 2rem;
-    }
 }
 @media screen and (max-width: 768px) {
     .mail-accaunt {

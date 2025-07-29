@@ -1,36 +1,27 @@
-import { useState } from 'react';
+import { type FC } from 'react';
 import { Button } from '../../common/Button/Button';
 import './MailAccaunt.css';
-import { useAppSelector } from '../../redux/hooks/hooks';
+import { useNavigate } from 'react-router-dom';
 
-export const MailAccaunt = () => {
-    const [value, setValue] = useState<boolean>(false);
+export const MailAccaunt: FC = () => {
+    const navigate = useNavigate();
     const handeClick = () => {
-        console.log('click');
-        setValue((prev) => !prev);
+        navigate('/Завершение регистрации');
     };
-    const user = useAppSelector((state) => state.user);
+
     return (
         <>
-            {value ? (
-                <h1 className="h1__mail-accaunt">
-                    Добро пожаловать, {user.user.login}!
-                </h1>
-            ) : (
-                <div className="mail-accaunt">
-                    <h2 className="h2__mail-accaunt">
-                        Подтвердите регистрацию
-                    </h2>
-                    <p>
-                        Письмо для подтверждения аккаунта отправлено почту.
-                        Перейдите по ссылке, указанной в письме. Если письма
-                        нет, то проверьте спам.
-                    </p>
-                    <Button unicClass="btn__mail-accaunt" onClick={handeClick}>
-                        Понятно
-                    </Button>
-                </div>
-            )}
+            <div className="mail-accaunt">
+                <h2 className="h2__mail-accaunt">Подтвердите регистрацию</h2>
+                <p>
+                    Письмо для подтверждения аккаунта отправлено почту.
+                    Перейдите по ссылке, указанной в письме. Если письма нет, то
+                    проверьте спам.
+                </p>
+                <Button unicClass="btn__mail-accaunt" onClick={handeClick}>
+                    Понятно
+                </Button>
+            </div>
         </>
     );
 };

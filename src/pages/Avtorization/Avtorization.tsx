@@ -4,25 +4,12 @@ import { Modal } from '../../common/Modal/Modal';
 import './Avtorization.css';
 import { useState, type ChangeEvent, type FormEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-
+import { getCookie } from '../../redux/features/User/userCookie';
 interface AvtorisationForm {
     login: string;
     password: string;
 }
 
-function getCookie(strSearch: string): string {
-    const arr = document.cookie.split(';');
-    let newStr = '';
-    for (const elem of arr) {
-        if (elem.includes(strSearch)) {
-            const str = elem.split('=');
-            console.log(`str`, typeof str[1]);
-            newStr = newStr + str[1].toString();
-        }
-    }
-    console.log(`newStr`, newStr);
-    return newStr;
-}
 const cookieLogin = getCookie('userLogin');
 const cookiePassword = getCookie('userPassword');
 
@@ -51,6 +38,7 @@ export function Avtorization() {
             setErrorLogin('Не заполнено поле!');
             flag = false;
         } else if (avtoForm.login !== str1) {
+            console.log(`cghhhhh`, typeof avtoForm.login);
             setErrorLogin('Неверный логин');
             flag = false;
         } else {
@@ -67,13 +55,17 @@ export function Avtorization() {
             setErrorPassword('');
             flag = true;
         }
+        if (avtoForm.login !== str1 || avtoForm.password !== str2) {
+            flag = false;
+        }
         return flag;
     }
     const navigate = useNavigate();
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
-        avtorizationData(cookieLogin, cookiePassword);
-        if (flag) {
+        const mark = avtorizationData(cookieLogin, cookiePassword);
+        console.log(`flag`, flag);
+        if (mark === true) {
             console.log(avtoForm);
             navigate('/');
         }

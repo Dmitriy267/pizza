@@ -1,0 +1,24 @@
+@media screen and (max-width: 1549px) {
+    .section__registrationEnd {
+        padding-top: 45px;
+        padding-bottom: 25vh;
+    }
+    .h1__registrationEnd {
+        text-align: center;
+        font-size: 2rem;
+        color: var(--yellow-color);
+    }
+}
+@media screen and (max-width: 768px) {
+    .h1__registrationEnd {
+        font-size: 1.625rem;
+    }
+}
+@media screen and (max-width: 320px) {
+    .section__registrationEnd {
+        padding-top: 20px;
+    }
+    .h1__registrationEnd {
+        font-size: 1rem;
+    }
+}

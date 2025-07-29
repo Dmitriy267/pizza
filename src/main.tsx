@@ -12,10 +12,12 @@ import { DrinksPage } from './pages/DrinksPage/DrinksPage.tsx';
 import { ShopPage } from './pages/ShopPage/ShopPage.tsx';
 import { Avtorization } from './pages/Avtorization/Avtorization.tsx';
 import { Registration } from './pages/Registration/Registration.tsx';
+import { RegistrationEnd } from './pages/RegistrationEnd/RegistrationEnd.tsx';
 import { OrderPage } from './pages/OrderPage/OrderPage.tsx';
 import { PayPage } from './pages/PayPage/PayPage.tsx';
 import { PayFinishPage } from './pages/PayFinishPage/PayFinishPage.tsx';
 import { PizzaPage } from './pages/PizzaPage/PizzaPage.tsx';
+
 const router = createBrowserRouter([
     {
         path: '/',
@@ -49,6 +51,10 @@ const router = createBrowserRouter([
     {
         path: 'Регистрация',
         element: <Registration />,
+    },
+    {
+        path: 'Завершение регистрации',
+        element: <RegistrationEnd />,
     },
     {
         path: '/Корзина/Оформление заказа',
