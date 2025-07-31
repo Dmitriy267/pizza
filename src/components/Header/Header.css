@@ -24,8 +24,13 @@
         flex-direction: column;
         margin-left: 52px;
     }
+    .option-deliver-city__paste {
+        display: flex;
+        align-items: center;
+    }
     .adress__paste > p,
-    .adress__paste > p span {
+    .adress__paste > p span,
+    .option-deliver-city__paste > p {
         font-weight: 600;
         font-size: 1.0625rem;
     }

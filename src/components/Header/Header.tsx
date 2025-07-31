@@ -1,8 +1,7 @@
 import logo from '../../../public/images/logo/Rectangle 76.png';
 import './Header.css';
 import { HamburgerMenu } from '../../components/HamburgerMenu/Hamburger';
-
-import { useState } from 'react';
+import { useState, type FC } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { SelectCity } from '../SelectCity/SelectCity';
 import { Option } from '../../common/Option/Option';
@@ -13,20 +12,22 @@ const menu = [
     { id: 4, name: 'Контакты' },
     { id: 5, name: 'Войти' },
 ];
-export function Header() {
+
+export const Header: FC = () => {
     const [isActive, setIsActive] = useState<boolean>(false);
+
     const handeClickToggle = () => {
         setIsActive((prev) => !prev);
     };
     const navigate = useNavigate();
 
     const handeClickNavigate = () => {
-        navigate('/Корзина');
+        navigate('Корзина');
     };
     const menuList = menu.map((m) => (
         <li key={m.id} className="menu__item">
             {' '}
-            <Link to={m.name} className="menu__link">
+            <Link to={`/${m.name}`} className="menu__link">
                 {m.name}
             </Link>
         </li>
@@ -48,8 +49,8 @@ export function Header() {
                             />
                         </a>
                         <div className="adress__paste">
-                            <p>
-                                Доставка еды{' '}
+                            <div className="option-deliver-city__paste">
+                                <p>Доставка еды </p>
                                 <SelectCity placeholder="Выберите город ">
                                     <Option value="Москва">Москва</Option>
                                     <Option value="Санкт-Петербург">
@@ -80,7 +81,7 @@ export function Header() {
                                     <Option value="Пермь">Пермь</Option>
                                     <Option value="Волгоград">Волгоград</Option>
                                 </SelectCity>
-                            </p>
+                            </div>
 
                             <div className="time">
                                 <p className="name-company__time">Яндекс еда</p>
@@ -166,4 +167,4 @@ export function Header() {
             </header>
         </>
     );
-}
+};

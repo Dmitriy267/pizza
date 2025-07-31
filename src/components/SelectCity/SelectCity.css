@@ -3,13 +3,13 @@
         display: inline-block;
         position: relative;
         width: 185px;
-
         border-radius: 5px;
     }
     .selected-text {
         padding: 10px 10px;
         cursor: pointer;
         color: var(--yellow-color);
+        font-size: 1.0625rem;
     }
 
     .selected-text::after {
