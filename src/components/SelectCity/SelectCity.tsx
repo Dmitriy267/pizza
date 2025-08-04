@@ -12,7 +12,9 @@ export const SelectCity: FC<SelectCityProps> = ({
     defaultValue,
     placeholder,
 }) => {
-    const [selectedOption, setSelectedOption] = useState(defaultValue || '');
+    const [selectedOption, setSelectedOption] = useState(
+        defaultValue || localStorage.getItem('city') || ''
+    );
     const [shopDropDown, setShopDropDown] = useState(false);
     const selectContainerRef = useRef(null);
     const showDropdownHandler = () => setShopDropDown((prev) => !prev);
@@ -24,8 +26,10 @@ export const SelectCity: FC<SelectCityProps> = ({
     useOnclickOutside(selectContainerRef, clickOutsideHandler);
     const updateSelectedOption = (option: string) => {
         setSelectedOption(option);
+        localStorage.setItem('city', option);
         setShopDropDown(false);
     };
+
     return (
         <>
             <SelectContext.Provider

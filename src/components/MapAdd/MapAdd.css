@@ -3,6 +3,7 @@
         background-color: var(--blue-light-color);
         padding-top: 32px;
         padding-bottom: 74px; /**/
+        margin-top: 32px;
     }
     .map__local {
         border-radius: 14px;

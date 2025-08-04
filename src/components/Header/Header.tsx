@@ -1,7 +1,7 @@
 import logo from '../../../public/images/logo/Rectangle 76.png';
 import './Header.css';
 import { HamburgerMenu } from '../../components/HamburgerMenu/Hamburger';
-import { useState, type FC } from 'react';
+import { useEffect, useState, type FC } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { SelectCity } from '../SelectCity/SelectCity';
 import { Option } from '../../common/Option/Option';
@@ -35,7 +35,16 @@ export const Header: FC = () => {
     const callClick = () => {
         alert('Вы позвонили!');
     };
-
+    const [theme, setTheme] = useState(
+        localStorage.getItem('theme') || 'light'
+    );
+    const onClickTheme = () => {
+        setTheme(theme === 'light' ? 'dark' : 'light');
+    };
+    useEffect(() => {
+        document.documentElement.className = theme;
+        localStorage.setItem('theme', theme);
+    }, [theme]);
     return (
         <>
             <header className="header">
@@ -108,6 +117,12 @@ export const Header: FC = () => {
                             </a>
                         </div>
                     </div>
+                    <button
+                        onClick={onClickTheme}
+                        className="btn-theme__header"
+                    >
+                        Cменить фон
+                    </button>
                     <div className="header_bottom">
                         <nav className="menu-nav__header_bottom">
                             <ul className="menu-list__header_bottom">

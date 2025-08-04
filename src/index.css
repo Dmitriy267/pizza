@@ -131,8 +131,18 @@ h6 {
     --active-button: #dd5f16;
     --hover-link: rgb(132, 132, 233);
     --active-link: rgb(80, 80, 248);
+    --dark-html: #282c34;
+    --light-html: #fff;
 }
-
+.dark {
+    background-color: var(--dark-html);
+}
+.light {
+    background-color: var(--light-html);
+}
+.lightP {
+    color: var(--blue-light-color);
+}
 @media (max-width: 1549px) {
     [class*='__container'] {
         max-width: 1108px;

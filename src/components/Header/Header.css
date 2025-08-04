@@ -182,6 +182,21 @@
     .btn-menu__header_bottom:active {
         background-color: var(--active-button);
     }
+    .btn-theme__header {
+        display: block;
+        border-radius: 8px;
+        position: absolute;
+        z-index: 5;
+        right: 6px;
+        width: 10%;
+        height: 42px;
+        background-color: var(--yellow-color);
+        font-family: Montserrat, sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 175%;
+        color: #231f20;
+    }
 }
 @media screen and (max-width: 768px) {
     .header {
@@ -295,6 +310,9 @@
     .btn__menu_display {
         display: none;
     }
+    .btn-theme__header {
+        width: 16%;
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -373,5 +391,10 @@
     .header_bottom,
     .header_top {
         display: none;
+    }
+    .btn-theme__header {
+        font-size: 0.675rem;
+        right: 95px;
+        width: 25%;
     }
 }
