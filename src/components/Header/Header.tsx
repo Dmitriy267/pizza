@@ -33,6 +33,7 @@ export const Header: FC = () => {
             </Link>
         </li>
     ));
+
     const callClick = () => {
         alert('Вы позвонили!');
     };

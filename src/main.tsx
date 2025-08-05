@@ -50,6 +50,26 @@ const router = createBrowserRouter([
                 element: <ShopPage />,
             },
             {
+                path: 'Войти/Корзина',
+                element: <ShopPage />,
+            },
+            {
+                path: 'Пицца/Корзина',
+                element: <ShopPage />,
+            },
+            {
+                path: 'Напитки/Корзина',
+                element: <ShopPage />,
+            },
+            {
+                path: 'Акции/Корзина',
+                element: <ShopPage />,
+            },
+            {
+                path: 'Контакты/Корзина',
+                element: <ShopPage />,
+            },
+            {
                 path: 'Войти',
                 element: <Avtorization />,
             },
@@ -76,50 +96,7 @@ const router = createBrowserRouter([
         ],
     },
 ]);
-// {
-//     path: 'Контакты',
-//     element: <Contacts />,
-// },
-// {
-//     path: 'Акции',
-//     element: <ActionsPage />,
-// },
-// {
-//     path: 'Напитки',
-//     element: <DrinksPage />,
-// },
-// {
-//     path: 'Пицца',
-//     element: <PizzaPage />,
-// },
-// {
-//     path: 'Корзина',
-//     element: <ShopPage />,
-// },
-// {
-//     path: 'Войти',
-//     element: <Avtorization />,
-// },
-// {
-//     path: 'Регистрация',
-//     element: <Registration />,
-// },
-// {
-//     path: 'Завершение регистрации',
-//     element: <RegistrationEnd />,
-// },
-// {
-//     path: '/Корзина/Оформление заказа',
-//     element: <OrderPage />,
-// },
-// {
-//     path: '/оплата',
-//     element: <PayPage />,
-// },
-// {
-//     path: '/Завершение заказа',
-//     element: <PayFinishPage />,
-//  ] },
+
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <Provider store={store}>

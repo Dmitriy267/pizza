@@ -2,9 +2,9 @@
     .block__shop-prod {
         width: 100%;
         box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.06);
-        border-bottom: 1px solid #ececf1;
         border-radius: 10px;
-        border-top: 1px solid #ececf1;
+        border: 1px solid #ececf1;
+        margin-top: 15px;
     }
     .block__shop_common {
         display: flex;
@@ -20,6 +20,7 @@
     .img__shop-prod_first {
         max-width: 100%;
         width: 15.43%;
+        margin-left: 10px;
     }
     .buttons__shop {
         display: flex;
@@ -112,11 +113,13 @@
         width: 25.43%;
     }
     .buttons__shop {
-        width: 93px;
+        width: 63px;
         height: 32px;
+        margin-left: 8px;
     }
     .img__shop-prod_second {
         width: 27px;
+        margin-right: 3px;
     }
     .price__span_yellow {
         font-size: 1.25rem;
