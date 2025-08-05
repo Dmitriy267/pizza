@@ -5,6 +5,7 @@ const SelectContext = createContext<{
     changeSelectedOption: (option: string) => void;
 }>({
     selectedOption: '',
+    // @ts-ignore
     changeSelectedOption: (option: string) => {},
 });
 const useSelectContext = () => {
