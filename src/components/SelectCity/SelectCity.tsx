@@ -22,7 +22,7 @@ export const SelectCity: FC<SelectCityProps> = ({
     const clickOutsideHandler = () => {
         setShopDropDown(false);
     };
-
+    // @ts-ignore
     useOnclickOutside(selectContainerRef, clickOutsideHandler);
     const updateSelectedOption = (option: string) => {
         setSelectedOption(option);
