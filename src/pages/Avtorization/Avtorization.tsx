@@ -38,7 +38,6 @@ export function Avtorization() {
             setErrorLogin('Не заполнено поле!');
             flag = false;
         } else if (avtoForm.login !== str1) {
-            console.log(`cghhhhh`, typeof avtoForm.login);
             setErrorLogin('Неверный логин');
             flag = false;
         } else {
@@ -64,7 +63,6 @@ export function Avtorization() {
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
         const mark = avtorizationData(cookieLogin, cookiePassword);
-        console.log(`flag`, flag);
         if (mark === true) {
             console.log(avtoForm);
             navigate('/');

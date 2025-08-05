@@ -21,7 +21,6 @@ export const ShopPage: FC = () => {
     const pizza = useAppSelector((state) => state.pizza.pizza);
     const priceSouce = useAppSelector((state) => state.sauces);
     const idPromo = useAppSelector((state) => state.actions.actions);
-    console.log(`idPromo`, idPromo);
     const filterIdSauce = priceSouce.sauces.filter(
         (obj, index, prod) =>
             index === prod.findIndex((item) => item.id === obj.id)

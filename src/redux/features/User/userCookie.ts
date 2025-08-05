@@ -4,7 +4,6 @@ export function getCookie(strSearch: string): string {
     for (const elem of arr) {
         if (elem.includes(strSearch)) {
             const str = elem.split('=');
-            console.log(`str`, typeof str[1]);
             newStr = newStr + str[1].toString();
         }
     }

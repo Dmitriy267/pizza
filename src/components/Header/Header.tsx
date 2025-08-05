@@ -5,6 +5,7 @@ import { useEffect, useState, type FC } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { SelectCity } from '../SelectCity/SelectCity';
 import { Option } from '../../common/Option/Option';
+
 const menu = [
     { id: 1, name: 'Пицца' },
     { id: 2, name: 'Напитки' },

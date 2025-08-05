@@ -140,9 +140,7 @@ h6 {
 .light {
     background-color: var(--light-html);
 }
-.lightP {
-    color: var(--blue-light-color);
-}
+
 @media (max-width: 1549px) {
     [class*='__container'] {
         max-width: 1108px;

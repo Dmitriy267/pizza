@@ -23,7 +23,10 @@ function App() {
                 <Route path="/Напитки" element={<DrinksPage />} />
                 <Route path="/Пицца" element={<PizzaPage />} />
                 <Route path="/Корзина" element={<ShopPage />} />
-                <Route path="/Оформление заказа" element={<OrderPage />} />
+                <Route
+                    path="/Корзина/Оформление заказа"
+                    element={<OrderPage />}
+                />
                 <Route path="/оплата" element={<PayPage />} />
                 <Route path="/Завершение заказа" element={<PayFinishPage />} />
                 <Route path="/Войти" element={<Avtorization />} />
