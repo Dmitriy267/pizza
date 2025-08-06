@@ -6,7 +6,7 @@
     "type": "module",
     "scripts": {
         "predeploy": "npm run build",
-        "dev": "vite",
+        "dev": "concurrently \"vite\" \"npm run server\"",
         "build": "tsc -b && vite build",
         "lint": "eslint .",
         "preview": "vite preview",
