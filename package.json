@@ -7,7 +7,7 @@
     "scripts": {
         "predeploy": "npm run build",
         "dev": "concurrently \"vite\" \"npm run server\"",
-        "build": "tsc -b && vite build",
+        "build": "concurrently \"npm run dev\" \"tsc -b && vite build\"",
         "lint": "eslint .",
         "preview": "vite preview",
         "server": "json-server -p3001 --watch data.json",
