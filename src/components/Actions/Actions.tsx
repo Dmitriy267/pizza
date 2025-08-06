@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
-import Cake from '../../../public/images/cake/image 26.jpg';
-import picter from '../../../public/images/cake/image 34.svg';
+import Cake from '/images/cake/image 26.jpg';
+import picter from '/images/cake/image 34.svg';
 import './Actions.css';
 export function Actions() {
     const navigate = useNavigate();
