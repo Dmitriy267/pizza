@@ -21,7 +21,7 @@ import { HomePage } from './pages/HomePage/HomePage.tsx';
 
 const router = createBrowserRouter([
     {
-        path: '/pizza',
+        path: '/',
         element: <App />,
         children: [
             {
