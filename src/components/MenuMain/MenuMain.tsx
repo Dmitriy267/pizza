@@ -1,21 +1,19 @@
 import { useState, type FC } from 'react';
 import { Product } from '../Product/Product';
 import './MenuMain.css';
-import { useGetProductQuery } from '../../redux/services/product';
 import { useNavigate } from 'react-router-dom';
 import { useAppDispatch } from '../../redux/hooks/hooks';
 import { getPizza } from '../../redux/features/Pizza/pizzaSlice';
 import { getProduct } from '../../redux/features/drinkSelect/drinkSelectSlice';
+import { drinks, pizza } from '../../data';
 
 export const MenuMain: FC = () => {
     const [shop, setShop] = useState<number>(0);
     const dispatch = useAppDispatch();
-    const { data: pizza, error, isLoading } = useGetProductQuery('pizza');
     const handeClick = () => {
         setShop((prev) => prev + 1);
     };
 
-    const { data: drinks } = useGetProductQuery('drinks');
     const navigate = useNavigate();
     const handeClickNavigate = () => {
         navigate('/Корзина');
@@ -25,8 +23,6 @@ export const MenuMain: FC = () => {
         <menu className="section__menu_main">
             <div className="menu__container">
                 <h1 className="h1">Пицца</h1>
-                {error && <h2>Ошибка в получении данных</h2>}
-                {isLoading && <p>Loading...</p>}
 
                 <div className="menu_table">
                     {pizza

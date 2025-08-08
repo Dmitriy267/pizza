@@ -3,11 +3,11 @@ import { Header } from '../../components/Header/Header';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks/hooks';
 import { ProductItem } from '../../components/ProductItem/ProductItem';
 import { PizzaItem } from '../../components/PizzaItem/PizzaItem';
-import { useGetProductQuery } from '../../redux/services/product';
 import { SauceItem } from '../../components/SauceItem/SauceItem';
 import { ShopSteps } from '../../components/ShopSteps/ShopSteps';
 import { FormPromo } from '../../common/FormPromo/FormPromo';
 import { useNavigate } from 'react-router-dom';
+import { sauces } from '../../data';
 import './ShopPage.css';
 import { useState, type ChangeEvent, type FC, type FormEvent } from 'react';
 import {
@@ -48,8 +48,6 @@ export const ShopPage: FC = () => {
         (total, val) => total + val.price * val.count,
         0
     );
-
-    const { data: sauces, isLoading, error } = useGetProductQuery('sauces');
 
     let numPercent = 0;
     if (idPromo.length !== 0) {
@@ -112,11 +110,7 @@ export const ShopPage: FC = () => {
 
                     <h2 className="h2__shop_add">Добавить к заказу?</h2>
                     <h3 className="h3__shop">Соусы</h3>
-                    {error ? (
-                        <p>Ошибка в запросе</p>
-                    ) : isLoading ? (
-                        <p>Loading...</p>
-                    ) : sauces ? (
+                    {sauces ? (
                         <div className="block__sauce_table">
                             {sauces.map((s) => (
                                 <SauceItem key={s.id} {...s} />
