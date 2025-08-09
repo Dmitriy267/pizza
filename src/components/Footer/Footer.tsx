@@ -1,15 +1,15 @@
 import type { FunctionComponent } from 'react';
-import logo from '../../../public/images/logo/Rectangle 76.png';
-import icon1 from '../../../public/images/social/image 17.svg';
-import icon2 from '../../../public/images/social/image 18.svg';
-import icon3 from '../../../public/images/social/image 19.svg';
-import icon4 from '../../../public/images/social/image 20.svg';
-import icon5 from '../../../public/images/social/image 21.svg';
-import icon6 from '../../../public/images/social/image 22.svg';
-import cardIcon1 from '../../../public/images/pay/Group 328.svg';
-import cardIcon2 from '../../../public/images/pay/Group 327.svg';
-import cardIcon3 from '../../../public/images/pay/Group 326.svg';
-import imgGroup from '../../../public/images/decors/Group 330.svg';
+import logo from '/images/logo/Rectangle 76.png';
+import icon1 from '/images/social/image 17.svg';
+import icon2 from '/images/social/image 18.svg';
+import icon3 from '/images/social/image 19.svg';
+import icon4 from '/images/social/image 20.svg';
+import icon5 from '/images/social/image 21.svg';
+import icon6 from '/images/social/image 22.svg';
+import cardIcon1 from '/images/pay/Group 328.svg';
+import cardIcon2 from '/images/pay/Group 327.svg';
+import cardIcon3 from '/images/pay/Group 326.svg';
+import imgGroup from '/images/decors/Group 330.svg';
 import './Footer.css';
 export const Footer: FunctionComponent = () => {
     const callClick = () => {

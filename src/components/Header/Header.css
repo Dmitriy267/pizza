@@ -1,6 +1,6 @@
-@media screen and (max-width: 1549px) {
+@media screen and (max-width: 1920px) {
     .header {
-        padding-top: 13px;
+        padding-top: 20px; /**/
         display: flex;
     }
     .header__container {
@@ -8,12 +8,12 @@
         flex-direction: column;
         flex-wrap: wrap;
         min-height: 108px;
-        width: 1108px;
+        width: 1800px;
     }
 
     .img-logo {
-        height: 59.13px;
-        width: 80px;
+        height: 65px; /**/
+        width: 85px; /**/
     }
     .header_top {
         display: flex;
@@ -26,7 +26,6 @@
     }
     .option-deliver-city__paste {
         display: flex;
-        align-items: center;
     }
     .adress__paste > p,
     .adress__paste > p span,
@@ -53,14 +52,14 @@
         display: flex;
         align-items: center;
         font-weight: 700;
-        font-size: 0.8125rem;
+        font-size: 1.1rem; /**/
         color: #231f20;
     }
     .name-company__time::before {
         content: '';
         width: 18px;
         height: 18px;
-        background-image: url('../../../public/images/decors/image\ 31.jpg');
+        background-image: url('/images/decors/image\ 31.jpg');
         margin-right: 7px;
     }
     .name-company__time::after,
@@ -79,11 +78,11 @@
         height: 16px;
         margin-left: 9px;
         margin-right: 20px;
-        background-image: url('../../../public/images/decors/reiting.png');
+        background-image: url('/images/decors/reiting.png');
     }
     .block-call__header {
         display: flex;
-        align-items: center;
+        align-items: first baseline; /**/
     }
     .btn-call__header {
         display: flex;
@@ -138,21 +137,21 @@
     }
     .menu-nav__header_bottom {
         display: flex;
-        gap: 30px;
+        gap: 45px;
         align-items: center;
     }
     .menu-list__header_bottom {
         display: flex;
-        gap: 21px;
+        gap: 30px; /**/
     }
     .menu-list__header_bottom li:not(li:last-of-type) {
         font-weight: 600;
-        font-size: 0.9375rem;
+        font-size: 1.2rem; /**/
         color: #0e0c0d;
     }
     .menu-list__header_bottom li:last-of-type {
         font-weight: 700;
-        font-size: 1rem;
+        font-size: 1.32rem; /**/
         color: #696f7a;
     }
     .menu__link {
@@ -198,6 +197,40 @@
         color: #231f20;
     }
 }
+@media screen and (max-width: 1549px) {
+    .header {
+        padding-top: 13px;
+    }
+    .header__container {
+        width: 1108px;
+    }
+
+    .img-logo {
+        height: 59.13px;
+        width: 80px;
+    }
+    .name-company__time,
+    .span-reiting__time,
+    .text-delivery__time,
+    .text-minut__time {
+        font-size: 0.8125rem;
+    }
+    .menu-nav__header_bottom {
+        gap: 30px;
+    }
+    .menu-list__header_bottom {
+        gap: 21px;
+    }
+    .menu-list__header_bottom li:not(li:last-of-type) {
+        font-size: 0.9375rem;
+    }
+    .menu-list__header_bottom li:last-of-type {
+        font-size: 1rem;
+    }
+    .block-call__header {
+        align-items: center;
+    }
+}
 @media screen and (max-width: 768px) {
     .header {
         display: flex;
@@ -213,7 +246,10 @@
         justify-content: space-between;
         width: 100%;
     }
-
+    .option-deliver-city__paste {
+        display: flex;
+        align-items: center;
+    }
     .img-logo {
         height: 59.13px;
         width: 80px;

@@ -1,5 +1,5 @@
 import { useState, type FunctionComponent } from 'react';
-import Arrow from '../../../public/images/slider/.svg';
+import Arrow from '/images/slider/.svg';
 import './Slider.css';
 import { SliderData } from './sliderData';
 

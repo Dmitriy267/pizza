@@ -1,5 +1,5 @@
 import { useState, type ChangeEvent, type FC } from 'react';
-import cartMoney from '../../../public/images/decors/image36.png';
+import cartMoney from '/images/decors/image36.png';
 import { BlockCartPay } from '../BlockCartPay/BlockCartPay';
 import './ViewPay.css';
 export const ViewPay: FC = () => {

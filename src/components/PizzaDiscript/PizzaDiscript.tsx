@@ -3,7 +3,7 @@ import { Button } from '../../common/Button/Button';
 import '../ProductDiscript/ProductDiscript.css';
 import { useAppDispatch } from '../../redux/hooks/hooks';
 import { getPizza } from '../../redux/features/Pizza/pizzaSlice';
-import { pizza as data } from '../../data';
+import { pizza as data } from '../../../src/data';
 
 export const PizzaDiscript: FunctionComponent = () => {
     const dispatch = useAppDispatch();
@@ -19,7 +19,7 @@ export const PizzaDiscript: FunctionComponent = () => {
                           >
                               <div className="productDesc_top">
                                   <img
-                                      src={`../../public/images/paste/${p.image}`}
+                                      src={`/images/paste/${p.image}`}
                                       alt="Фото продукта"
                                   />
                               </div>

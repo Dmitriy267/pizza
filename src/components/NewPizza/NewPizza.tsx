@@ -1,9 +1,9 @@
 import './NewPizza.css';
 import { DemoNewPizza } from '../DemoNewPizza/DemoNewPizza';
-import svgPicter from '../../../public/images/demoPizza/image 14.png';
+import svgPicter from '/images/demoPizza/image 14.png';
 
 const demo = Array(5).fill({
-    image: '../../../public/images/demoPizza/image 8.jpg',
+    image: '/images/demoPizza/image 8.jpg',
     name: 'Карбонара',
     price: 'от 120 ₽',
 });

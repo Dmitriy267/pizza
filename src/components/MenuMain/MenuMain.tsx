@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAppDispatch } from '../../redux/hooks/hooks';
 import { getPizza } from '../../redux/features/Pizza/pizzaSlice';
 import { getProduct } from '../../redux/features/drinkSelect/drinkSelectSlice';
-import { drinks, pizza } from '../../data';
+import { drinks, pizza } from '../../../src/data';
 
 export const MenuMain: FC = () => {
     const [shop, setShop] = useState<number>(0);
@@ -29,7 +29,7 @@ export const MenuMain: FC = () => {
                         ? pizza.map((p) => (
                               <Product
                                   key={p.id}
-                                  srcImage={`/public/images/paste/${p.image}`}
+                                  srcImage={`/images/paste/${p.image}`}
                                   name={p.name}
                                   description={p.description}
                                   price={p.price}
@@ -66,7 +66,7 @@ export const MenuMain: FC = () => {
                         ? drinks
                               .map((p) => (
                                   <Product
-                                      srcImage={`/public/images/drink/${p.image}`}
+                                      srcImage={`/images/drink/${p.image}`}
                                       name={p.name}
                                       price={p.price}
                                       key={p.id}

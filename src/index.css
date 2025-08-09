@@ -1,48 +1,43 @@
 @font-face {
     font-family: Montserrat;
-    src: url('../public/fonts/Montserrat/static/Montserrat-Bold.ttf')
-        format('ttf');
+    src: url('/fonts/Montserrat/static/Montserrat-Bold.ttf') format('ttf');
     font-weight: 700;
 }
 @font-face {
     font-family: Montserrat;
-    src: url('../public/fonts/Montserrat/static/Montserrat-SemiBold.ttf')
-        format('ttf');
+    src: url('/fonts/Montserrat/static/Montserrat-SemiBold.ttf') format('ttf');
     font-weight: 600;
 }
 @font-face {
     font-family: Montserrat;
-    src: url('../public/fonts/Montserrat/static/Montserrat-ExtraBold.ttf')
-        format('ttf');
+    src: url('/fonts/Montserrat/static/Montserrat-ExtraBold.ttf') format('ttf');
     font-weight: 800;
 }
 @font-face {
     font-family: Montserrat;
-    src: url('../public/fonts/Montserrat/static/Montserrat-Medium.ttf')
-        format('ttf');
+    src: url('/fonts/Montserrat/static/Montserrat-Medium.ttf') format('ttf');
     font-weight: 500;
 }
 @font-face {
     font-family: Montserrat;
-    src: url('../public/fonts/Montserrat/static/Montserrat-Black.ttf')
-        format('ttf');
+    src: url('/fonts/Montserrat/static/Montserrat-Black.ttf') format('ttf');
     font-weight: 900;
 }
 @font-face {
     font-family: Inter;
-    src: url('../public/fonts/Inter/static/Inter_18pt-Bold.ttf') format('ttf');
+    src: url('/fonts/Inter/static/Inter_18pt-Bold.ttf') format('ttf');
     font-weight: 700;
 }
 @font-face {
     font-family: Awesome;
-    src: url('../public/fonts/Awesome/fa-regular-400.ttf') format('ttf'),
-        url('../public/fonts/Awesome/fa-regular-400.woff2') format('woff2');
+    src: url('/fonts/Awesome/fa-regular-400.ttf') format('ttf'),
+        url('/fonts/Awesome/fa-regular-400.woff2') format('woff2');
     font-weight: 400;
 }
 @font-face {
     font-family: Awesome;
-    src: url('../public/fonts/Awesome/fa-solid-900.ttf') format('ttf'),
-        url('../public/fonts/Awesome/fa-solid-900.woff2') format('woff2');
+    src: url('/fonts/Awesome/fa-solid-900.ttf') format('ttf'),
+        url('/fonts/Awesome/fa-solid-900.woff2') format('woff2');
     font-weight: 900;
 }
 
@@ -51,17 +46,6 @@ body {
     font-weight: 700;
     font-size: 16px;
 }
-
-/* [class*='__container'] {
-    max-width: 1110px;
-    margin: 0px auto;
-    padding: 0px 15px;
-} */
-/* [class*='__container'] {
-    max-width: 300px;
-    margin: 0px auto;
-    padding: 0px 10px;
-} */
 
 * {
     padding: 0px;
@@ -141,6 +125,13 @@ h6 {
     background-color: var(--light-html);
 }
 
+@media (max-width: 1920px) {
+    [class*='__container'] {
+        max-width: 1880px;
+        margin: 0px auto;
+        padding: 0px 20px;
+    }
+}
 @media (max-width: 1549px) {
     [class*='__container'] {
         max-width: 1108px;

@@ -1,6 +1,6 @@
 import type { FC } from 'react';
-import infoCartPay from '../../../public/images/decors/image40.png';
-import card from '../../../public/images/decors/image 36.jpg';
+import infoCartPay from '/images/decors/image40.png';
+import card from '/images/decors/image 36.jpg';
 import './BlockCartPay.css';
 
 export const BlockCartPay: FC = () => {

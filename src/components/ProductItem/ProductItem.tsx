@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import decor from '../../../public/images/decors/image 41.jpg';
+import decor from '/images/decors/image 41.jpg';
 import { useAppDispatch } from '../../redux/hooks/hooks';
 import {
     decrementPrice,
@@ -40,7 +40,7 @@ export const ProductItem: FC<ProductItemProps> = ({
                 <div className="block__shop_common">
                     <div className="shop-prod_top">
                         <img
-                            src={`../../public/images/drink/${image}`}
+                            src={`/images/drink/${image}`}
                             alt="Фото товара"
                             className="img__shop-prod_first"
                         />

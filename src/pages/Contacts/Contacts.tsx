@@ -2,7 +2,7 @@ import { Footer } from '../../components/Footer/Footer';
 import { Header } from '../../components/Header/Header';
 import { MapAdd } from '../../components/MapAdd/MapAdd';
 import './Contacts.css';
-import Icons34 from '../../../public/images/cake/image 34.svg';
+import Icons34 from '/images/cake/image 34.svg';
 import type { FC } from 'react';
 export const Contacts: FC = () => {
     return (

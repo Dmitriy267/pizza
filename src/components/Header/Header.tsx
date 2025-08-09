@@ -1,4 +1,4 @@
-import logo from '../../../public/images/logo/Rectangle 76.png';
+import logo from '/images/logo/Rectangle 76.png';
 import './Header.css';
 import { HamburgerMenu } from '../../components/HamburgerMenu/Hamburger';
 import { useEffect, useState, type FC } from 'react';

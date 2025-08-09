@@ -105,7 +105,7 @@ export function Avtorization() {
                                             onChange={onChangeInputLogin}
                                         />
                                         <svg className="svg-user">
-                                            <use href="../../public/images/decors/sprite-svg.svg#svg-user"></use>
+                                            <use href="/images/decors/sprite-svg.svg#svg-user"></use>
                                         </svg>
                                         {errorLogin ? (
                                             <span className="error">
@@ -124,7 +124,7 @@ export function Avtorization() {
                                             onChange={onChangeInputPassword}
                                         />
                                         <svg className="svg-password">
-                                            <use href="../../public/images/decors/sprite-svg.svg#svg-password"></use>
+                                            <use href="/images/decors/sprite-svg.svg#svg-password"></use>
                                         </svg>
                                         {errorPassword ? (
                                             <span className="error">

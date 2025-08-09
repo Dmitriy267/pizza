@@ -3,7 +3,7 @@ import { Footer } from '../../components/Footer/Footer';
 import { Header } from '../../components/Header/Header';
 import { ShopSteps } from '../../components/ShopSteps/ShopSteps';
 import { ViewPay } from '../../components/ViewPay/ViewPay';
-import Group425 from '../../../public/images/decors/Group425.jpg';
+import Group425 from '/images/decors/Group425.jpg';
 import { MenuPagePay } from '../../components/MenuPagePay/MenuPagePay';
 import './PayPage.css';
 import { useAppSelector } from '../../redux/hooks/hooks';

@@ -7,7 +7,7 @@ import { SauceItem } from '../../components/SauceItem/SauceItem';
 import { ShopSteps } from '../../components/ShopSteps/ShopSteps';
 import { FormPromo } from '../../common/FormPromo/FormPromo';
 import { useNavigate } from 'react-router-dom';
-import { sauces } from '../../data';
+import { sauces } from '../../../src/data';
 import './ShopPage.css';
 import { useState, type ChangeEvent, type FC, type FormEvent } from 'react';
 import {

@@ -3,7 +3,7 @@ import { Footer } from '../../components/Footer/Footer';
 import { Header } from '../../components/Header/Header';
 import './ActionsPage.css';
 import { ActionComponent } from '../../components/ActionComponent/ActionComponent';
-import { actions as data } from '../../data';
+import { actions as data } from '../../../src/data';
 
 export const ActionsPage: FC = () => {
     return (

@@ -1,7 +1,7 @@
-import pay1 from '../../../public/images/pay/image 15.svg';
-import pay2 from '../../../public/images/pay/image 15 (1).svg';
-import pay3 from '../../../public/images/pay/image 15 (2).svg';
-import pay4 from '../../../public/images/pay/image 15 (3).svg';
+import pay1 from '/images/pay/image 15.svg';
+import pay2 from '/images/pay/image 15 (1).svg';
+import pay3 from '/images/pay/image 15 (2).svg';
+import pay4 from '/images/pay/image 15 (3).svg';
 import './PayAdd.css';
 export function PayAdd() {
     return (

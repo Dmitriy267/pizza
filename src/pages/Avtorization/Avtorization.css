@@ -7,7 +7,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-image: url('../../public/images/enter/1.jpg');
+        background-image: url('/images/enter/1.jpg');
         width: 100%;
         height: 86vh; /**/
         background-repeat: no-repeat;
