@@ -1,4 +1,4 @@
-@media screen and (max-width: 1549px) {
+@media screen and (max-width: 1920px) {
     .actions__section {
         padding-top: 76px; /**/
     }
@@ -40,11 +40,12 @@
         row-gap: 30px; /**/
         column-gap: 27px; /**/
         width: 51.27%; /**/
-        margin-left: 29px; /**/
+        margin-left: 34px; /**/
     }
     .block__actions_bottom img {
         height: 189px; /**/
         width: 100%; /**/
+        border-radius: 12px;
     }
 
     .actions_all {
@@ -87,6 +88,21 @@
     .actions__image_right {
         height: 479px; /**/
         width: 378px; /**/
+    }
+}
+@media screen and (max-width: 1549px) {
+    .block__actions_top {
+        width: 48.73%; /**/
+    }
+    .cake__image_top {
+        width: 100%; /**/
+    }
+    .block__actions_bottom {
+        margin-left: 29px; /**/
+    }
+    .block__actions_bottom img {
+        height: 189px; /**/
+        width: 100%; /**/
     }
 }
 

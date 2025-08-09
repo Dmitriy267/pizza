@@ -1,4 +1,4 @@
-@media screen and (max-width: 1549px) {
+@media screen and (max-width: 1920px) {
     .pay__section {
         background-color: var(--blue-light-color);
         padding-top: 62px; /**/
@@ -11,7 +11,7 @@
     }
     .pay-title__h2 {
         font-weight: 800;
-        font-size: 1.875rem; /**/
+        font-size: 2rem; /***/
         text-align: center;
         color: var(--yellow-color);
     }
@@ -20,14 +20,14 @@
         display: flex;
         flex-direction: row;
         width: 100%;
-        gap: 29px; /**/
+        gap: 167px; /***/
     }
     .block-pay__info {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
-        height: 132px; /**/
+        height: 145px; /***/
         position: relative;
         margin-bottom: 32px; /**/
     }
@@ -61,6 +61,14 @@
         padding-left: 20px; /**/
         padding-right: 29px; /**/
         text-align: center;
+    }
+}
+@media screen and (max-width: 1549px) {
+    .pay-title__h2 {
+        font-size: 1.875rem; /**/
+    }
+    .block-pay__info_all {
+        gap: 29px; /***/
     }
 }
 @media screen and (max-width: 768px) {

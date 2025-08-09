@@ -1,19 +1,36 @@
-@media screen and (max-width: 1549px) {
+@media screen and (max-width: 1920px) {
     .section__newMenu {
-        padding-top: 75px; /**/
+        padding-top: 75px;
         position: relative;
     }
     .h2 {
         font-weight: bold;
-        font-size: 1.5rem; /**/
+        font-size: 1.8rem; /**/
         color: #231f20;
     }
     .block__newMenu {
-        width: 87vw; /**/
+        width: 96vw; /**/
         height: auto;
         display: flex;
         overflow: hidden;
         margin-top: 39px; /**/
+    }
+    .img__position {
+        width: 238.27px; /**/
+        height: 364.1px; /**/
+        position: absolute;
+        z-index: -1;
+        top: 12px;
+        left: -43px; /**/
+        object-fit: contain;
+    }
+}
+@media screen and (max-width: 1549px) {
+    .h2 {
+        font-size: 1.5rem; /**/
+    }
+    .block__newMenu {
+        width: 87vw; /**/
     }
     .img__position {
         width: 238.27px; /**/

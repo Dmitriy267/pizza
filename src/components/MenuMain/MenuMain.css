@@ -1,4 +1,4 @@
-@media screen and (max-width: 1549px) {
+@media screen and (max-width: 1920px) {
     .section__menu_main {
         padding-top: 55px; /**/
         width: 93vw;
@@ -20,17 +20,17 @@
         grid-template-rows: repeat(3, 1fr); /**/
         row-gap: 49px; /**/
         column-gap: 30px; /**/
-        width: 1109px; /**/
+        width: 100%; /**/
     }
 
     .btn__shop {
         border-radius: 8px;
-        width: 126px;
+        width: 140px; /**/
         height: 36px;
         background-color: var(--yellow-color);
         font-family: Montserrat, sans-serif;
         font-weight: 700;
-        font-size: 0.875rem;
+        font-size: 1rem; /**/
         line-height: 200%;
         transition: background-color 0.5s;
     }
@@ -56,6 +56,17 @@
         gap: 40px; /**/
         width: 100%; /**/
         overflow: hidden;
+    }
+}
+@media screen and (max-width: 1549px) {
+    .menu_table {
+        width: 1109px; /**/
+    }
+
+    .btn__shop {
+        width: 126px;
+
+        font-size: 0.875rem;
     }
 }
 @media screen and (max-width: 768px) {

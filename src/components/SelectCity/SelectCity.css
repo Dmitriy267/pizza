@@ -1,8 +1,8 @@
-@media screen and (max-width: 1549px) {
+@media screen and (max-width: 1920px) {
     .select-container {
         display: inline-block;
         position: relative;
-        width: 185px;
+        width: 200px; /**/
         border-radius: 5px;
     }
     .selected-text {
@@ -42,5 +42,10 @@
         min-height: 0;
         opacity: 0;
         visibility: hidden;
+    }
+}
+@media screen and (max-width: 1549px) {
+    .select-container {
+        width: 185px;
     }
 }

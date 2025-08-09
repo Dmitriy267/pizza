@@ -26,6 +26,7 @@
     }
     .option-deliver-city__paste {
         display: flex;
+        align-items: center;
     }
     .adress__paste > p,
     .adress__paste > p span,
@@ -146,12 +147,12 @@
     }
     .menu-list__header_bottom li:not(li:last-of-type) {
         font-weight: 600;
-        font-size: 1.2rem; /**/
+        font-size: 1.1rem; /**/
         color: #0e0c0d;
     }
     .menu-list__header_bottom li:last-of-type {
         font-weight: 700;
-        font-size: 1.32rem; /**/
+        font-size: 1.2rem; /**/
         color: #696f7a;
     }
     .menu__link {
