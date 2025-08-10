@@ -1,12 +1,17 @@
-@media screen and (max-width: 1549px) {
+@media screen and (max-width: 1920px) {
     .section__registrationEnd {
         padding-top: 45px;
         padding-bottom: 25vh;
     }
     .h1__registrationEnd {
         text-align: center;
-        font-size: 2rem;
+        font-size: 2.4rem;
         color: var(--yellow-color);
+    }
+}
+@media screen and (max-width: 1549px) {
+    .h1__registrationEnd {
+        font-size: 2rem;
     }
 }
 @media screen and (max-width: 768px) {

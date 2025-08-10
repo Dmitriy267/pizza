@@ -1,4 +1,4 @@
-@media screen and (max-width: 1549px) {
+@media screen and (max-width: 1920px) {
     .form__order {
         margin-top: 10px;
         display: flex;
@@ -11,7 +11,7 @@
         align-items: center; /**/
     }
     .form__order label {
-        width: 52%; /**/
+        width: 62%; /***/
     }
     .form__order input[type='text'],
     .form__order input[type='tel'],
@@ -74,6 +74,11 @@
         font-size: 0.8125rem;
         line-height: 150%;
         color: red;
+    }
+}
+@media screen and (max-width: 1549px) {
+    .form__order label {
+        width: 52%; /**/
     }
 }
 @media screen and (max-width: 768px) {

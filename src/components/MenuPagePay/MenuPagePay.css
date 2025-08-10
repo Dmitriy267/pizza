@@ -1,9 +1,9 @@
-@media screen and (max-width: 1549px) {
+@media screen and (max-width: 1920px) {
     .menu-page__pay {
         display: flex;
         flex-direction: column;
         margin-top: 37px;
-        width: 68%; /**/
+        width: 80%; /***/
         height: auto;
         box-shadow: 0 4px 28px 0 rgba(0, 0, 0, 0.08);
         background-color: #fff;
@@ -32,6 +32,11 @@
         line-height: 165%;
         color: #231f20;
         margin-left: 110px; /**/
+    }
+}
+@media screen and (max-width: 1549px) {
+    .menu-page__pay {
+        width: 68%; /**/
     }
 }
 @media screen and (max-width: 768px) {

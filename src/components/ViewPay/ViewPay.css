@@ -1,10 +1,10 @@
-@media screen and (max-width: 1549px) {
+@media screen and (max-width: 1920px) {
     .view__pay {
         margin-top: 58px; /**/
         display: flex;
         flex-direction: column;
         border-radius: 6px;
-        width: 68%; /**/
+        width: 50%; /***/
         height: auto;
         background-color: var(--bg-color-grey);
         padding-left: 29px; /**/
@@ -151,6 +151,11 @@
         line-height: 187%;
         color: #231f20;
         opacity: 0.7;
+    }
+}
+@media screen and (max-width: 1549px) {
+    .view__pay {
+        width: 68%; /**/
     }
 }
 @media screen and (max-width: 768px) {

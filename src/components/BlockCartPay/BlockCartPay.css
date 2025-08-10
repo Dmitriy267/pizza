@@ -1,7 +1,7 @@
-@media screen and (max-width: 1549px) {
+@media screen and (max-width: 1920px) {
     .wrapper__cart-pay {
         display: flex;
-        gap: 27px;
+        gap: 30px; /***/
     }
     .block__cart-pay {
         display: flex;
@@ -46,6 +46,11 @@
     }
     .inputs__cart-pay_bottom .input-decor__cart:nth-of-type(2n) {
         width: 33.22%;
+    }
+}
+@media screen and (max-width: 1549px) {
+    .wrapper__cart-pay {
+        gap: 27px;
     }
 }
 @media screen and (max-width: 768px) {

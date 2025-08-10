@@ -1,4 +1,4 @@
-@media screen and (max-width: 1549px) {
+@media screen and (max-width: 1920px) {
     .registration__section {
         padding-top: 45px;
     }
@@ -24,7 +24,7 @@
         margin-top: 30px;
         display: flex;
         flex-direction: column;
-        width: 60%; /**/
+        width: 65%; /***/
         margin-left: 20%; /**/
     }
     .form__registration {
@@ -97,6 +97,11 @@
     }
     .link_prev {
         color: #664ef9;
+    }
+}
+@media screen and (max-width: 1549px) {
+    .block-form__registration {
+        width: 60%; /**/
     }
 }
 @media screen and (max-width: 768px) {

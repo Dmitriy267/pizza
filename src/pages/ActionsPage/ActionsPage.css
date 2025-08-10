@@ -1,11 +1,16 @@
-@media screen and (max-width: 1549px) {
+@media screen and (max-width: 1920px) {
     .sections__actions {
         padding-top: 25px; /**/
     }
     .h2__actions {
         font-weight: 700; /**/
-        font-size: 1.875rem; /**/
+        font-size: 1.93rem; /***/
         color: var(--yellow-color);
+    }
+}
+@media screen and (max-width: 1549px) {
+    .h2__actions {
+        font-size: 1.875rem; /**/
     }
 }
 @media screen and (max-width: 768px) {

@@ -1,4 +1,4 @@
-@media screen and (max-width: 1549px) {
+@media screen and (max-width: 1920px) {
     .shop__wrapper {
         padding-top: 59px; /**/
     }
@@ -37,7 +37,7 @@
         margin-top: 43px; /**/
         margin-bottom: 24px;
         font-weight: 600;
-        font-size: 1.375rem;
+        font-size: 1.5rem; /***/
         line-height: 77%; /**/
         color: #ff2e65;
     }
@@ -110,6 +110,11 @@
     }
     .text-percent {
         margin-top: 8px;
+    }
+}
+@media screen and (max-width: 1549px) {
+    .h3__promo {
+        font-size: 1.375rem;
     }
 }
 @media screen and (max-width: 768px) {

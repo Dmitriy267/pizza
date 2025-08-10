@@ -1,4 +1,7 @@
-@media screen and (max-width: 1549px) {
+@media screen and (max-width: 1920px) {
+    .section__contacts {
+        padding-top: 45px;
+    }
     .adress__container {
         position: static; /**/
         overflow: hidden;
@@ -6,6 +9,7 @@
     .block__contacts_middle {
         display: flex;
         align-items: center;
+        margin-top: 20px;
     }
     .tel__contacts {
         color: var(--yellow-color);
@@ -21,18 +25,7 @@
         color: var(--active-link);
     }
     .image_position {
-        position: absolute;
-        top: 203px;
-        right: 1px; /**/
-        width: 196px; /**/
-        height: 281px; /**/
-        z-index: 0;
-        overflow: hidden;
-    }
-    .img__contacts {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        display: none;
     }
 
     .adress__contacts p:first-of-type {
@@ -48,6 +41,23 @@
         margin-top: 12px;
         font-variant: small-caps;
         color: var(--black-color);
+    }
+}
+@media screen and (max-width: 1549px) {
+    .image_position {
+        display: block;
+        position: absolute;
+        top: 203px;
+        right: 1px; /**/
+        width: 196px; /**/
+        height: 281px; /**/
+        z-index: 0;
+        overflow: hidden;
+    }
+    .img__contacts {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 @media screen and (max-width: 768px) {

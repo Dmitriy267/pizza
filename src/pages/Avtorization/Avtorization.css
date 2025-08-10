@@ -1,4 +1,4 @@
-@media screen and (max-width: 1549px) {
+@media screen and (max-width: 1920px) {
     .avtorization {
         padding-top: 45px;
     }
@@ -54,7 +54,7 @@
     .avtorization_flex > p {
         margin-top: 15px;
         font-weight: 400;
-        font-size: 0.875rem;
+        font-size: 1.2rem; /***/
         text-align: center;
         color: var(--grey-color);
         margin-bottom: 15px;
@@ -62,7 +62,6 @@
     .form-avtorization {
         display: flex;
         flex-direction: column;
-        /* position: relative; */
         width: 45%; /**/
     }
     .div__avtorisation_relative {
@@ -78,11 +77,9 @@
         height: 50px;
     }
     .login {
-        /* margin-bottom: 20px; */
         border: 2px solid rgba(78, 100, 249, 0.8);
     }
     .password {
-        /* margin-bottom: 20px; */
         background-color: #f6f6f6;
     }
     .svg-user,
@@ -151,7 +148,7 @@
     }
     .link__avtorization-password {
         font-weight: 500;
-        font-size: 0.8125rem;
+        font-size: 0.875rem; /***/
         line-height: 143%;
         text-align: right;
         color: #664ef9;
@@ -180,6 +177,15 @@
         font-weight: 500;
         line-height: 186%;
         color: #664ef9;
+    }
+}
+@media screen and (max-width: 1549px) {
+    .avtorization_flex > p {
+        font-size: 0.875rem;
+    }
+
+    .link__avtorization-password {
+        font-size: 0.8125rem;
     }
 }
 @media screen and (max-width: 768px) {

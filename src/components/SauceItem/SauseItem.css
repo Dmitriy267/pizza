@@ -1,10 +1,10 @@
-@media screen and (max-width: 1549px) {
+@media screen and (max-width: 1920px) {
     .sauce-wrapper {
-        width: 114.95px; /**/
+        width: 160px; /***/
         border: 1.5px solid #e2e2e9;
         box-shadow: none;
         border-radius: 12px;
-        height: 173px;
+        height: 194px; /***/
     }
     @keyframes boxShadow {
         from {
@@ -26,14 +26,14 @@
         flex-direction: column;
         align-items: center;
         margin-top: 14px;
-        gap: 14px; /**/
+        gap: 18px; /***/
     }
     .sauce_flex > img {
-        width: 56.56%;
+        width: 65%; /***/
     }
     .sauce_flex > p:first-of-type {
         font-weight: 600;
-        font-size: 0.825rem;
+        font-size: 1.1rem; /***/
         line-height: 108%;
         text-align: center;
         color: #000;
@@ -43,9 +43,32 @@
     }
     .sauce_flex > span {
         font-weight: 700;
-        font-size: 0.875rem;
+        font-size: 1.2rem; /***/
         text-align: center;
         color: #ff2e65;
+    }
+    .span_hidden {
+        display: none;
+    }
+}
+@media screen and (max-width: 1549px) {
+    .sauce-wrapper {
+        width: 114.95px; /**/
+        height: 173px;
+    }
+
+    .sauce_flex {
+        gap: 14px; /**/
+    }
+    .sauce_flex > img {
+        width: 56.56%;
+    }
+    .sauce_flex > p:first-of-type {
+        font-size: 0.825rem;
+    }
+
+    .sauce_flex > span {
+        font-size: 0.875rem;
     }
     .span_hidden {
         display: none;

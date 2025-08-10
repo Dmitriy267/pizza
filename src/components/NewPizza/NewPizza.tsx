@@ -4,7 +4,7 @@ import svgPicter from '/images/demoPizza/image 14.png';
 
 const demo = Array(7).fill({
     image: '/images/demoPizza/image 8.jpg',
-    name: 'Карбонара',
+    name: 'Комбо-пицца',
     price: 'от 120 ₽',
 });
 export function NewPizza() {

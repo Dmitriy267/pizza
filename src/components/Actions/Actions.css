@@ -81,7 +81,7 @@
         height: 348px; /**/
         width: 210px; /**/
         overflow: hidden;
-        left: 400px; /**/
+        left: 490px; /**/
         top: -190px; /**/
         z-index: -1; /**/
     }
@@ -103,6 +103,9 @@
     .block__actions_bottom img {
         height: 189px; /**/
         width: 100%; /**/
+    }
+    .wrap__img_position {
+        left: 400px; /**/
     }
 }
 
@@ -156,6 +159,7 @@
         top: 0px;
         z-index: 1;
     }
+
     .actions__image_right {
         position: absolute;
         top: 0;

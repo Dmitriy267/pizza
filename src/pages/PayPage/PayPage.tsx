@@ -1,4 +1,4 @@
-import type { FC } from 'react';
+import { useState, type FC } from 'react';
 import { Footer } from '../../components/Footer/Footer';
 import { Header } from '../../components/Header/Header';
 import { ShopSteps } from '../../components/ShopSteps/ShopSteps';
@@ -22,6 +22,10 @@ export const PayPage: FC = () => {
         if (summa !== 0) {
             navigate('/Завершение заказа');
         }
+    };
+    const [sms, setSms] = useState<boolean>(false);
+    const handleChengeSms = () => {
+        setSms((prev) => !prev);
     };
 
     return (
@@ -66,6 +70,7 @@ export const PayPage: FC = () => {
                                 type="checkbox"
                                 name="smsActions"
                                 className="input-decor__actions"
+                                onChange={handleChengeSms}
                             />
                             Сообщать о бонусах, акциях и{' '}
                             <span>новых продуктах</span>
@@ -76,6 +81,12 @@ export const PayPage: FC = () => {
                                 />
                             </span>
                         </label>
+                        {sms ? (
+                            <p className="text-memory__actions">
+                                Мы сообщим об акциях по почте, указанной при
+                                регистрации
+                            </p>
+                        ) : null}
                     </div>
 
                     <MenuPagePay />

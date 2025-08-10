@@ -1,4 +1,4 @@
-@media screen and (max-width: 1549px) {
+@media screen and (max-width: 1920px) {
     .shop__steps {
         display: flex;
         justify-content: space-between;
@@ -20,8 +20,8 @@
         font-size: 0.9375rem;
         line-height: 187%;
         display: flex;
-        width: 36px;
-        height: 36px;
+        width: 45px; /***/
+        height: 45px; /***/
         border-radius: 100%;
         justify-content: center;
         align-items: center;
@@ -44,13 +44,13 @@
     .step_active + p,
     .step_default + p {
         font-weight: 600;
-        font-size: 0.875rem;
+        font-size: 0.935rem; /***/
         line-height: 200%;
         text-align: center;
     }
     .hr_dashed {
         border: 2px dashed #b8c5d0;
-        width: 14.82%;
+        width: 30%; /***/
         height: 0px;
         position: absolute;
     }
@@ -60,7 +60,7 @@
     }
     .hr_dashed:last-of-type {
         top: 17px;
-        left: 694px; /**/
+        left: 1100px; /***/
     }
     .step_default + p {
         color: rgba(105, 111, 122, 0.95);
@@ -71,6 +71,27 @@
     }
     .text__step_threed {
         width: 95px;
+    }
+}
+@media screen and (max-width: 1549px) {
+    .step_active,
+    .step_default {
+        width: 36px;
+        height: 36px;
+    }
+
+    .step_active + p,
+    .step_default + p {
+        font-size: 0.875rem;
+    }
+    .hr_dashed {
+        width: 14.82%;
+    }
+    .hr_dashed:first-of-type {
+        left: 164px; /**/
+    }
+    .hr_dashed:last-of-type {
+        left: 694px; /**/
     }
 }
 @media screen and (max-width: 768px) {
