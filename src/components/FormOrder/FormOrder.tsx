@@ -46,74 +46,86 @@ export const FormOrder: FC = () => {
     const handleChangeTextArea = (e: ChangeEvent<HTMLTextAreaElement>) => {
         setFormOrder({ ...formOrder, comment: e.target.value });
     };
-    let flag = false;
+    let flag1 = false,
+        flag2 = false,
+        flag3 = false,
+        flag4 = false,
+        flag5 = false,
+        flag6 = false,
+        flag7 = false;
+
     const validate = () => {
+        const arr: boolean[] = [];
         if (formOrder) {
             if (formOrder.lastName.length === 0) {
                 setErrorsLastName('Не заполнено поле!');
-                flag = false;
+                flag1 = false;
             } else {
                 setErrorsLastName('');
-                flag = true;
+                flag1 = true;
             }
+
             if (formOrder.firstName.length === 0) {
                 setErrorsFirstName('Не заполнено поле!');
-                flag = false;
+                flag2 = false;
             } else {
                 setErrorsFirstName('');
-                flag = true;
+                flag2 = true;
             }
             if (formOrder.patron.length === 0) {
                 setErrorsPatronName('Не заполнено поле!');
-                flag = false;
+                flag3 = false;
             } else {
                 setErrorsPatronName('');
-                flag = true;
+                flag3 = true;
             }
             if (formOrder.tel.length === 0) {
                 setErrorsTel('Не заполнено поле!');
-                flag = false;
+                flag4 = false;
             } else if (!reTel.test(formOrder.tel)) {
                 setErrorsTel('Неправильно введен номер!');
-                flag = false;
+                flag4 = false;
             } else {
                 setErrorsTel('');
-                flag = true;
+                flag4 = true;
             }
             if (formOrder.email.length === 0) {
                 setErrorsEmail('Не заполнено поле!');
-                flag = false;
+                flag5 = false;
             } else if (!emailRe.test(formOrder.email)) {
                 setErrorsEmail('Неправильно введена электронная почта!');
-                flag = false;
+                flag5 = false;
             } else {
                 setErrorsEmail(' ');
-                flag = true;
+                flag5 = true;
             }
             if (formOrder.deliver.length === 0) {
                 setErrorsDeliver('Выберите доставку');
-                flag = false;
+                flag6 = false;
             } else {
                 setErrorsDeliver('');
-                flag = true;
+                flag6 = true;
             }
 
             if (formOrder.adress.length === 0) {
                 setErrorsAdress('Не заполнено поле!');
-                flag = false;
+                flag7 = false;
             } else {
                 setErrorsAdress('');
-                flag = true;
+                flag7 = true;
             }
         }
 
-        return flag;
+        arr.push(flag1, flag2, flag3, flag4, flag5, flag6, flag7);
+        return arr;
     };
     const navigate = useNavigate();
     const dispatch = useAppDispatch();
     const handleSubmitOrder = (e: FormEvent) => {
         e.preventDefault();
-        validate();
+        const valArr: boolean[] = validate();
+
+        const flag = valArr.every((item) => item === true);
         if (flag) {
             console.log(`formOrder`, formOrder);
             dispatch(getUserOrder(formOrder));
