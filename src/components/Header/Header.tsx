@@ -5,6 +5,8 @@ import { useEffect, useState, type FC } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { SelectCity } from '../SelectCity/SelectCity';
 import { Option } from '../../common/Option/Option';
+import sun from '../../../public/images/decors/sun.png';
+import loon from '../../../public/images/decors/loon.png';
 import { arrTags } from './colorTag';
 const menu = [
     { id: 1, name: 'Пицца' },
@@ -40,8 +42,10 @@ export const Header: FC = () => {
     const [theme, setTheme] = useState(
         localStorage.getItem('theme') || 'light'
     );
+    const [isImg, setIsImg] = useState<boolean>(true);
     const onClickTheme = () => {
         setTheme(theme === 'light' ? 'dark' : 'light');
+        setIsImg((prev) => !prev);
     };
     useEffect(() => {
         document.documentElement.className = theme;
@@ -128,12 +132,12 @@ export const Header: FC = () => {
                             </a>
                         </div>
                     </div>
-                    <button
+                    {/* <button
                         onClick={onClickTheme}
                         className="btn-theme__header"
                     >
                         Cменить фон
-                    </button>
+                    </button> */}
                     <div className="header_bottom">
                         <nav className="menu-nav__header_bottom">
                             <ul className="menu-list__header_bottom ">
@@ -165,7 +169,16 @@ export const Header: FC = () => {
                     >
                         Корзина
                     </button>
-
+                    <button
+                        onClick={onClickTheme}
+                        className="btn-theme__header"
+                    >
+                        {isImg ? (
+                            <img src={sun} alt="Иконка светлой темы" />
+                        ) : (
+                            <img src={loon} alt="Иконка темной темы" />
+                        )}
+                    </button>
                     <HamburgerMenu
                         isActive={isActive}
                         onClick={handeClickToggle}
