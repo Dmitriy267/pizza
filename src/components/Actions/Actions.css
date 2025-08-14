@@ -81,7 +81,7 @@
         height: 348px; /**/
         width: 210px; /**/
         overflow: hidden;
-        left: 490px; /**/
+        left: 384px;
         top: -190px; /**/
         z-index: -1; /**/
     }
@@ -105,7 +105,7 @@
         width: 100%; /**/
     }
     .wrap__img_position {
-        left: 400px; /**/
+        left: 402px; /**/
     }
 }
 
@@ -181,7 +181,6 @@
     .block__actions {
         flex-direction: column;
         margin-bottom: 7px;
-        width: 300px;
         height: auto;
     }
     .block__actions_top {
@@ -199,7 +198,7 @@
         width: 100%;
     }
     .block__actions_bottom img {
-        width: 144px;
+        width: 100%;
         height: 101px;
     }
     .actions_all {
@@ -215,7 +214,7 @@
     }
     .wrap__img_position {
         width: 79px;
-        left: 39px;
+        left: 35px; /***/
     }
     .actions__image_right {
         height: 100px;

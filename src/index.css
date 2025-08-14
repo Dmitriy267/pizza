@@ -117,6 +117,8 @@ h6 {
     --active-link: rgb(80, 80, 248);
     --dark-html: #282c34;
     --light-html: #fff;
+    --dark-color: #231f20;
+    --orange-bgColor: #db510a;
 }
 .dark {
     background-color: var(--dark-html);
@@ -124,7 +126,34 @@ h6 {
 .light {
     background-color: var(--light-html);
 }
+.font_white {
+    color: var(--white-color);
+}
 
+.li-last_dark {
+    color: #696f7a;
+}
+.font_dark {
+    color: var(--black-color);
+}
+
+.p-title_grey {
+    color: #797979;
+}
+.p_grey {
+    color: var(--grey-color);
+}
+
+.p_dark {
+    color: var(--dark-color);
+}
+
+.block__demoPizza_white {
+    background-color: var(--white-color);
+}
+.block__demoPizza_orange {
+    background-color: var(--orange-bgColor);
+}
 @media (max-width: 1920px) {
     [class*='__container'] {
         max-width: 1880px;

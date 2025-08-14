@@ -28,13 +28,13 @@
         font-weight: 800;
         font-size: 1.7rem; /***/
         line-height: 117%; /**/
-        color: #797979;
+        /* color: #797979; */
     }
     .productDesc_middle p:last-of-type {
         font-weight: 500;
         font-size: 1rem; /***/
         line-height: 146%; /**/
-        color: #686466;
+        /* color: #686466; */
         margin-top: 15px; /**/
     }
     .productDesc_bottom {
@@ -49,7 +49,6 @@
         font-weight: 700;
         font-size: 1.375rem;
         line-height: 86%;
-        color: var(--black-color);
     }
     .btn__productDesc {
         font-weight: 700;

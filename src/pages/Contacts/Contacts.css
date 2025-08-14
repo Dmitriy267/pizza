@@ -33,14 +33,12 @@
         font-variant: small-caps;
         margin-top: 35px; /**/
         font-size: 1.625rem; /**/
-        color: var(--black-color);
     }
     .adress__contacts p:last-of-type {
         font-weight: 600;
         font-size: 0.9375rem; /**/
         margin-top: 12px;
         font-variant: small-caps;
-        color: var(--black-color);
     }
 }
 @media screen and (max-width: 1549px) {

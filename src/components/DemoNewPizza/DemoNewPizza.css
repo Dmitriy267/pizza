@@ -1,11 +1,9 @@
 @media screen and (max-width: 1920px) {
     .block__demoPizza {
-        background-color: var(--white-color);
         border-radius: 12px;
         box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.06);
         display: flex;
         align-items: center;
-        margin-right: 29px;
         padding-top: 14px; /**/
         padding-bottom: 14px;
         border: 1px solid #faebeb;
@@ -33,17 +31,6 @@
     }
 }
 @media screen and (max-width: 1549px) {
-    .block__demoPizza {
-        background-color: var(--white-color);
-        border-radius: 12px;
-        box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.06);
-        display: flex;
-        align-items: center;
-        margin-right: 29px;
-        padding-top: 14px; /**/
-        padding-bottom: 14px;
-        border: 1px solid #faebeb;
-    }
     .block-info__newPizza {
         display: flex;
         flex-direction: column;
@@ -90,9 +77,12 @@
 }
 @media screen and (max-width: 320px) {
     .block__demoPizza {
-        margin-right: 12px;
         padding-top: 12px;
         padding-bottom: 16px;
+        margin-left: 10px;
+    }
+    .block__demoPizza:not(:nth-child(1)) {
+        display: none;
     }
     .block-info__newPizza {
         margin-left: 16px;

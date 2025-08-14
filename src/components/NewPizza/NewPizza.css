@@ -6,14 +6,14 @@
     .h2 {
         font-weight: bold;
         font-size: 1.8rem; /**/
-        color: #231f20;
     }
     .block__newMenu {
-        width: 96vw; /**/
         height: auto;
         display: flex;
         overflow: hidden;
         margin-top: 39px; /**/
+        gap: 29px; /***/
+        margin-left: 58px;
     }
     .img__position {
         width: 238.27px; /**/
@@ -30,7 +30,8 @@
         font-size: 1.5rem; /**/
     }
     .block__newMenu {
-        width: 87vw; /**/
+        width: 100%; /***/
+        margin-left: 0;
     }
     .img__position {
         width: 238.27px; /**/
@@ -69,6 +70,7 @@
     }
     .block__newMenu {
         margin-top: 16px;
+        width: 100%;
     }
     .img__position {
         width: 89px;

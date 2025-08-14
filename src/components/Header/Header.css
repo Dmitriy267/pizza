@@ -34,9 +34,7 @@
         font-weight: 600;
         font-size: 1.0625rem;
     }
-    .adress__paste > p {
-        color: #231f20;
-    }
+
     .adress__paste > p span {
         color: var(--yellow-color);
     }
@@ -44,6 +42,7 @@
         display: flex;
         align-items: center;
         margin-top: 9px;
+        gap: 5px;
     }
 
     .name-company__time,
@@ -54,7 +53,6 @@
         align-items: center;
         font-weight: 700;
         font-size: 1.1rem; /**/
-        color: #231f20;
     }
     .name-company__time::before {
         content: '';
@@ -148,12 +146,10 @@
     .menu-list__header_bottom li:not(li:last-of-type) {
         font-weight: 600;
         font-size: 1.1rem; /**/
-        color: #0e0c0d;
     }
     .menu-list__header_bottom li:last-of-type {
         font-weight: 700;
         font-size: 1.2rem; /**/
-        color: #696f7a;
     }
     .menu__link {
         transition: color 0.6s;

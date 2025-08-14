@@ -5,7 +5,7 @@ import { useEffect, useState, type FC } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { SelectCity } from '../SelectCity/SelectCity';
 import { Option } from '../../common/Option/Option';
-
+import { arrTags } from './colorTag';
 const menu = [
     { id: 1, name: 'Пицца' },
     { id: 2, name: 'Напитки' },
@@ -26,7 +26,7 @@ export const Header: FC = () => {
         navigate('Корзина');
     };
     const menuList = menu.map((m) => (
-        <li key={m.id} className="menu__item">
+        <li key={m.id} className="menu__item ">
             {' '}
             <Link to={`/${m.name}`} className="menu__link">
                 {m.name}
@@ -46,7 +46,14 @@ export const Header: FC = () => {
     useEffect(() => {
         document.documentElement.className = theme;
         localStorage.setItem('theme', theme);
+
+        if (theme === 'dark') {
+            arrTags.map((item) => item.addStyle());
+        } else {
+            arrTags.map((item) => item.removeAddStyle());
+        }
     }, [theme]);
+
     return (
         <>
             <header className="header">
@@ -95,13 +102,15 @@ export const Header: FC = () => {
                             </div>
 
                             <div className="time">
-                                <p className="name-company__time">Яндекс еда</p>
-                                <span className="span-reiting__time">4.8</span>
+                                <p className="name-company__time ">
+                                    Яндекс еда
+                                </p>
+                                <span className="span-reiting__time ">4.8</span>
 
                                 <p className="text-delivery__time">
                                     Время доставки
                                 </p>
-                                <p className="text-minut__time">от 31 мин</p>
+                                <p className="text-minut__time ">от 31 мин</p>
                             </div>
                         </div>
                         <div className="block-call__header">
@@ -127,7 +136,7 @@ export const Header: FC = () => {
                     </button>
                     <div className="header_bottom">
                         <nav className="menu-nav__header_bottom">
-                            <ul className="menu-list__header_bottom">
+                            <ul className="menu-list__header_bottom ">
                                 {menuList}
                             </ul>
 

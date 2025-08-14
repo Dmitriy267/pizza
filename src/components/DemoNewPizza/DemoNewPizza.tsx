@@ -12,7 +12,7 @@ export const DemoNewPizza: FunctionComponent<DemoNewPizzaProps> = ({
 }) => {
     return (
         <>
-            <div className="block__demoPizza">
+            <div className="block__demoPizza block__demoPizza_white">
                 <img
                     src={srcImage}
                     alt="Демо пиццы"
