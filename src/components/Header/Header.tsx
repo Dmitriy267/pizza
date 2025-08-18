@@ -8,6 +8,8 @@ import { Option } from '../../common/Option/Option';
 import sun from '../../../public/images/decors/sun.png';
 import loon from '../../../public/images/decors/loon.png';
 import { arrTags } from './colorTag';
+import { IsLogin } from '../isLoginUser/isLoginUser';
+
 const menu = [
     { id: 1, name: 'Пицца' },
     { id: 2, name: 'Напитки' },
@@ -17,12 +19,12 @@ const menu = [
 ];
 
 export const Header: FC = () => {
+    const navigate = useNavigate();
     const [isActive, setIsActive] = useState<boolean>(false);
 
     const handeClickToggle = () => {
         setIsActive((prev) => !prev);
     };
-    const navigate = useNavigate();
 
     const handeClickNavigate = () => {
         navigate('Корзина');
@@ -132,17 +134,13 @@ export const Header: FC = () => {
                             </a>
                         </div>
                     </div>
-                    {/* <button
-                        onClick={onClickTheme}
-                        className="btn-theme__header"
-                    >
-                        Cменить фон
-                    </button> */}
+
                     <div className="header_bottom">
                         <nav className="menu-nav__header_bottom">
                             <ul className="menu-list__header_bottom ">
                                 {menuList}
                             </ul>
+                            <IsLogin />
 
                             <button
                                 className="btn-menu__header_bottom"
@@ -187,6 +185,7 @@ export const Header: FC = () => {
                         <div className="header__menu header_border">
                             <nav className="menu__body">
                                 <ul className="menu__list">{menuList}</ul>
+
                                 <a
                                     href="tel:84993918449"
                                     className="menu__tel link-menu__tel_display"

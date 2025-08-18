@@ -5,6 +5,8 @@ import './Avtorization.css';
 import { useState, type ChangeEvent, type FormEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { getCookie } from '../../redux/features/User/userCookie';
+import { useAppDispatch, useAppSelector } from '../../redux/hooks/hooks';
+import { isLoginIn, logout } from '../../redux/features/authReducer/authSlice';
 interface AvtorisationForm {
     login: string;
     password: string;
@@ -60,12 +62,18 @@ export function Avtorization() {
         return flag;
     }
     const navigate = useNavigate();
+    const auth = useAppSelector((state) => state.auth);
+    const dispatch = useAppDispatch();
+    console.log(`wwww`, auth.isLoggedIn);
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
         const mark = avtorizationData(cookieLogin, cookiePassword);
         if (mark === true) {
+            dispatch(isLoginIn());
             console.log(avtoForm);
-            navigate('/');
+            navigate('/Профиль');
+        } else {
+            dispatch(logout());
         }
     };
     return (
