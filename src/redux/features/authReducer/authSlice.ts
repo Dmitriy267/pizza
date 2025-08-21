@@ -12,6 +12,7 @@ export const authSlice = createSlice({
     reducers: {
         isLoginIn: (state) => {
             state.isLoggedIn = true;
+            document.cookie = `isLoggedn=${state.isLoggedIn}`;
         },
         logout: (state) => {
             state.isLoggedIn = false;

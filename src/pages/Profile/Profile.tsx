@@ -1,7 +1,6 @@
 import { useRef, useState, type ChangeEvent, type FC } from 'react';
 import { Header } from '../../components/Header/Header';
 import { Footer } from '../../components/Footer/Footer';
-import { useAppSelector } from '../../redux/hooks/hooks';
 import { Link } from 'react-router-dom';
 import { getCookie } from '../../redux/features/User/userCookie';
 import './Profile.css';
@@ -10,12 +9,10 @@ interface File {
     name: string;
 }
 export const Profile: FC = () => {
-    const auth = useAppSelector((state) => state.auth);
-    console.log(auth);
     const cookieLogin = getCookie('userLogin');
     const cookiePassword = getCookie('userPassword');
     const cookieEmail = getCookie('userEmail');
-
+    const cookieIsLoggedIn = getCookie('isLoggedn');
     const uploadRef = useRef<HTMLInputElement>(null);
 
     const [text, setText] = useState<string>('');
@@ -50,25 +47,28 @@ export const Profile: FC = () => {
             <Header />
             <section className="section__profile">
                 <div className="profile__container">
-                    {auth.isLoggedIn ? (
+                    {cookieIsLoggedIn ? (
                         <div className="block__profile">
                             <div className="block-photo__profile">
-                                <div className="photo"></div>
-                                {localStorage.getItem('imgProfile') ? (
-                                    <>
-                                        <img
-                                            src={`${localStorage.getItem(
-                                                'imgProfile'
-                                            )}`}
-                                            id="image"
-                                            alt="Выбранное фото"
-                                            className="img__profile_upload"
-                                        />
-                                        <p>{text}</p>
-                                    </>
-                                ) : null}
-
+                                <div className="photo">
+                                    {localStorage.getItem('imgProfile') ? (
+                                        <>
+                                            <img
+                                                src={`${localStorage.getItem(
+                                                    'imgProfile'
+                                                )}`}
+                                                id="image"
+                                                alt="Выбранное фото"
+                                                className="img__profile_upload"
+                                            />
+                                            <p>{text}</p>
+                                        </>
+                                    ) : (
+                                        <div className="block-img__profile_alternative"></div>
+                                    )}
+                                </div>
                                 <button
+                                    className="btn__profile"
                                     onClick={() => uploadRef.current?.click()}
                                 >
                                     Загрузить фото

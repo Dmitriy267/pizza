@@ -15,7 +15,6 @@ const menu = [
     { id: 2, name: 'Напитки' },
     { id: 3, name: 'Акции' },
     { id: 4, name: 'Контакты' },
-    { id: 5, name: 'Войти' },
 ];
 
 export const Header: FC = () => {
@@ -185,6 +184,7 @@ export const Header: FC = () => {
                         <div className="header__menu header_border">
                             <nav className="menu__body">
                                 <ul className="menu__list">{menuList}</ul>
+                                <IsLogin />
 
                                 <a
                                     href="tel:84993918449"

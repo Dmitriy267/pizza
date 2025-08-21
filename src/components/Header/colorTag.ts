@@ -28,16 +28,8 @@ class ColorTag {
         }
     }
 }
-const liHeader = new ColorTag(
-    'font_white',
-    'font_dark',
-    '.menu__item:not(:nth-of-type(5))'
-);
-const liLastHeader = new ColorTag(
-    'font_white',
-    'li-last_dark',
-    '.menu__item:nth-of-type(5)'
-);
+const liHeader = new ColorTag('font_white', 'font_dark', '.menu__item');
+
 const pNameCompany = new ColorTag(
     'font_white',
     'p_dark',
@@ -95,7 +87,6 @@ const pAdress = new ColorTag('font_white', 'font_dark', '.adress__contacts p');
 
 export const arrTags = [
     liHeader,
-    liLastHeader,
     pNameCompany,
     ptextDeliver,
     pTextMinute,

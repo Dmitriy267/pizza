@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import './isLoginUser.css';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks/hooks';
 import { logout } from '../../redux/features/authReducer/authSlice';
+
 export const IsLogin: FC = () => {
     const auth = useAppSelector((state) => state.auth);
-    console.log(auth.isLoggedIn);
     const navigate = useNavigate();
     const dispatch = useAppDispatch();
 
@@ -20,7 +20,7 @@ export const IsLogin: FC = () => {
 
     return (
         <>
-            <button onClick={handeClickisLogin}>
+            <button onClick={handeClickisLogin} className="btn-enter__header">
                 {' '}
                 {auth.isLoggedIn ? 'Выйти' : 'Войти'}
             </button>
