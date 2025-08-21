@@ -16,11 +16,20 @@ export const RegistrationEnd: FC = () => {
             <Header />
             <section className="section__registrationEnd">
                 <div className="block-registrationEnd__container">
-                    <h1 className="h1__registrationEnd">
-                        Добро пожаловать, {cookieLogin}
-                    </h1>
-                    <h2>Вы успешно зарегистрировались на сайте "ПиццаБум"</h2>
-                    <button onClick={handeClick}>Посмотреть профиль</button>
+                    <div className="block___registrationEnd_flex">
+                        <h1 className="h1__registrationEnd">
+                            Добро пожаловать, {cookieLogin}
+                        </h1>
+                        <h2 className="h2__registrationEnd">
+                            Вы успешно зарегистрировались на сайте "ПиццаБум"
+                        </h2>
+                        <button
+                            onClick={handeClick}
+                            className="btn__registrationEnd"
+                        >
+                            Посмотреть профиль
+                        </button>
+                    </div>
                 </div>
             </section>
             <Footer />

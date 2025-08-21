@@ -130,7 +130,8 @@ h6 {
     color: var(--white-color);
 }
 
-.li-last_dark {
+.li-last_dark,
+.font_grey {
     color: #696f7a;
 }
 .font_dark {
@@ -147,7 +148,9 @@ h6 {
 .p_dark {
     color: var(--dark-color);
 }
-
+.bg_grey {
+    background-color: var(--bg-color-grey);
+}
 .block__demoPizza_white {
     background-color: var(--white-color);
 }

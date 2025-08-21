@@ -84,6 +84,36 @@ const pMessage = new ColorTag('font_white', 'font_dark', '.message > p ');
 const pLastFooterText = new ColorTag('font_white', 'font_dark', '.last__text');
 const btnEmail = new ColorTag('font_white', 'font_dark', '.btn__email');
 const pAdress = new ColorTag('font_white', 'font_dark', '.adress__contacts p');
+const pShopProd = new ColorTag('font_white', 'p_grey', '.shop-prod_bottom > p');
+const pStepActive = new ColorTag('font_white', 'font_dark', '.step_active + p');
+const pStepDefault = new ColorTag(
+    'font_white',
+    'font_grey',
+    '.step_default + p'
+);
+const pSause = new ColorTag(
+    'font_white',
+    'font_dark',
+    '.sauce_flex > p:first-of-type'
+);
+const pSumma = new ColorTag('font_white', 'font_dark', '.summa__shop');
+const spanArrowLeft = new ColorTag(
+    'font_white',
+    'font_grey',
+    '.btn__left span'
+);
+const btnArrow = new ColorTag(
+    'font_white',
+    'font_grey',
+    '.block-btn__shop button:last-of-type'
+);
+const pTextUser = new ColorTag('font_white', 'p_dark', '.text-user__pay_first');
+const divFirstUser = new ColorTag('bg_grey', 'bg_white', '.div_first');
+const labelSms = new ColorTag(
+    'font_white',
+    'p_dark',
+    '.div-sms__actions label'
+);
 
 export const arrTags = [
     liHeader,
@@ -105,4 +135,14 @@ export const arrTags = [
     pLastFooterText,
     btnEmail,
     pAdress,
+    pShopProd,
+    pStepActive,
+    pSause,
+    pSumma,
+    spanArrowLeft,
+    btnArrow,
+    pStepDefault,
+    pTextUser,
+    divFirstUser,
+    labelSms,
 ];

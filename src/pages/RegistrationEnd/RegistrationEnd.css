@@ -3,20 +3,55 @@
         padding-top: 45px;
         padding-bottom: 25vh;
     }
-    .h1__registrationEnd {
+    .block___registrationEnd_flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .h1__registrationEnd,
+    .h2__registrationEnd {
         text-align: center;
-        font-size: 2.4rem;
         color: var(--yellow-color);
+    }
+    .h1__registrationEnd {
+        font-size: 2.4rem;
+    }
+    .h2__registrationEnd {
+        font-size: 2rem;
+    }
+    .h2__registrationEnd {
+        margin-top: 20px;
+    }
+    .btn__registrationEnd {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15%;
+        height: 45px;
+        margin-top: 20px;
+        font-family: Montserrat;
+        font-weight: 700;
+        background-color: var(--yellow-color);
+        border-radius: 8px;
     }
 }
 @media screen and (max-width: 1549px) {
     .h1__registrationEnd {
         font-size: 2rem;
     }
+    .h2__registrationEnd {
+        font-size: 1.6rem;
+    }
 }
 @media screen and (max-width: 768px) {
     .h1__registrationEnd {
         font-size: 1.625rem;
+    }
+    .h2__registrationEnd {
+        font-size: 1.2rem;
+    }
+    .btn__registrationEnd {
+        width: 30%;
     }
 }
 @media screen and (max-width: 320px) {
@@ -25,5 +60,11 @@
     }
     .h1__registrationEnd {
         font-size: 1rem;
+    }
+    .h2__registrationEnd {
+        font-size: 0.875rem;
+    }
+    .btn__registrationEnd {
+        width: 60%;
     }
 }
