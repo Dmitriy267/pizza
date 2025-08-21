@@ -24,13 +24,28 @@
     .photo {
         width: 200px;
         height: 200px;
-        border-radius: 100%;
-        overflow: hidden;
     }
+
     .img__profile_upload,
     .block-img__profile_alternative {
         width: 100%;
         height: 100%;
+        border-radius: 100%;
+    }
+    .photo > p {
+        text-align: center;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    .block-img__profile_alternative {
+        position: relative;
+    }
+    .profile {
+        position: absolute;
+        fill: #fff;
+        width: 180px;
+        left: 10px;
+        top: 20px;
     }
     .block-img__profile_alternative {
         background-color: grey;
@@ -42,6 +57,7 @@
         border-radius: 8px;
         width: 80%;
         height: 32px;
+        margin-top: 10px;
         font-family: Montserrat;
         font-weight: 700;
         font-size: 1rem;

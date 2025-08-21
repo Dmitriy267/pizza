@@ -10,6 +10,7 @@ interface File {
 }
 export const Profile: FC = () => {
     const cookieLogin = getCookie('userLogin');
+    console.log(`cookieLogin`, cookieLogin);
     const cookiePassword = getCookie('userPassword');
     const cookieEmail = getCookie('userEmail');
     const cookieIsLoggedIn = getCookie('isLoggedn');
@@ -64,7 +65,12 @@ export const Profile: FC = () => {
                                             <p>{text}</p>
                                         </>
                                     ) : (
-                                        <div className="block-img__profile_alternative"></div>
+                                        <div className="block-img__profile_alternative">
+                                            {' '}
+                                            <svg className="profile">
+                                                <use href="/images/decors/sprite-svg.svg#svg-user"></use>
+                                            </svg>
+                                        </div>
                                     )}
                                 </div>
                                 <button

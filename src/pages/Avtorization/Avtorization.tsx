@@ -12,9 +12,6 @@ interface AvtorisationForm {
     password: string;
 }
 
-const cookieLogin = getCookie('userLogin');
-const cookiePassword = getCookie('userPassword');
-
 export function Avtorization() {
     const [range, setRange] = useState<boolean>(false);
     const [avtoForm, setAvtoForm] = useState<AvtorisationForm>({
@@ -64,6 +61,8 @@ export function Avtorization() {
     const navigate = useNavigate();
 
     const dispatch = useAppDispatch();
+    const cookieLogin = getCookie('userLogin');
+    const cookiePassword = getCookie('userPassword');
 
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
@@ -74,6 +73,13 @@ export function Avtorization() {
             navigate('/Профиль');
         } else {
             dispatch(logout());
+        }
+    };
+    const handeClickBtnMemoryPassword = () => {
+        if (cookiePassword) {
+            alert(`Ваш пароль: ${cookiePassword}`);
+        } else {
+            alert('Зарегестрируйтесь');
         }
     };
     return (
@@ -153,12 +159,15 @@ export function Avtorization() {
                                                 Запомнить меня
                                             </span>
                                         ) : null}
-                                        <a
-                                            href="#"
-                                            className="link__avtorization-password"
+                                        <button
+                                            className="btn__avtorization-password"
+                                            onClick={
+                                                handeClickBtnMemoryPassword
+                                            }
                                         >
+                                            {' '}
                                             Забыли пароль?
-                                        </a>
+                                        </button>
                                     </div>
 
                                     <button

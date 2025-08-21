@@ -3,14 +3,14 @@ import { Footer } from '../../components/Footer/Footer';
 import { Header } from '../../components/Header/Header';
 import { getCookie } from '../../redux/features/User/userCookie';
 import './RegistrationEnd.css';
-
 import { useNavigate } from 'react-router-dom';
-const cookieLogin = getCookie('userLogin');
+
 export const RegistrationEnd: FC = () => {
     const navigate = useNavigate();
     const handeClick = () => {
         navigate('/Профиль');
     };
+    const cookieLogin = getCookie('userLogin');
     return (
         <>
             <Header />
