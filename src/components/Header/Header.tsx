@@ -5,28 +5,31 @@ import { useEffect, useState, type FC } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { SelectCity } from '../SelectCity/SelectCity';
 import { Option } from '../../common/Option/Option';
+import sun from '../../../public/images/decors/sun.png';
+import loon from '../../../public/images/decors/loon.png';
+import { arrTags } from './colorTag';
+import { IsLogin } from '../isLoginUser/isLoginUser';
 
 const menu = [
     { id: 1, name: 'Пицца' },
     { id: 2, name: 'Напитки' },
     { id: 3, name: 'Акции' },
     { id: 4, name: 'Контакты' },
-    { id: 5, name: 'Войти' },
 ];
 
 export const Header: FC = () => {
+    const navigate = useNavigate();
     const [isActive, setIsActive] = useState<boolean>(false);
 
     const handeClickToggle = () => {
         setIsActive((prev) => !prev);
     };
-    const navigate = useNavigate();
 
     const handeClickNavigate = () => {
         navigate('Корзина');
     };
     const menuList = menu.map((m) => (
-        <li key={m.id} className="menu__item">
+        <li key={m.id} className="menu__item ">
             {' '}
             <Link to={`/${m.name}`} className="menu__link">
                 {m.name}
@@ -40,13 +43,22 @@ export const Header: FC = () => {
     const [theme, setTheme] = useState(
         localStorage.getItem('theme') || 'light'
     );
+    const [isImg, setIsImg] = useState<boolean>(true);
     const onClickTheme = () => {
         setTheme(theme === 'light' ? 'dark' : 'light');
+        setIsImg((prev) => !prev);
     };
     useEffect(() => {
         document.documentElement.className = theme;
         localStorage.setItem('theme', theme);
+
+        if (theme === 'dark') {
+            arrTags.map((item) => item.addStyle());
+        } else {
+            arrTags.map((item) => item.removeAddStyle());
+        }
     }, [theme]);
+
     return (
         <>
             <header className="header">
@@ -95,13 +107,15 @@ export const Header: FC = () => {
                             </div>
 
                             <div className="time">
-                                <p className="name-company__time">Яндекс еда</p>
-                                <span className="span-reiting__time">4.8</span>
+                                <p className="name-company__time ">
+                                    Яндекс еда
+                                </p>
+                                <span className="span-reiting__time ">4.8</span>
 
                                 <p className="text-delivery__time">
                                     Время доставки
                                 </p>
-                                <p className="text-minut__time">от 31 мин</p>
+                                <p className="text-minut__time ">от 31 мин</p>
                             </div>
                         </div>
                         <div className="block-call__header">
@@ -119,17 +133,13 @@ export const Header: FC = () => {
                             </a>
                         </div>
                     </div>
-                    <button
-                        onClick={onClickTheme}
-                        className="btn-theme__header"
-                    >
-                        Cменить фон
-                    </button>
+
                     <div className="header_bottom">
                         <nav className="menu-nav__header_bottom">
-                            <ul className="menu-list__header_bottom">
+                            <ul className="menu-list__header_bottom ">
                                 {menuList}
                             </ul>
+                            <IsLogin />
 
                             <button
                                 className="btn-menu__header_bottom"
@@ -156,7 +166,16 @@ export const Header: FC = () => {
                     >
                         Корзина
                     </button>
-
+                    <button
+                        onClick={onClickTheme}
+                        className="btn-theme__header"
+                    >
+                        {isImg ? (
+                            <img src={sun} alt="Иконка светлой темы" />
+                        ) : (
+                            <img src={loon} alt="Иконка темной темы" />
+                        )}
+                    </button>
                     <HamburgerMenu
                         isActive={isActive}
                         onClick={handeClickToggle}
@@ -165,6 +184,8 @@ export const Header: FC = () => {
                         <div className="header__menu header_border">
                             <nav className="menu__body">
                                 <ul className="menu__list">{menuList}</ul>
+                                <IsLogin />
+
                                 <a
                                     href="tel:84993918449"
                                     className="menu__tel link-menu__tel_display"

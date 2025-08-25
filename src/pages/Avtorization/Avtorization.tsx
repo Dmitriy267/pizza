@@ -5,13 +5,12 @@ import './Avtorization.css';
 import { useState, type ChangeEvent, type FormEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { getCookie } from '../../redux/features/User/userCookie';
+import { useAppDispatch } from '../../redux/hooks/hooks';
+import { isLoginIn, logout } from '../../redux/features/authReducer/authSlice';
 interface AvtorisationForm {
     login: string;
     password: string;
 }
-
-const cookieLogin = getCookie('userLogin');
-const cookiePassword = getCookie('userPassword');
 
 export function Avtorization() {
     const [range, setRange] = useState<boolean>(false);
@@ -60,12 +59,27 @@ export function Avtorization() {
         return flag;
     }
     const navigate = useNavigate();
+
+    const dispatch = useAppDispatch();
+    const cookieLogin = getCookie('userLogin');
+    const cookiePassword = getCookie('userPassword');
+
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
         const mark = avtorizationData(cookieLogin, cookiePassword);
         if (mark === true) {
+            dispatch(isLoginIn());
             console.log(avtoForm);
-            navigate('/');
+            navigate('/Профиль');
+        } else {
+            dispatch(logout());
+        }
+    };
+    const handeClickBtnMemoryPassword = () => {
+        if (cookiePassword) {
+            alert(`Ваш пароль: ${cookiePassword}`);
+        } else {
+            alert('Зарегестрируйтесь');
         }
     };
     return (
@@ -145,12 +159,15 @@ export function Avtorization() {
                                                 Запомнить меня
                                             </span>
                                         ) : null}
-                                        <a
-                                            href="#"
-                                            className="link__avtorization-password"
+                                        <button
+                                            className="btn__avtorization-password"
+                                            onClick={
+                                                handeClickBtnMemoryPassword
+                                            }
                                         >
+                                            {' '}
                                             Забыли пароль?
-                                        </a>
+                                        </button>
                                     </div>
 
                                     <button

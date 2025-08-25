@@ -2,7 +2,7 @@ import './NewPizza.css';
 import { DemoNewPizza } from '../DemoNewPizza/DemoNewPizza';
 import svgPicter from '/images/demoPizza/image 14.png';
 
-const demo = Array(7).fill({
+const demo = Array(5).fill({
     image: '/images/demoPizza/image 8.jpg',
     name: 'Комбо-пицца',
     price: 'от 120 ₽',
@@ -20,13 +20,12 @@ export function NewPizza() {
                     />
                     <div className="block__newMenu">
                         {demo.map((d, index) => (
-                            <div key={index}>
-                                <DemoNewPizza
-                                    name={d.name}
-                                    price={d.price}
-                                    srcImage={d.image}
-                                />
-                            </div>
+                            <DemoNewPizza
+                                key={index}
+                                name={d.name}
+                                price={d.price}
+                                srcImage={d.image}
+                            />
                         ))}
                     </div>
                 </div>

@@ -7,6 +7,7 @@ import saucesReducer from './features/sauces/saucesSlice';
 import userReducer from './features/User/userSlice';
 import userOrderProducReducer from './features/userOrderProduct/userOrderProductSlice';
 import summaProductsReducer from './features/summaProducts/summaProductsSlice';
+import authReducer from './features/authReducer/authSlice';
 
 export const store = configureStore({
     reducer: {
@@ -17,6 +18,7 @@ export const store = configureStore({
         summaProducts: summaProductsReducer,
         user: userReducer,
         userOrderProduct: userOrderProducReducer,
+        auth: authReducer,
     },
 });
 

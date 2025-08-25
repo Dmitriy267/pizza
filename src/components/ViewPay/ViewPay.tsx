@@ -50,7 +50,7 @@ export const ViewPay: FC = () => {
                         <p>С какой суммы подготовить сдачу?</p>
                         <div className="block-decor-input__nal">
                             <input
-                                type="text"
+                                type="number"
                                 className="input__nal"
                                 placeholder="₽"
                             />

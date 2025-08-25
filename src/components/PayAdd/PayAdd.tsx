@@ -19,8 +19,8 @@ export function PayAdd() {
                         </div>
                         <div className="decoration__text">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit
+                                Оплачивайте заказы любым удобным для вас
+                                способом
                             </p>
                         </div>
                     </div>
@@ -30,8 +30,8 @@ export function PayAdd() {
                         </div>
                         <div className="decoration__text">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit
+                                Регитрируйтесь на сайте и получайте приятные
+                                бонусы
                             </p>
                         </div>
                     </div>
@@ -41,8 +41,7 @@ export function PayAdd() {
                         </div>
                         <div className="decoration__text">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit
+                                Быстрая доставка в любое удобное для вас время
                             </p>
                         </div>
                     </div>
@@ -52,8 +51,7 @@ export function PayAdd() {
                         </div>
                         <div className="decoration__text">
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit
+                                У нас имеется сертификаты на качество продукции
                             </p>
                         </div>
                     </div>

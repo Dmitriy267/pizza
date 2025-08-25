@@ -18,7 +18,7 @@ import { PayPage } from './pages/PayPage/PayPage.tsx';
 import { PayFinishPage } from './pages/PayFinishPage/PayFinishPage.tsx';
 import { PizzaPage } from './pages/PizzaPage/PizzaPage.tsx';
 import { HomePage } from './pages/HomePage/HomePage.tsx';
-
+import { Profile } from './pages/Profile/Profile.tsx';
 const router = createBrowserRouter([
     {
         path: '/',
@@ -91,6 +91,10 @@ const router = createBrowserRouter([
             {
                 path: '/Завершение заказа',
                 element: <PayFinishPage />,
+            },
+            {
+                path: '/Профиль',
+                element: <Profile />,
             },
         ],
         errorElement: <ErrorPage />,

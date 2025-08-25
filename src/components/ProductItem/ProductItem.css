@@ -60,14 +60,13 @@
         font-weight: 700;
         font-size: 1.6rem; /***/
         line-height: 89%;
-        color: var(--black-color);
+        color: var(--yellow-color);
     }
     .shop-prod_bottom > p {
         margin-top: 14px; /**/
         font-weight: 500;
         font-size: 1.2rem; /***/
         line-height: 146%;
-        color: var(--grey-color);
     }
 }
 @media screen and (max-width: 1549px) {

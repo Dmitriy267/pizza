@@ -10,6 +10,8 @@ import { useState } from 'react';
 import { MailAccaunt } from '../../components/MailAccaunt/MailAccaunt';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../../redux/features/User/userSlice';
+import { isLoginIn, logout } from '../../redux/features/authReducer/authSlice';
+
 const shema = yup
     .object({
         login: yup.string().required('Не задан логин'),
@@ -42,6 +44,7 @@ interface IFormInput extends yup.InferType<typeof shema> {
 export function Registration() {
     const dispatch = useDispatch();
     const [mailShow, setMailShow] = useState<boolean>(false);
+
     const {
         register,
         handleSubmit,
@@ -50,8 +53,12 @@ export function Registration() {
     const onSubmit: SubmitHandler<IFormInput> = (data) => {
         if (data) {
             setMailShow((prev) => !prev);
+            dispatch(isLoginIn());
+        } else {
+            dispatch(logout());
         }
         dispatch(addUser(data));
+
         console.log(data);
     };
 

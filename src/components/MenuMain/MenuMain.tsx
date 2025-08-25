@@ -1,23 +1,13 @@
-import { useState, type FC } from 'react';
+import { type FC } from 'react';
 import { Product } from '../Product/Product';
 import './MenuMain.css';
-import { useNavigate } from 'react-router-dom';
 import { useAppDispatch } from '../../redux/hooks/hooks';
 import { getPizza } from '../../redux/features/Pizza/pizzaSlice';
 import { getProduct } from '../../redux/features/drinkSelect/drinkSelectSlice';
 import { drinks, pizza } from '../../../src/data';
 
 export const MenuMain: FC = () => {
-    const [shop, setShop] = useState<number>(0);
     const dispatch = useAppDispatch();
-    const handeClick = () => {
-        setShop((prev) => prev + 1);
-    };
-
-    const navigate = useNavigate();
-    const handeClickNavigate = () => {
-        navigate('/Корзина');
-    };
 
     return (
         <menu className="section__menu_main">
@@ -44,20 +34,10 @@ export const MenuMain: FC = () => {
                                               price: p.price,
                                           })
                                       );
-                                      handeClick();
                                   }}
                               />
                           ))
                         : null}
-
-                    {shop === 0 ? null : (
-                        <button
-                            className="btn__shop btn_fixed btn_grey"
-                            onClick={handeClickNavigate}
-                        >
-                            Корзина | {shop}
-                        </button>
-                    )}
                 </div>
                 <h2 className="title__h2">Напитки</h2>
 
@@ -72,7 +52,6 @@ export const MenuMain: FC = () => {
                                       key={p.id}
                                       onClick={() => {
                                           dispatch(getProduct({ ...p }));
-                                          handeClick();
                                       }}
                                       description={p.description}
                                   />

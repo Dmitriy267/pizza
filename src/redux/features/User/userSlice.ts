@@ -28,6 +28,7 @@ export const userSlice = createSlice({
             state.user = { ...state.user, ...action.payload };
             document.cookie = `userLogin=${state.user.login}`;
             document.cookie = `userPassword=${state.user.password}`;
+            document.cookie = `userEmail=${state.user.email}`;
         },
     },
 });

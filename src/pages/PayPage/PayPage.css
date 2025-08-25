@@ -17,7 +17,6 @@
         font-weight: 600;
         font-size: 1.2rem; /***/
         line-height: 165%; /**/
-        color: #231f20;
         opacity: 0.7;
     }
     .div__pay {
@@ -91,9 +90,12 @@
         font-weight: 700;
         font-size: 0.9375rem; /**/
         line-height: 187%; /**/
-        color: #231f20;
         opacity: 0.7;
     }
+    .text-memory__actions {
+        color: var(--yellow-color);
+    }
+
     .div-sms__actions span:first-of-type {
         margin-left: 0px; /**/
     }

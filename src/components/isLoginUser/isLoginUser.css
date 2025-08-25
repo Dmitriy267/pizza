@@ -1,0 +1,27 @@
+@media screen and (max-width: 1920px) {
+    .btn-enter__header {
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 1.1rem;
+        transition: color 0.6s;
+        color: rgb(10, 207, 207);
+    }
+
+    .btn-enter__header:hover {
+        color: rgb(8, 88, 141);
+    }
+
+    .btn-display {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .btn-enter__header {
+        margin-left: -24px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .btn-enter__header {
+        margin-left: 0;
+    }
+}
