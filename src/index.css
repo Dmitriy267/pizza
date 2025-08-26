@@ -157,14 +157,14 @@ h6 {
 .block__demoPizza_orange {
     background-color: var(--orange-bgColor);
 }
-@media (max-width: 1920px) {
+@media screen and (max-width: 1920px) {
     [class*='__container'] {
         max-width: 1880px;
         margin: 0px auto;
         padding: 0px 20px;
     }
 }
-@media (max-width: 1549px) {
+@media screen and (max-width: 1549px) {
     [class*='__container'] {
         max-width: 1108px;
         margin: 0px auto;
@@ -172,14 +172,54 @@ h6 {
     }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     [class*='__container'] {
         max-width: 728px;
         margin: 0px auto;
         padding: 0px 20px;
     }
 }
-@media (max-width: 320px) {
+@media screen and (min-width: 1550px) and (max-width: 1920px) {
+    [class*='__container'] {
+        min-width: 1510px;
+        max-width: 1880px;
+        margin: 0px auto;
+        padding: 0px 20px;
+    }
+}
+@media screen and (min-width: 1200px) and (max-width: 1549px) {
+    [class*='__container'] {
+        min-width: 1160px;
+        max-width: 1509px;
+        margin: 0px auto;
+        padding: 0px 20px;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    [class*='__container'] {
+        min-width: 952px;
+        max-width: 1159px;
+        margin: 0px auto;
+        padding: 0px 20px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    [class*='__container'] {
+        min-width: 728px;
+        max-width: 951px;
+        margin: 0px auto;
+        padding: 0px 20px;
+    }
+}
+@media screen and (min-width: 321px) and (max-width: 767px) {
+    [class*='__container'] {
+        min-width: 301px;
+        max-width: 747px;
+        margin: 0px auto;
+        padding: 0px 10px;
+    }
+}
+@media screen and (max-width: 320px) {
     [class*='__container'] {
         max-width: 300px;
         margin: 0px auto;

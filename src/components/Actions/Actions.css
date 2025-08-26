@@ -109,7 +109,37 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+/*Исправить позиционирование img*/
+@media screen and (min-width: 1200px) and (max-width: 1549px) {
+    .block__actions_top {
+        width: 48.73%; /**/
+    }
+    .cake__image_top {
+        width: 100%; /**/
+    }
+    .block__actions_bottom {
+        margin-left: 29px; /**/
+    }
+    .block__actions_bottom img {
+        height: 189px; /**/
+        width: 100%; /**/
+    }
+    .wrap__img_position {
+        left: 402px; /**/
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .actions_all {
+        justify-content: center;
+    }
+    .btn__actions_all {
+        margin-left: 0;
+    }
+    .wrap__img_position {
+        display: none;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
     .actions__section {
         padding-top: 45px;
     }
@@ -168,6 +198,68 @@
         width: 100%;
     }
 }
+@media screen and (min-width: 321px) and (max-width: 767px) {
+    .actions__section {
+        padding-top: 41px;
+    }
+    .actions__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cake__h2,
+    .cake__h2 > span {
+        font-size: 1.25rem;
+        margin-bottom: 18px;
+    }
+
+    .block__actions {
+        flex-direction: column;
+        margin-bottom: 7px;
+        height: auto;
+    }
+    .block__actions_top {
+        width: 100%;
+        max-width: 530px;
+    }
+    .cake__image_top {
+        width: 100%;
+    }
+    .block__actions_bottom {
+        margin-top: 12px;
+        row-gap: 12px;
+        column-gap: 12px;
+        margin-left: 0;
+        width: 100%;
+        max-width: 530px;
+    }
+    .block__actions_bottom img {
+        max-width: 100%;
+        max-height: 101px;
+    }
+    .actions_all {
+        height: 83px;
+        justify-content: space-between;
+        max-width: 530px;
+    }
+    .btn__actions_all {
+        font-size: 62.5%;
+        line-height: 280%;
+        width: 97px;
+        height: 33px;
+        margin-top: 20px;
+        margin-left: 0%;
+    }
+    .wrap__img_position {
+        width: 79px;
+        position: static;
+    }
+    .actions__image_right {
+        height: 100px;
+        position: static;
+    }
+}
 @media screen and (max-width: 320px) {
     .actions__section {
         padding-top: 41px;
@@ -214,10 +306,11 @@
     }
     .wrap__img_position {
         width: 79px;
-        left: 35px; /***/
+        position: static;
+        margin-left: 14px;
     }
     .actions__image_right {
         height: 100px;
-        right: 5px;
+        position: static;
     }
 }
