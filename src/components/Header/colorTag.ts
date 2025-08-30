@@ -114,7 +114,17 @@ const labelSms = new ColorTag(
     'p_dark',
     '.div-sms__actions label'
 );
-
+const pDescript = new ColorTag(
+    'font_white',
+    'p-title_grey',
+    '    .descript p:first-child '
+);
+const pDescropitSecond = new ColorTag(
+    'font_white',
+    'p_grey',
+    '.descript p:last-child '
+);
+const pBlockShop = new ColorTag('font_white', 'font_dark', '.block__shop p  ');
 export const arrTags = [
     liHeader,
     pNameCompany,
@@ -145,4 +155,7 @@ export const arrTags = [
     pTextUser,
     divFirstUser,
     labelSms,
+    pDescript,
+    pDescropitSecond,
+    pBlockShop,
 ];
