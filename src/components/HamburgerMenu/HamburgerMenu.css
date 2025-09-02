@@ -1,9 +1,4 @@
-/* @media screen and (max-width: 1549px) {
-    .Hamburger {
-        display: none;
-    }
-} */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 992px) and (max-width: 1199px) {
     .Hamburger {
         display: flex;
         align-items: center;
@@ -47,21 +42,97 @@
         transform: rotate(-45deg);
     }
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .Hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+        width: 46px;
+        height: 27px;
+    }
+    .Burger {
+        display: flex;
+        width: 46px;
+        height: 3px;
+        position: relative;
+        background-color: var(--grey-color);
+        transition: all 0.15s ease-in-out;
+    }
+    .Burger::after,
+    .Burger::before {
+        background-color: var(--grey-color);
+        content: '';
+        width: 46px;
+        height: 3px;
+        position: absolute;
+        transition: all 0.15s ease-in-out;
+    }
+    .Burger::before {
+        transform: translateY(-9px);
+    }
+    .Burger::after {
+        transform: translateY(9px);
+    }
+    .Burger__active {
+        transform: translateX(-18px);
+        background-color: transparent;
+    }
+    .Burger__active::before {
+        transform: rotate(45deg);
+    }
+    .Burger__active::after {
+        transform: rotate(-45deg);
+    }
+}
+/*Проверить стили*/
 @media screen and (min-width: 321px) and (max-width: 767px) {
     .header__container {
         justify-content: space-between;
     }
     .Hamburger {
+        display: flex;
         width: 39px;
-        position: static;
+        z-index: 3;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+        height: 27px;
     }
-
     .Burger {
+        display: flex;
         width: 39px;
+        height: 3px;
+        position: relative;
+        background-color: var(--grey-color);
+        transition: all 0.15s ease-in-out;
     }
     .Burger::after,
     .Burger::before {
+        background-color: var(--grey-color);
+        content: '';
         width: 39px;
+        height: 3px;
+        position: absolute;
+        transition: all 0.15s ease-in-out;
+    }
+    .Burger::before {
+        transform: translateY(-9px);
+    }
+    .Burger::after {
+        transform: translateY(9px);
+    }
+    .Burger__active {
+        transform: translateX(-18px);
+        background-color: transparent;
+    }
+    .Burger__active::before {
+        transform: rotate(45deg);
+    }
+    .Burger__active::after {
+        transform: rotate(-45deg);
     }
 }
 @media screen and (max-width: 320px) {
@@ -69,15 +140,46 @@
         justify-content: space-between;
     }
     .Hamburger {
+        display: flex;
         width: 39px;
         z-index: 3;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+        height: 27px;
     }
-
     .Burger {
+        display: flex;
         width: 39px;
+        height: 3px;
+        position: relative;
+        background-color: var(--grey-color);
+        transition: all 0.15s ease-in-out;
     }
     .Burger::after,
     .Burger::before {
+        background-color: var(--grey-color);
+        content: '';
         width: 39px;
+        height: 3px;
+        position: absolute;
+        transition: all 0.15s ease-in-out;
+    }
+    .Burger::before {
+        transform: translateY(-9px);
+    }
+    .Burger::after {
+        transform: translateY(9px);
+    }
+    .Burger__active {
+        transform: translateX(-18px);
+        background-color: transparent;
+    }
+    .Burger__active::before {
+        transform: rotate(45deg);
+    }
+    .Burger__active::after {
+        transform: rotate(-45deg);
     }
 }
