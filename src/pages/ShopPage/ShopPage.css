@@ -110,12 +110,12 @@
         margin-top: 8px;
     }
 }
-@media screen and (max-width: 1549px) {
+/* @media screen and (max-width: 1549px) {
     .h3__promo {
         font-size: 1.375rem;
     }
-}
-@media screen and (max-width: 768px) {
+} */
+/* @media screen and (max-width: 768px) {
     .shop__wrapper {
         padding-top: 45px;
     }
@@ -164,6 +164,144 @@
     .block-btn__shop button:first-of-type,
     .block-btn__shop button:last-of-type {
         width: 32.66%;
+    }
+} */
+@media screen and (min-width: 1200px) and (max-width: 1549px) {
+    .h3__promo {
+        font-size: 1.375rem;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .shop__wrapper {
+        padding-top: 45px;
+    }
+
+    .shop__h2 {
+        margin-top: 37px;
+        font-size: 1.9375rem;
+        margin-bottom: 20px;
+    }
+    .block__sauce_table {
+        margin-top: 30px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .h2__shop_add {
+        margin-top: 25px;
+    }
+    .h2__shop_add,
+    .h3__shop {
+        line-height: 85%;
+    }
+    .h3__shop {
+        margin-top: 30px;
+    }
+
+    .h3__promo {
+        margin-top: 33px;
+        line-height: 85%;
+    }
+
+    .summa__shop {
+        margin-top: 30px;
+        line-height: 81%;
+        width: 100%;
+    }
+    .summa__shop span {
+        font-size: 1.625rem;
+    }
+    .block-btn__shop {
+        margin-top: 34px;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .block-btn__shop button:first-of-type,
+    .block-btn__shop button:last-of-type {
+        width: 32.66%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .shop__wrapper {
+        padding-top: 45px;
+    }
+
+    .shop__h2 {
+        margin-top: 37px;
+        font-size: 1.9375rem;
+        margin-bottom: 20px;
+    }
+    .block__sauce_table {
+        margin-top: 30px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .h2__shop_add {
+        margin-top: 25px;
+    }
+    .h2__shop_add,
+    .h3__shop {
+        line-height: 85%;
+    }
+    .h3__shop {
+        margin-top: 30px;
+    }
+
+    .h3__promo {
+        margin-top: 33px;
+        line-height: 85%;
+    }
+
+    .summa__shop {
+        margin-top: 30px;
+        line-height: 81%;
+        width: 100%;
+    }
+    .summa__shop span {
+        font-size: 1.625rem;
+    }
+    .block-btn__shop {
+        margin-top: 34px;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .block-btn__shop button:first-of-type,
+    .block-btn__shop button:last-of-type {
+        width: 32.66%;
+    }
+}
+@media screen and (min-width: 321px) and (max-width: 767px) {
+    .shop__wrapper {
+        padding-top: 12px;
+    }
+
+    .shop__h2 {
+        font-size: 1.625rem;
+    }
+    .block__sauce_table {
+        gap: 6px;
+    }
+
+    .h2__shop_add {
+        margin-top: 22px;
+    }
+    .h2__shop_add,
+    .h3__shop {
+        font-size: 1.25rem;
+    }
+
+    .summa__shop {
+        font-size: 1.3125rem;
+    }
+
+    .block-btn__shop button:first-of-type,
+    .block-btn__shop button:last-of-type {
+        font-size: 0.9375rem;
+        width: 74.66%;
     }
 }
 @media screen and (max-width: 320px) {

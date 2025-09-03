@@ -1,30 +1,120 @@
-@media screen and (max-width: 1920px) {
-    .shop__steps {
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        border-bottom-width: 2px;
-        border-bottom-color: #ececf1;
-        border-bottom-style: solid;
-        padding-bottom: 19px;
+.shop__steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-bottom-width: 2px;
+    border-bottom-color: #ececf1;
+    border-bottom-style: solid;
+    padding-bottom: 19px;
+}
+.shop__step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step_active,
+.step_default {
+    font-weight: 800;
+    font-size: 0.9375rem;
+    line-height: 187%;
+    display: flex;
+    width: 45px; /***/
+    height: 45px; /***/
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.step_active {
+    color: #231f20;
+}
+.step_default {
+    color: var(--yellow-color);
+}
+.step_default {
+    border-color: var(--yellow-color);
+    border-width: 2px;
+    border-style: solid;
+    opacity: 0.6;
+}
+.step_active {
+    background-color: var(--yellow-color);
+}
+.step_active + p,
+.step_default + p {
+    font-weight: 600;
+    font-size: 0.935rem; /***/
+    line-height: 200%;
+    text-align: center;
+}
+.hr_dashed {
+    border: 2px dashed #b8c5d0;
+    width: 20%; /***/
+    height: 0px;
+    position: absolute;
+}
+.hr_dashed:first-of-type {
+    top: 17px;
+    left: 20%; /**/
+}
+.hr_dashed:last-of-type {
+    top: 17px;
+    left: 60%; /***/
+}
+.step_default + p {
+    opacity: 0.8;
+}
+.text__step_second {
+    width: 141px;
+}
+.text__step_threed {
+    width: 95px;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1549px) {
+    .step_active,
+    .step_default {
+        width: 36px;
+        height: 36px;
     }
-    .shop__step {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+
+    .step_active + p,
+    .step_default + p {
+        font-size: 0.875rem;
+    }
+    .hr_dashed {
+        width: 14.82%;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .step_active,
+    .step_default {
+        width: 36px;
+        height: 36px;
+    }
+
+    .step_active + p,
+    .step_default + p {
+        font-size: 0.875rem;
+    }
+    .hr_dashed {
+        width: 14.82%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .hr_dashed {
+        width: 20%;
+    }
+}
+@media screen and (min-width: 321px) and (max-width: 767px) {
+    .shop__steps {
+        padding-bottom: 11px;
     }
 
     .step_active,
     .step_default {
-        font-weight: 800;
-        font-size: 0.9375rem;
-        line-height: 187%;
-        display: flex;
-        width: 45px; /***/
-        height: 45px; /***/
-        border-radius: 100%;
-        justify-content: center;
-        align-items: center;
+        font-weight: 700;
     }
     .step_active {
         color: #231f20;
@@ -43,62 +133,22 @@
     }
     .step_active + p,
     .step_default + p {
-        font-weight: 600;
-        font-size: 0.935rem; /***/
-        line-height: 200%;
-        text-align: center;
+        font-size: 0.6875rem;
+        line-height: 255%;
     }
     .hr_dashed {
-        border: 2px dashed #b8c5d0;
-        width: 30%; /***/
-        height: 0px;
-        position: absolute;
+        width: 10%;
     }
-    .hr_dashed:first-of-type {
-        top: 17px;
-        left: 164px; /**/
-    }
-    .hr_dashed:last-of-type {
-        top: 17px;
-        left: 1100px; /***/
-    }
+
     .step_default + p {
+        color: rgba(105, 111, 122, 0.95);
         opacity: 0.8;
     }
     .text__step_second {
-        width: 141px;
+        width: 120px;
     }
     .text__step_threed {
-        width: 95px;
-    }
-}
-@media screen and (max-width: 1549px) {
-    .step_active,
-    .step_default {
-        width: 36px;
-        height: 36px;
-    }
-
-    .step_active + p,
-    .step_default + p {
-        font-size: 0.875rem;
-    }
-    .hr_dashed {
-        width: 14.82%;
-    }
-    .hr_dashed:first-of-type {
-        left: 164px; /**/
-    }
-    .hr_dashed:last-of-type {
-        left: 694px; /**/
-    }
-}
-@media screen and (max-width: 768px) {
-    .hr_dashed:first-of-type {
-        left: 101px;
-    }
-    .hr_dashed:last-of-type {
-        left: 433px;
+        width: 79px;
     }
 }
 @media screen and (max-width: 320px) {
@@ -134,11 +184,9 @@
         width: 40px;
     }
     .hr_dashed:first-of-type {
-        top: 17px;
         left: 53px;
     }
     .hr_dashed:last-of-type {
-        top: 17px;
         left: 163px;
     }
     .step_default + p {

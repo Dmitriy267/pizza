@@ -24,32 +24,34 @@ export const Slider: FunctionComponent<SliderProps> = ({ slides }) => {
     return (
         <section className="slider">
             <div className="slider__container">
-                <div className="block__arrow">
-                    <div className="arrow " onClick={prevSlide}>
-                        <img src={Arrow} alt="Стрелка влево" />
-                    </div>
-                    <div className="arrow arrow_right" onClick={nextSlide}>
-                        <img src={Arrow} alt="Стрелка вправо" />
-                    </div>
-                </div>
-                {SliderData.map((slide, index) => {
-                    return (
-                        <div
-                            className={
-                                index === current ? 'slide active' : 'slide'
-                            }
-                            key={index}
-                        >
-                            {index === current && (
-                                <img
-                                    src={slide.image}
-                                    alt="Слайд"
-                                    className="image__slide"
-                                />
-                            )}
+                <div className="block__slider">
+                    <div className="block__arrow">
+                        <div className="arrow " onClick={prevSlide}>
+                            <img src={Arrow} alt="Стрелка влево" />
                         </div>
-                    );
-                })}
+                        <div className="arrow arrow_right" onClick={nextSlide}>
+                            <img src={Arrow} alt="Стрелка вправо" />
+                        </div>
+                    </div>
+                    {SliderData.map((slide, index) => {
+                        return (
+                            <div
+                                className={
+                                    index === current ? 'slide active' : 'slide'
+                                }
+                                key={index}
+                            >
+                                {index === current && (
+                                    <img
+                                        src={slide.image}
+                                        alt="Слайд"
+                                        className="image__slide"
+                                    />
+                                )}
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
         </section>
     );

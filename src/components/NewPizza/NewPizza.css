@@ -1,31 +1,29 @@
-@media screen and (max-width: 1920px) {
-    .section__newMenu {
-        padding-top: 75px;
-        position: relative;
-    }
-    .h2 {
-        font-weight: bold;
-        font-size: 1.8rem; /**/
-    }
-    .block__newMenu {
-        height: auto;
-        display: flex;
-        overflow: hidden;
-        margin-top: 39px; /**/
-        gap: 29px; /***/
-        margin-left: 58px;
-    }
-    .img__position {
-        width: 238.27px; /**/
-        height: 364.1px; /**/
-        position: absolute;
-        z-index: -1;
-        top: 12px;
-        left: -43px; /**/
-        object-fit: contain;
-    }
+.section__newMenu {
+    padding-top: 75px;
+    position: relative;
 }
-@media screen and (max-width: 1549px) {
+.h2 {
+    font-weight: bold;
+    font-size: 1.8rem; /**/
+}
+.block__newMenu {
+    height: auto;
+    display: flex;
+    overflow: hidden;
+    margin-top: 39px; /**/
+    gap: 29px; /***/
+}
+.img__position {
+    width: 238.27px; /**/
+    height: 364.1px; /**/
+    position: absolute;
+    z-index: -1;
+    top: 12px;
+    left: -43px; /**/
+    object-fit: contain;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1549px) {
     .h2 {
         font-size: 1.5rem; /**/
     }
@@ -43,7 +41,7 @@
         object-fit: contain;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 992px) and (max-width: 1199px) {
     .section__newMenu {
         padding-top: 42px;
     }
@@ -51,7 +49,7 @@
         font-size: 1.3125rem;
     }
     .block__newMenu {
-        width: 93vw;
+        width: 100%;
         margin-top: 23px;
     }
     .img__position {
@@ -59,6 +57,45 @@
         height: 252.38px;
         left: -60px;
         opacity: 0.5;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .section__newMenu {
+        padding-top: 42px;
+    }
+    .h2 {
+        font-size: 1.3125rem;
+    }
+    .block__newMenu {
+        width: 100%;
+        margin-top: 23px;
+    }
+    .img__position {
+        width: 196.67px;
+        height: 252.38px;
+        left: -60px;
+        opacity: 0.5;
+    }
+}
+@media screen and (min-width: 321px) and (max-width: 767px) {
+    .section__newMenu {
+        padding-top: 24px;
+    }
+    .h2 {
+        font-size: 1.1875rem;
+    }
+    .block__newMenu {
+        margin-top: 16px;
+        width: 100%;
+        overflow: hidden;
+        gap: 15px;
+        margin-left: 0;
+    }
+    .img__position {
+        width: 89px;
+        height: 126px;
+        top: 32px;
+        left: -18px;
     }
 }
 @media screen and (max-width: 320px) {
@@ -71,6 +108,8 @@
     .block__newMenu {
         margin-top: 16px;
         width: 100%;
+        gap: 10px;
+        margin-left: 0;
     }
     .img__position {
         width: 89px;

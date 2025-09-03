@@ -1,66 +1,58 @@
-@media screen and (max-width: 1920px) {
-    .section__menu_main {
-        padding-top: 55px; /**/
-        width: 93vw;
-    }
-
-    .h1,
-    .title__h2 {
-        font-weight: 800;
-        font-size: 2rem; /**/
-        margin-bottom: 37px; /**/
-        color: var(--yellow-color);
-    }
-    .title__h2 {
-        margin-top: 31px;
-    }
-    .menu_table {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr; /**/
-        grid-template-rows: repeat(3, 1fr); /**/
-        row-gap: 49px; /**/
-        column-gap: 30px; /**/
-        width: 100%; /**/
-    }
-
-    .btn__shop {
-        border-radius: 8px;
-        width: 140px; /**/
-        height: 36px;
-        background-color: var(--yellow-color);
-        font-family: Montserrat, sans-serif;
-        font-weight: 700;
-        font-size: 1rem; /**/
-        line-height: 200%;
-        transition: background-color 0.5s;
-    }
-    .btn__shop:hover {
-        background-color: var(--hover-button);
-    }
-    .btn__shop:active {
-        background-color: var(--active-button);
-    }
-    .btn_grey {
-        color: #473e43;
-    }
-    .btn_fixed {
-        position: fixed;
-        top: 50%;
-        right: 5%;
-        z-index: 4;
-    }
-
-    .menu_table_drinks {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr; /**/
-        gap: 40px; /**/
-        width: 100%; /**/
-        overflow: hidden;
-    }
+.section__menu_main {
+    padding-top: 55px; /**/
 }
-@media screen and (max-width: 1549px) {
+
+.h1,
+.title__h2 {
+    font-weight: 800;
+    font-size: 2rem; /**/
+    margin-bottom: 37px; /**/
+    color: var(--yellow-color);
+}
+.title__h2 {
+    margin-top: 31px;
+}
+.menu_table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /**/
+    grid-template-rows: repeat(3, 1fr); /**/
+    row-gap: 49px; /**/
+    column-gap: 30px; /**/
+    width: 100%; /**/
+}
+
+.btn__shop {
+    border-radius: 8px;
+    width: 140px; /**/
+    height: 36px;
+    background-color: var(--yellow-color);
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    font-size: 1rem; /**/
+    line-height: 200%;
+    transition: background-color 0.5s;
+}
+.btn__shop:hover {
+    background-color: var(--hover-button);
+}
+.btn__shop:active {
+    background-color: var(--active-button);
+}
+.btn_grey {
+    color: #473e43;
+}
+
+.menu_table_drinks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /**/
+    gap: 40px; /**/
+    width: 100%; /**/
+    overflow: hidden;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1549px) {
     .menu_table {
-        width: 1109px; /**/
+        width: 100%; /**/
     }
 
     .btn__shop {
@@ -69,7 +61,18 @@
         font-size: 0.875rem;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .menu_table {
+        width: 100%;
+        row-gap: 20px;
+    }
+
+    .btn__shop {
+        width: 126px;
+        font-size: 0.875rem;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
     .section__menu_main {
         padding-top: 44px;
     }
@@ -85,17 +88,38 @@
         grid-template-rows: repeat(4, 1fr);
         row-gap: 30px;
         column-gap: 32px;
-        width: 729px;
-    }
-
-    .btn_color {
-        color: #473e43;
+        width: 100%;
     }
 
     .menu_table_drinks {
         grid-template-columns: 1fr 1fr;
         row-gap: 30px;
-        width: 729px;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 321px) and (max-width: 767px) {
+    .section__menu_main {
+        padding-top: 21px;
+    }
+    .h1,
+    .title__h2 {
+        font-size: 1.3125rem;
+        margin-bottom: 18px;
+    }
+    .title__h2 {
+        margin-top: 21px;
+    }
+    .menu_table,
+    .menu_table_drinks {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .btn__shop {
+        width: 107px;
+        height: 42px;
+        font-size: 0.75rem;
+        line-height: 233%;
     }
 }
 @media screen and (max-width: 320px) {
@@ -123,10 +147,7 @@
         font-size: 0.75rem;
         line-height: 233%;
     }
-    .btn_fixed {
-        top: 446px;
-        left: 165px;
-    }
+
     .menu_table_drinks {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, 1fr);
