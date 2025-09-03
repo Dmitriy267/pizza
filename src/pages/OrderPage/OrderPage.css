@@ -45,6 +45,7 @@
         width: 30.66%; /**/
     }
 }
+
 @media screen and (max-width: 320px) {
     .btn-order {
         width: 74.66%;

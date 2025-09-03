@@ -22,6 +22,7 @@
     width: 39%; /**/
     max-width: 580px;
     min-height: 300px;
+    max-height: 90%;
     background: white;
     opacity: 100;
     overflow-y: auto;
