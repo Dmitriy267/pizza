@@ -9,7 +9,13 @@ import { FormPromo } from '../../common/FormPromo/FormPromo';
 import { useNavigate } from 'react-router-dom';
 import { sauces } from '../../../src/data';
 import './ShopPage.css';
-import { useState, type ChangeEvent, type FC, type FormEvent } from 'react';
+import {
+    useMemo,
+    useState,
+    type ChangeEvent,
+    type FC,
+    type FormEvent,
+} from 'react';
 import {
     getPercent,
     getSummaProducts,
@@ -25,10 +31,15 @@ export const ShopPage: FC = () => {
         (obj, index, prod) =>
             index === prod.findIndex((item) => item.id === obj.id)
     );
-    const filterPizzaId = pizza.filter(
-        (obj, index, prod) =>
-            index === prod.findIndex((item) => item.id === obj.id)
+    const filterPizzaId = useMemo(
+        () =>
+            pizza.filter(
+                (obj, index, prod) =>
+                    index === prod.findIndex((item) => item.id === obj.id)
+            ),
+        [pizza]
     );
+    console.log(`filterPizzaId`, filterPizzaId);
     const filterId = drink.filter(
         (obj, index, prod) =>
             index === prod.findIndex((item) => item.id === obj.id)
