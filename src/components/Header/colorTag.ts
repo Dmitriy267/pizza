@@ -117,7 +117,7 @@ const labelSms = new ColorTag(
 const pDescript = new ColorTag(
     'font_white',
     'p-title_grey',
-    '    .descript p:first-child '
+    '.descript p:first-child '
 );
 const pDescropitSecond = new ColorTag(
     'font_white',
