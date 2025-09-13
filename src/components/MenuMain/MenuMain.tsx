@@ -19,7 +19,7 @@ export const MenuMain: FC = () => {
                         ? pizza.map((p) => (
                               <Product
                                   key={p.id}
-                                  srcImage={`/images/paste/${p.image}`}
+                                  srcImage={`/pizza/images/paste/${p.image}`}
                                   name={p.name}
                                   description={p.description}
                                   price={p.price}
@@ -46,7 +46,7 @@ export const MenuMain: FC = () => {
                         ? drinks
                               .map((p) => (
                                   <Product
-                                      srcImage={`/images/drink/${p.image}`}
+                                      srcImage={`/pizza/images/drink/${p.image}`}
                                       name={p.name}
                                       price={p.price}
                                       key={p.id}

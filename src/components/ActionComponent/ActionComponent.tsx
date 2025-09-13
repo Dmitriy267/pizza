@@ -24,7 +24,10 @@ export const ActionComponent: FC<ActionComponentProps> = ({
     return (
         <>
             <div key={id} className="block__actions-component">
-                <img src={`/images/actions/${image}`} alt="Изображение акции" />
+                <img
+                    src={`/pizza/images/actions/${image}`}
+                    alt="Изображение акции"
+                />
 
                 <h3 className="h3__actions-component">{title}</h3>
 
