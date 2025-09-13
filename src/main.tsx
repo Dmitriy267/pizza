@@ -2,7 +2,11 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App.tsx';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import {
+    createBrowserRouter,
+    RouterProvider,
+    BrowserRouter,
+} from 'react-router-dom';
 import { ErrorPage } from './pages/errorPage/ErrorPage.tsx';
 import { store } from './redux/store.ts';
 import { Provider } from 'react-redux';
@@ -104,7 +108,13 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <Provider store={store}>
-            <RouterProvider router={router} />
+            <BrowserRouter
+                basename={
+                    process.env.NODE_ENV === 'production' ? '/pizza' : '/'
+                }
+            >
+                <RouterProvider router={router} />
+            </BrowserRouter>
         </Provider>
     </StrictMode>
 );
