@@ -68,7 +68,7 @@ export const Profile: FC = () => {
                                         <div className="block-img__profile_alternative">
                                             {' '}
                                             <svg className="profile">
-                                                <use href="/images/decors/sprite-svg.svg#svg-user"></use>
+                                                <use href="/pizza/images/decors/sprite-svg.svg#svg-user"></use>
                                             </svg>
                                         </div>
                                     )}

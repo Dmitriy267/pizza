@@ -19,7 +19,7 @@ export const PizzaDiscript: FunctionComponent = () => {
                           >
                               <div className="productDesc_top">
                                   <img
-                                      src={`/images/paste/${p.image}`}
+                                      src={`/pizza/images/paste/${p.image}`}
                                       alt="Фото продукта"
                                   />
                               </div>
