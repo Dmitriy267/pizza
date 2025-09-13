@@ -23,87 +23,92 @@ import { PayFinishPage } from './pages/PayFinishPage/PayFinishPage.tsx';
 import { PizzaPage } from './pages/PizzaPage/PizzaPage.tsx';
 import { HomePage } from './pages/HomePage/HomePage.tsx';
 import { Profile } from './pages/Profile/Profile.tsx';
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+    [
+        {
+            path: '/',
+            element: <App />,
+            children: [
+                {
+                    path: '/',
+                    element: <HomePage />,
+                },
+                {
+                    path: '/Контакты',
+                    element: <Contacts />,
+                },
+                {
+                    path: 'Акции',
+                    element: <ActionsPage />,
+                },
+                {
+                    path: 'Напитки',
+                    element: <DrinksPage />,
+                },
+                {
+                    path: 'Пицца',
+                    element: <PizzaPage />,
+                },
+                {
+                    path: 'Корзина',
+                    element: <ShopPage />,
+                },
+                {
+                    path: 'Войти/Корзина',
+                    element: <ShopPage />,
+                },
+                {
+                    path: 'Пицца/Корзина',
+                    element: <ShopPage />,
+                },
+                {
+                    path: 'Напитки/Корзина',
+                    element: <ShopPage />,
+                },
+                {
+                    path: 'Акции/Корзина',
+                    element: <ShopPage />,
+                },
+                {
+                    path: 'Контакты/Корзина',
+                    element: <ShopPage />,
+                },
+                {
+                    path: 'Войти',
+                    element: <Avtorization />,
+                },
+                {
+                    path: 'Регистрация',
+                    element: <Registration />,
+                },
+                {
+                    path: 'Завершение регистрации',
+                    element: <RegistrationEnd />,
+                },
+                {
+                    path: '/Корзина/Оформление заказа',
+                    element: <OrderPage />,
+                },
+                {
+                    path: '/оплата',
+                    element: <PayPage />,
+                },
+                {
+                    path: '/Завершение заказа',
+                    element: <PayFinishPage />,
+                },
+                {
+                    path: '/Профиль',
+                    element: <Profile />,
+                },
+            ],
+            errorElement: <ErrorPage />,
+        },
+    ],
     {
-        path: '/',
-        element: <App />,
-        children: [
-            {
-                path: '/',
-                element: <HomePage />,
-            },
-            {
-                path: '/Контакты',
-                element: <Contacts />,
-            },
-            {
-                path: 'Акции',
-                element: <ActionsPage />,
-            },
-            {
-                path: 'Напитки',
-                element: <DrinksPage />,
-            },
-            {
-                path: 'Пицца',
-                element: <PizzaPage />,
-            },
-            {
-                path: 'Корзина',
-                element: <ShopPage />,
-            },
-            {
-                path: 'Войти/Корзина',
-                element: <ShopPage />,
-            },
-            {
-                path: 'Пицца/Корзина',
-                element: <ShopPage />,
-            },
-            {
-                path: 'Напитки/Корзина',
-                element: <ShopPage />,
-            },
-            {
-                path: 'Акции/Корзина',
-                element: <ShopPage />,
-            },
-            {
-                path: 'Контакты/Корзина',
-                element: <ShopPage />,
-            },
-            {
-                path: 'Войти',
-                element: <Avtorization />,
-            },
-            {
-                path: 'Регистрация',
-                element: <Registration />,
-            },
-            {
-                path: 'Завершение регистрации',
-                element: <RegistrationEnd />,
-            },
-            {
-                path: '/Корзина/Оформление заказа',
-                element: <OrderPage />,
-            },
-            {
-                path: '/оплата',
-                element: <PayPage />,
-            },
-            {
-                path: '/Завершение заказа',
-                element: <PayFinishPage />,
-            },
-            {
-                path: '/Профиль',
-                element: <Profile />,
-            },
-        ],
-        errorElement: <ErrorPage />,
-    },
-]);
+        basename: '/pizza',
+    }
+);
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
