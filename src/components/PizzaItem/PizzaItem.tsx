@@ -40,7 +40,7 @@ export const PizzaItem: FC<ProductItemProps> = ({
                 <div className="block__shop_common">
                     <div className="shop-prod_top">
                         <img
-                            src={`/images/paste/${image}`}
+                            src={`/pizza/images/paste/${image}`}
                             alt="Фото товара"
                             className="img__shop-prod_first"
                         />

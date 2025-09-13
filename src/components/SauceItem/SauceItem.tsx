@@ -40,7 +40,10 @@ export const SauceItem: FunctionComponent<SauceItemProps> = ({
                 }
             >
                 <div className="sauce_flex">
-                    <img src={`/images/sauces/${image}`} alt="Фото соуса" />
+                    <img
+                        src={`/pizza/images/sauces/${image}`}
+                        alt="Фото соуса"
+                    />
                     <p>{name}</p>
                     <p>{description}</p>
                     <span>{price} ₽</span>

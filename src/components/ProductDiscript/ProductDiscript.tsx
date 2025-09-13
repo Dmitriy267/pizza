@@ -19,7 +19,7 @@ export const ProductDiscript: FunctionComponent = () => {
                           >
                               <div className="productDesc_top">
                                   <img
-                                      src={`/images/drink/${p.image}`}
+                                      src={`/pizza/images/drink/${p.image}`}
                                       alt="Фото продукта"
                                   />
                               </div>
