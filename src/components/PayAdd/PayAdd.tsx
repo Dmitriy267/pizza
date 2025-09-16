@@ -30,7 +30,7 @@ export function PayAdd() {
                         </div>
                         <div className="decoration__text">
                             <p>
-                                Регитрируйтесь на сайте и получайте приятные
+                                Регистрируйтесь на сайте и получайте приятные
                                 бонусы
                             </p>
                         </div>
@@ -51,7 +51,7 @@ export function PayAdd() {
                         </div>
                         <div className="decoration__text">
                             <p>
-                                У нас имеется сертификаты на качество продукции
+                                У нас имеются сертификаты на качество продукции
                             </p>
                         </div>
                     </div>

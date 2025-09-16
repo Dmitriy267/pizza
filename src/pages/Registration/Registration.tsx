@@ -91,7 +91,7 @@ export function Registration() {
                                         {<span>{errors.login?.message}</span>}
 
                                         <svg className="login__registration">
-                                            <use href="/images/decors/sprite-svg.svg#svg-user"></use>
+                                            <use href="/pizza/images/decors/sprite-svg.svg#svg-user"></use>
                                         </svg>
                                     </div>
                                     <div className="block-valid__form_position">
@@ -104,7 +104,7 @@ export function Registration() {
                                         {<span>{errors.email?.message}</span>}
 
                                         <svg className="email__registration">
-                                            <use href="/images/decors/sprite-svg.svg#svg-email"></use>
+                                            <use href="/pizza/images/decors/sprite-svg.svg#svg-email"></use>
                                         </svg>
                                     </div>
                                     <div className="block-valid__form_position">
@@ -121,7 +121,7 @@ export function Registration() {
                                         }
 
                                         <svg className="password__registration">
-                                            <use href="/images/decors/sprite-svg.svg#svg-password"></use>
+                                            <use href="/pizza/images/decors/sprite-svg.svg#svg-password"></use>
                                         </svg>
                                     </div>
                                     <div className="block-valid__form_position">
@@ -138,7 +138,7 @@ export function Registration() {
                                         }
 
                                         <svg className="password__registration_add">
-                                            <use href="/images/decors/sprite-svg.svg#svg-password"></use>
+                                            <use href="/pizza/images/decors/sprite-svg.svg#svg-password"></use>
                                         </svg>
                                     </div>
                                     <div className="castom-checkbox__registration">
